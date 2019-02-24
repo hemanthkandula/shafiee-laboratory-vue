@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+
+    <div>
+
+      <Header msg="Welcome to Shafiee Lab"/>
+
+    </div>
+    <div>
+      <main class="section-wrapper">
+        <router-view>
+
+
+        </router-view>
+      </main>
+    </div>
+
+
+    <AppFooter/>
+    <!--<div id="nav">-->
+    <!--<router-link to="/">Home</router-link> |-->
+    <!--<router-link to="/about">About</router-link>-->
+    <!--</div>-->
+
+
+
+
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+<script>
+  // @ is an alias to /src
+  import Header from './components/Header'
+  import AppFooter from "@/AppFooter";
+
+  export default {
+    name: 'App',
+    components: {
+      AppFooter,
+      Header
+    }
   }
-}
+
+
+
 </script>
 
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  /*@import './assets/css/custom.css';*/
+
+
+  a {
+    text-decoration: none;
+  }
+
+
 </style>
