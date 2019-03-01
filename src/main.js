@@ -20,25 +20,12 @@ import 'material-icons/iconfont/material-icons.css';
 
 import './assets/css/custom.css';
 
-
-// ../././/// Firebase connection
-
-import VueFire from 'vuefire'
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-
-Vue.use(VueFire);
+import VueFirestore from 'vue-firestore';
 
 
-const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyAvv7O7kyq6AmPPAHV-4xNA5lgE8eQW36k",
-    authDomain: "shafiee-laboratory-vue.firebaseapp.com",
-    databaseURL: "https://shafiee-laboratory-vue.firebaseio.com",
-    projectId: "shafiee-laboratory-vue",
-    storageBucket: "shafiee-laboratory-vue.appspot.com",
-    messagingSenderId: "1037007490240"
-});
-export const db = firebaseApp.firestore();
+Vue.use(VueFirestore);
+
+
 
 // /. end
 
