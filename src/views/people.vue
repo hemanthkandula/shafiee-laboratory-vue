@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="quote__source">
                                     <div class="quote__image"
-                                         style="background-image: url(http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/Hadi.jpg)">
+                                         style="background-image: url(../assets/Hadi.jpg)">
 
 
                                     </div>
@@ -118,13 +118,13 @@
                         </div>
                         <div class="quote__source">
                             <!--<div class="quote__image"-->
-                            <!--style="background-image: url(http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/Hadi.jpg)">-->
+                            <!--style="background-image: url(../assets/Hadi.jpg)">-->
 
 
                             <!--</div>-->
                             <div>
                                 <vs-avatar size="large"
-                                           src="http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/Hadi.jpg"/>
+                                           src="../assets/Hadi.jpg"/>
                             </div>
 
 
