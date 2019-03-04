@@ -28,15 +28,22 @@
             <div class="group__gallery-wrapper">
                 <div class="gallery gallery--pub
                      gallery--1-columns">
-                    <div class="gallery__wrapper">
+                    <!--<div class="gallery__wrapper">-->
+
+                    <single-publication :authors="PublicationsDB[idx-1].Authors"
+                                        :description="PublicationsDB[idx-1].Description"
+                                        :issue="PublicationsDB[idx-1].Issue"
+                                        :journal="PublicationsDB[idx-1].Journal"
+                                        :key="idx" :link="PublicationsDB[idx-1].URL"
+                                        :pages="PublicationsDB[idx-1].Pages" :pub-date="PublicationsDB[idx-1].Pubdate"
+                                        :pubdate="PublicationsDB[idx-1].Pubdate" :title="PublicationsDB[idx-1].Title"
+                                        :volume="PublicationsDB[idx-1].Volume" v-for="idx in 4">
 
 
-                        <SinglePublication/>
-                        <SinglePublication/>
-                        <SinglePublication/>
+                    </single-publication>
 
 
-                    </div>
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -47,6 +54,7 @@
 
 <script>
     import SinglePublication from "@/components/SinglePublication";
+    import db from '@/db'
 
     export default {
         props: {
@@ -56,8 +64,46 @@
         components: {SinglePublication},
         data: function () {
             return {
-                tweets: null
-            };
+
+                CalloutFullWidth: 'callout--fullwidth',
+                CalloutGrid: 'callout--grid',
+
+                BlockHalfSize: 'block--half-size',
+                BlockRight: 'block--default-right',
+                BlockLeft: 'block--default-left',
+
+                BlockCtaLeft: 'block--cta-left',
+                BlockCtaRight: 'block--cta-right',
+                DarkBackground: true,
+                NoDarkBackground: false,
+
+                BlockHalfImage: 'block--half-image',
+                PublicationsDB: [],
+                Authors: '',
+                URL: '',
+
+                Title: '',
+                pubDate: '',
+                Year: '',
+
+                Volume: '',
+                Publisher: '',
+                Journal: '',
+                Source: '',
+                Pubdate: '',
+                Serial: '',
+
+
+                newReptile: ''
+            }
+
+        },
+        firestore() {
+            return {
+                PublicationsDB: db.collection('Publications').orderBy("Serial")
+
+            }
+
         }
     }
 </script>

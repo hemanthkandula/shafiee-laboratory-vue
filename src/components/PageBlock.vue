@@ -1,7 +1,7 @@
 <template>
     <section :class="SectionClass" class="callout  ">
-        <div :class="{DivClass, 'has-dark-background' : HasDarkBackground}"
-             class="block block--cta-left   has-light-mobile-bg has-mobile-bg">
+        <div :class="[HasDarkBackground? HasDarkBackgrounds: '', DivClass ]"
+             class="block  has-light-mobile-bg has-mobile-bg">
             <div class="block__background ng-isolate-scope is-loaded"
                  data-ng-lazy-background="/static/images/global/footer-cta_join-us.jpg"
                  style="background-image: url(/static/images/global/footer-cta_join-us.jpg);"></div>
@@ -36,7 +36,10 @@
     export default {
         data: function () {
 
-            return {}
+            return {
+
+                HasDarkBackgrounds: 'has-dark-background'
+            }
         }
 
         ,

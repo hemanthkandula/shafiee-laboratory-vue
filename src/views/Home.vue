@@ -1,16 +1,24 @@
 <template>
     <div class="home">
 
-        <RecentPublication>
-        </RecentPublication>
 
-        <NewsSlider>
-
-        </NewsSlider>
+        <home-hexagon></home-hexagon>
 
 
-        <page-block :div-class="BlockCtaLeft" :has-dark-background="NoDarkBackground"
+        <recent-publication>
+        </recent-publication>
+
+        <news-slider>
+
+        </news-slider>
+
+
+        <ResearchAreas/>
+
+
+        <page-block :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
                     :section-class=CalloutGrid></page-block>
+
         <page-block :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
@@ -27,10 +35,15 @@
     import RecentPublication from '@/components/RecentPubications'
     import NewsSlider from "@/components/NewsSlider";
     import PageBlock from "@/components/PageBlock";
+    import HomeHexagon from "@/views/HomeHexagon";
+    import ResearchAreas from "@/views/ResearchAreas";
 
     export default {
         name: 'home',
         components: {
+            ResearchAreas,
+            HomeHexagon,
+
             PageBlock,
             NewsSlider,
             RecentPublication

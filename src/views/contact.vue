@@ -1,12 +1,35 @@
 <template>
     <div class="contact">
-        <h1>This is an contact page</h1>
+
+        <page-block :div-class="BlockCtaLeft" :has-dark-background="NoDarkBackground"
+                    :section-class=CalloutFullWidth></page-block>
+
     </div>
 </template>
 
 <script>
+    import PageBlock from "@/components/PageBlock";
     export default {
-        name: "contact"
+        name: "contact",
+        components: {PageBlock},
+
+        data: function () {
+            return {
+                CalloutFullWidth: 'callout--fullwidth',
+                CalloutGrid: 'callout--grid',
+
+                BlockHalfSize: 'block--half-size',
+                BlockRight: 'block--default-right',
+                BlockLeft: 'block--default-left',
+
+                BlockCtaLeft: 'block--cta-left',
+                BlockCtaRight: 'block--cta-right',
+                DarkBackground: true,
+                NoDarkBackground: false
+
+
+            }
+        }
     }
 </script>
 

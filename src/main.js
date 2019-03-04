@@ -19,6 +19,10 @@ Vue.use(Vuesax);
 import 'material-icons/iconfont/material-icons.css';
 
 import './assets/css/custom.css';
+import './assets/css/hexagons.css'
+
+import './assets/css/hexagonrotated.css'
+
 
 import VueFirestore from 'vue-firestore';
 
@@ -26,8 +30,22 @@ import VueFirestore from 'vue-firestore';
 Vue.use(VueFirestore);
 
 
+import VueMouseParallax from 'vue-mouse-parallax'
+
+Vue.use(VueMouseParallax)
+
 
 // /. end
+// import VueParticles from 'vue-particles'
+// Vue.use(VueParticles)
+
+
+
+
+
+
+
+
 
 
 Vue.config.productionTip = false;

@@ -47,8 +47,7 @@ export default new Router({
             path: '/publications',
             name: 'Publications',
             component: Publications
-        }
-
+        },
         //
         // {
         //   path: '/about',

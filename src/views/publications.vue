@@ -42,7 +42,7 @@
                                                     :pub-date="Publication.Pubdate" :pubdate="Publication.Pubdate"
                                                     :title="Publication.Title" :volume="Publication.Volume"
                                                     v-for="(Publication,idx) in PublicationsDB">
-                                    {{ Publication.Authors }}
+                                    <!--{{ Publication.Authors }}-->
 
                                 </single-publication>
 

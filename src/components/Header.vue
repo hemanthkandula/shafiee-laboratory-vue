@@ -22,11 +22,11 @@
         <router-link exact to="/">
           <div class="header__logo">
 
-            <!--<img src="http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/shafiee-e1420467796229.png" alt="logo">-->
+            <!--<img src="../assets/logo.png" alt="logo">-->
 
 
             <img alt="logo" height="39"
-                 src="http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/shafiee-e1420467796229.png"
+                 src="../assets/logo.png"
                  width="200">
             <!--</a>-->
           </div>
@@ -42,7 +42,7 @@
           <router-link exact to="/">
             <div class="header__logo">
               <img alt="logo" height="39"
-                   src="http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/shafiee-e1420467796229.png"
+                   src="../assets/logo.png"
                    width="200">
 
 
@@ -60,9 +60,9 @@
 
         <div aria-level="1" class="header__item">
 
-          <router-link exact to="/research">
+          <router-link exact to="/">
             <a class="header__link">
-              Research
+              Home
             </a>
 
           </router-link>
