@@ -40,7 +40,7 @@
 
                     <vs-row vs-align="center"
                             vs-justify="space-around" vs-type="flex" vs-w="12">
-                        <vs-col vs-align="center" vs-justify="center" vs-type="flex" vs-w="2">
+                        <vs-col vs-align="center" vs-justify="center" vs-type="flex" vs-w="3">
                             <div class="hex">
                                 <div class="hexIn">
                                     <a class="hexLink" href="#">
@@ -54,11 +54,11 @@
 
                         </vs-col>
 
-                        <vs-col vs-align="center" vs-justify="center" vs-type="flex" vs-w="3">
+                        <vs-col vd-offset="4" vs-align="center" vs-justify="center" vs-type="flex" vs-w="4">
                             <div class="hexr">
                                 <div class="hexrIn">
                                     <a class="hexrLink" href="#">
-                                        <img src="../assets/homecen.jpg">
+                                        <img src="../assets/logo-inverted1.png" alt="">
                                         <h1>This is a title</h1>
                                         <p>Some sample text about </p>
                                     </a>
@@ -67,7 +67,7 @@
 
                         </vs-col>
 
-                        <vs-col vs-align="" vs-type="flex" vs-w="2">
+                        <vs-col vs-align="" vs-type="flex" vs-w="3">
                             <div class="hex">
                                 <div class="hexIn">
                                     <a class="hexLink" href="#">
