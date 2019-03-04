@@ -38,9 +38,9 @@
                 <div class="centerhex">
 
 
-                    <vs-row vs-align="center"
-                            vs-justify="space-around" vs-type="flex" vs-w="12">
-                        <vs-col vs-align="center" vs-justify="center" vs-type="flex" vs-w="3">
+                    <vs-row
+                             vs-w="12">
+                        <vs-col vs-offset="1" v-tooltip="'col - 3'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">
                             <div class="hex">
                                 <div class="hexIn">
                                     <a class="hexLink" href="#">
@@ -54,8 +54,9 @@
 
                         </vs-col>
 
-                        <vs-col vd-offset="4" vs-align="center" vs-justify="center" vs-type="flex" vs-w="4">
-                            <div class="hexr">
+                        <vs-col vs-offset="1" v-tooltip="'col - 4'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
+
+                        <div class="hexr">
                                 <div class="hexrIn">
                                     <a class="hexrLink" href="#">
                                         <img src="../assets/logo-inverted1.png" alt="">
@@ -67,7 +68,7 @@
 
                         </vs-col>
 
-                        <vs-col vs-align="" vs-type="flex" vs-w="3">
+                        <vs-col vs-offset="-1" v-tooltip="'col - 3'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">
                             <div class="hex">
                                 <div class="hexIn">
                                     <a class="hexLink" href="#">
