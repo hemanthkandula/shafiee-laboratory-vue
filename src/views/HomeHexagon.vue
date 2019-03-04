@@ -12,9 +12,9 @@
             </particles-j-s>
 
 
-            <!--<parallax-container>-->
+            <parallax-container>
 
-                <!--<parallax-element :parallaxStrength="5" :type="'depth'">-->
+                <parallax-element :parallaxStrength="7" :type="'depth'">
             <div class="allhex">
 
 
@@ -117,8 +117,8 @@
             </div>
 
 
-                <!--</parallax-element>-->
-            <!--</parallax-container>-->
+                </parallax-element>
+            </parallax-container>
 
         </div>
 
