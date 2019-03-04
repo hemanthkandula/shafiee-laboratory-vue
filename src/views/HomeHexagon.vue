@@ -1,6 +1,8 @@
 <template>
     <section class="hero hero--home ng-scope is-text-shown">
 
+
+
         <div class="hexahom">
 
 
@@ -10,6 +12,9 @@
             </particles-j-s>
 
 
+            <!--<parallax-container>-->
+
+                <!--<parallax-element :parallaxStrength="5" :type="'depth'">-->
             <div class="allhex">
 
 
@@ -41,6 +46,7 @@
                     <vs-row
                              vs-w="12">
                         <vs-col vs-offset="1" v-tooltip="'col - 3'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">
+
                             <div class="hex">
                                 <div class="hexIn">
                                     <a class="hexLink" href="#">
@@ -110,7 +116,12 @@
 
             </div>
 
+
+                <!--</parallax-element>-->
+            <!--</parallax-container>-->
+
         </div>
+
 
 
     </section>
