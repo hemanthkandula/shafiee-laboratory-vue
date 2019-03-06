@@ -35,6 +35,12 @@ import VueMouseParallax from 'vue-mouse-parallax'
 Vue.use(VueMouseParallax)
 
 
+
+
+import VueScrollProgressBar from 'vue-scroll-progressbar'
+
+Vue.use(VueScrollProgressBar)
+
 // /. end
 // import VueParticles from 'vue-particles'
 // Vue.use(VueParticles)

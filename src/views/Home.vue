@@ -1,10 +1,12 @@
 <template>
     <div class="home">
 
+        <vue-scroll-progress-bar @complete="handleComplete" height="2rem" />
 
-        <home-hexagon></home-hexagon>
 
 
+<!--<homehexagon> </homehexagon>-->
+        <hextest></hextest>
         <recent-publication>
         </recent-publication>
 
@@ -35,14 +37,16 @@
     import RecentPublication from '@/components/RecentPubications'
     import NewsSlider from "@/components/NewsSlider";
     import PageBlock from "@/components/PageBlock";
-    import HomeHexagon from "@/views/HomeHexagon";
     import ResearchAreas from "@/views/ResearchAreas";
+    import Hextest from "@/components/hextest";
 
     export default {
         name: 'home',
         components: {
+            Hextest,
+
             ResearchAreas,
-            HomeHexagon,
+
 
             PageBlock,
             NewsSlider,

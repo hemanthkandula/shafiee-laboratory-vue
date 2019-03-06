@@ -7,6 +7,12 @@
     -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Safari */
     transform: rotate(90deg);
+
+    z-index: 5000;
+
+
+    background-color: white;
+
 }
 
 .hexr::after {
@@ -16,6 +22,9 @@
 }
 
 .hexrIn {
+
+    background-color: white;
+
     position: absolute;
     width: 96%;
     padding-bottom: 110.851%; /* =  width / sin(60) */
