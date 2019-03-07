@@ -1,90 +1,149 @@
 <template>
 
+
+
     <div class="hexmain">
 
         <section class='tl'>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                        src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
 
 
 
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="centerhex">
+
+
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
 
 
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+
+
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
-            <article>
-                <figure>
-                    <h2>@mikmoro_mikel</h2>
-                    <p>Ni corre como la liebre, ni vuela como el ave ni nada como el pez</p>
-                </figure>
-                <img alt src='https://pbs.twimg.com/profile_images/822712444619489282/gni0UbSS.jpg' />
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video  style=' margin-left: 50%;
+transform: translateX(-50%); height: auto;      object-fit: cover;
+' autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/new.mp4"></video>
+                </div>
+
             </article>
+
+
+
 
 
         </section>
@@ -102,6 +161,28 @@
 </script>
 
 <style scoped>
+
+
+    .centerhex{
+
+        filter: drop-shadow(0 0 10px #333);
+
+
+    }
+
+    .inhexvideo {
+
+        height: 100%;
+        width: 100%;
+
+        position: relative;
+        overflow: hidden;
+
+
+
+
+        /*-webkit-transform: translateY(-50%) translateX(-50%);*/
+    }
 
 
     .hexmain {
@@ -132,6 +213,7 @@
         margin: .5rem auto;
     }
     article {
+
         background: var(--negroC);
         width: var(--width);
         height: var(--height);
@@ -224,8 +306,7 @@
         hyphens: auto;
         text-align: center;
     }
-    img,
-    [class*='svg-icon'] {
+    img,video    [class*='svg-icon'] {
         background: #fff;
         min-width: var(--radio);
         min-height: var(--radio);
@@ -241,7 +322,7 @@
         clip-path: inherit;
         z-index:  10;
     }
-    article:hover img,
+    article:hover img,video
     article:hover [class*='svg-icon'] {
         transform: translate(-50%, -50%) rotateY(.25turn);
     }
@@ -276,27 +357,7 @@
         shape-rendering: geometricprecision;
         text-rendering: geometricprecision;
     }
-    [class*='-codepen'] {
-        fill: #000;
-    }
-    [class*='-blogger'] {
-        fill: #F38936;
-    }
-    [class*='-face'] {
-        fill: #3B5998;
-    }
-    [class*='-gplus'] {
-        fill: #DC4E41;
-    }
-    [class*='-twitter'] {
-        fill: #1DA1F2;
-    }
-    [class*='-whatsa'] {
-        fill: #25D366;
-    }
-    [class*='-wp'] {
-        fill: #21759B;
-    }
+
     @media only screen and (max-width: 450px) {
         figure p {display: none;}
         figure h2 {font-size: 1rem;}
