@@ -3,17 +3,21 @@
 
 
     <div class="hexmain">
+        <!--<particles-j-s>-->
 
+
+        <!--</particles-j-s>-->
+
+
+        <particles-j-s></particles-j-s>
         <section class='tl'>
             <article >
 
 
                 <div class="Inhexvideo">
 
-                <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                        src="../assets/videos/new.mp4"></video>
+                <video class="videohex"   autoplay="" loop="" muted="" playsinline=""
+                        src="../assets/videos/loc1.mp4"></video>
                 </div>
 
             </article>
@@ -22,10 +26,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/fingerprint.mp4"></video>
                 </div>
 
             </article>
@@ -34,10 +36,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/anish.mp4"></video>
                 </div>
 
             </article>
@@ -46,10 +46,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/embryoinsem.mp4"></video>
                 </div>
 
             </article>
@@ -61,19 +59,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="centerhex">
-
-
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/indoor.mp4"></video>
                 </div>
 
             </article>
@@ -82,10 +69,18 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
+                           src="../assets/videos/3dprinting_1.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/outdoor.mp4"></video>
                 </div>
 
             </article>
@@ -98,10 +93,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/sperm_testing_on_phone.mp4"></video>
                 </div>
 
             </article>
@@ -110,10 +103,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/smartphonemore.mp4"></video>
                 </div>
 
             </article>
@@ -122,10 +113,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/Media1.mp4"></video>
                 </div>
 
             </article>
@@ -134,10 +123,8 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
                 <div class="Inhexvideo">
 
-                    <video  style=' margin-left: 50%;
-transform: translateX(-50%); height: auto;      object-fit: cover;
-' autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/new.mp4"></video>
+                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            src="../assets/videos/smartphone-.mp4"></video>
                 </div>
 
             </article>
@@ -155,8 +142,10 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 </template>
 
 <script>
+    import ParticlesJS from "@/components/ParticlesJS";
     export default {
-        name: "hextest"
+        name: "hextest",
+        components: {ParticlesJS}
     }
 </script>
 
@@ -170,14 +159,42 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
 
     }
 
+    .videohex{
+        position: absolute;
+
+
+        min-width: var(--radio);
+        min-height: var(--radio);
+        max-width: var(--width);
+        max-height: var(--height);
+        position: absolute;
+
+
+        left: 50%;
+
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        object-fit: contain;
+    }
+
+
+    #particles-j-s {
+        position: center;
+        width: 100%;
+        /*height: 100%;*/
+        z-index: 1000;
+
+        height: 90vh;
+
+    }
+
     .inhexvideo {
 
         height: 100%;
         width: 100%;
 
         position: relative;
-        overflow: hidden;
-
 
 
 
@@ -310,7 +327,7 @@ transform: translateX(-50%); height: auto;      object-fit: cover;
         background: #fff;
         min-width: var(--radio);
         min-height: var(--radio);
-        max-widt: var(--width);
+        max-width: var(--width);
         max-height: var(--height);
         position: absolute;
         top: 50%;
