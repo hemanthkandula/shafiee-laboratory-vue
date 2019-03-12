@@ -7,6 +7,7 @@ import News from './views/news.vue'
 import People from './views/people.vue'
 import Positions from './views/positions.vue'
 import Publications from './views/publications.vue'
+import Research from "@/views/Research";
 
 
 Vue.use(Router);
@@ -19,6 +20,11 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home
+        },
+        {
+            path: '/research',
+            name: 'research',
+            component: Research
         },
         {
             path: '/contact',

@@ -2,12 +2,18 @@
     <section :class="SectionClass" class="callout  ">
         <div :class="[HasDarkBackground? HasDarkBackgrounds: '', DivClass ]"
              class="block  has-light-mobile-bg has-mobile-bg">
+
+        <div class="block__background--mobile ng-isolate-scope is-loaded"
+
+             v-bind:style="{ backgroundImage: 'url(' + BackgroundImage + ')' }"
+
+        ></div>
+
             <div class="block__background ng-isolate-scope is-loaded"
-                 data-ng-lazy-background="/static/images/global/footer-cta_join-us.jpg"
-                 style="background-image: url(/static/images/global/footer-cta_join-us.jpg);"></div>
-            <div class="block__background--mobile ng-isolate-scope is-loaded"
-                 data-ng-lazy-background="/static/images/global/footer-cta_join-us-m.jpg"
-                 style="background-image: url(./static/images/global/footer-cta_join-us-m.jpg);"></div>
+
+
+                 v-bind:style="{ backgroundImage: 'url(' + BackgroundImage + ')' }"></div>
+
             <div class="block__content-wrapper">
                 <div class="content block__content    ">
                     <div class="content__text">
@@ -33,18 +39,28 @@
     </section>
 </template>
 <script>
+
+    import img from "@/assets/images/Spermcard.jpg"
     export default {
         data: function () {
 
             return {
 
-                HasDarkBackgrounds: 'has-dark-background'
+                HasDarkBackgrounds: 'has-dark-background',
+                Imag : img
             }
         }
 
         ,
         name: 'PageBlock',
         props: {
+            BackgroundImage: {
+                // default: 'Lucas'
+            },
+
+
+
+
             SectionClass: {
                 type: String,
                 required: true
@@ -62,6 +78,7 @@
             }
         }
     }
+
 
 
 </script>

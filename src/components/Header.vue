@@ -69,6 +69,16 @@
 
         </div>
 
+        <div aria-level="1" class="header__item">
+
+          <router-link exact to="/research">
+            <a class="header__link">
+              Research
+            </a>
+
+          </router-link>
+
+        </div>
 
         <div aria-level="1" class="header__item">
           <router-link exact to="/publications">
@@ -102,14 +112,7 @@
         </div>
 
 
-        <div aria-level="1" class="header__item">
-          <router-link exact to="/news">
 
-            <a class="header__link">
-              News
-            </a>
-          </router-link>
-        </div>
 
 
         <div aria-level="1" class="header__item">

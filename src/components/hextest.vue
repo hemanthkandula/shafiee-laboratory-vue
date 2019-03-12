@@ -10,47 +10,12 @@
 
 
         <particles-j-s></particles-j-s>
+
+
         <section class='tl'>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                <video class="videohex"   autoplay="" loop="" muted="" playsinline=""
-                        src="../assets/videos/loc1.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/fingerprint.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/anish.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/embryoinsem.mp4"></video>
-                </div>
-
-            </article>
+                <HexVideo :key="index+'-lab1'" v-for="(news ,index) in 5"
+                          :current-playing="CurrentPlaying[index]"
+                              :index="index"/>
 
 
 
@@ -59,75 +24,18 @@
 
                 <div class="Inhexvideo">
 
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/indoor.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
-                           src="../assets/videos/3dprinting_1.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/outdoor.mp4"></video>
+                    <video class="videohex" autoplay=""  muted="" playsinline=""
+                           src="../assets/videos/3d.mp4"></video>
                 </div>
 
             </article>
 
+            <HexVideo :key="idx +'-lab2'" v-for="(news ,idx) in 5"
+                      :current-playing="CurrentPlaying[idx+5]" :pick-video="PickVideo(CurrentPlaying[idx+5])"
+                      />
 
 
 
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/sperm_testing_on_phone.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/smartphonemore.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/Media1.mp4"></video>
-                </div>
-
-            </article>
-            <article >
-
-
-                <div class="Inhexvideo">
-
-                    <video  class="videohex" autoplay="" loop="" muted="" playsinline=""
-                            src="../assets/videos/smartphone-.mp4"></video>
-                </div>
-
-            </article>
 
 
 
@@ -143,9 +51,146 @@
 
 <script>
     import ParticlesJS from "@/components/ParticlesJS";
+
+    import vid1 from "@/assets/videos/1.mp4";
+    import vid2 from "@/assets/videos/2.mp4";
+
+    import vid3 from "@/assets/videos/3.mp4";
+    import vid4 from "@/assets/videos/4.mp4";
+    import vid5 from "@/assets/videos/5.mp4";
+    import vid6 from "@/assets/videos/6.mp4";
+    import vid7 from "@/assets/videos/7.mp4";
+    import vid8 from "@/assets/videos/8.mp4";
+    import vid9 from "@/assets/videos/9.mp4";
+    import vid10 from "@/assets/videos/10.mp4";
+    import vid11 from "@/assets/videos/11.mp4";
+    import vid12 from "@/assets/videos/12.mp4";
+    import vid13 from "@/assets/videos/13.mp4";
+    import vid14 from "@/assets/videos/14.mp4";
+    import vid15 from "@/assets/videos/15.mp4";
+    import vid16 from "@/assets/videos/16.mp4";
+    import vid17 from "@/assets/videos/17.mp4";
+    import vid18 from "@/assets/videos/18.mp4";
+    import vid19 from "@/assets/videos/19.mp4";
+    import vid20 from "@/assets/videos/20.mp4";
+    import HexVideo from "@/components/HexVideo";
+
+
     export default {
+
         name: "hextest",
-        components: {ParticlesJS}
+        components: {HexVideo, ParticlesJS},
+
+
+
+
+
+
+        data:function(){
+
+            return {
+                videosrc : "../assets/videos/",
+                videos: [vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
+                    vid14,vid15,vid16,vid17,vid18,vid19,vid20],
+
+
+
+
+
+
+
+            }
+
+        },
+
+        props:{
+
+            AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
+                vid14,vid15,vid16,vid17,vid18,vid19,vid20 ],
+
+            CurrentPlaying:[]
+        },
+
+        created() {
+
+            while(this.CurrentPlaying.length < 10){
+                let r = Math.floor(Math.random()*20) + 1;
+                if(this.CurrentPlaying.indexOf(this.videos[r]) === -1) this.CurrentPlaying.push(this.videos[r]);
+            }
+
+
+
+
+        },
+
+
+            computed:{
+
+
+
+            /**
+             * @return {string}
+             */
+            PickVideo: function (currentPlayingElement) {
+
+
+
+                var index = this.CurrentPlaying.indexOf(currentPlayingElement);
+
+
+
+
+                this.AvailablePlaying = this.arrayDiff1(this.CurrentPlaying,this.AvailablePlaying)
+
+                let random = Math.floor(Math.random() * (this.AvailablePlaying.length - 1 + 1)) + 1 ;
+                let video = this.AvailablePlaying[random];
+
+                this.CurrentPlaying[index] = video
+
+
+                // this.CurrentPlaying.splice(index, 0, video);
+
+
+                this.AvailablePlaying.splice(0, 0, currentPlayingElement);
+
+
+                console.log(currentPlayingElement)
+
+
+
+
+
+
+
+                return (video)
+
+            },  arrayDiff1: function (a1, a2) {
+
+        var a = [], diff = [];
+
+        for (var i = 0; i < a1.length; i++) {
+            a[a1[i]] = true;
+        }
+
+        for (var j = 0; j < a2.length; j++) {
+            if (a[a2[j]]) {
+                delete a[a2[j]];
+            } else {
+                a[a2[j]] = true;
+            }
+        }
+
+        for (var k in a) {
+            diff.push(k);
+        }
+
+        return diff;
+    }
+
+
+
+
+    }
     }
 </script>
 
@@ -167,9 +212,6 @@
         min-height: var(--radio);
         max-width: var(--width);
         max-height: var(--height);
-        position: absolute;
-
-
         left: 50%;
 
         top: 50%;
@@ -225,7 +267,7 @@
         grid-template-columns: repeat(16, 2fr);
         grid-gap: 0vmin;
         max-width: 200vmin;
-        padding-left: 15vmin;
+        padding-left: 5vmin;
 
         margin: .5rem auto;
     }

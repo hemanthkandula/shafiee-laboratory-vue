@@ -3,7 +3,9 @@
 
 
         <page-block :div-class="BlockHalfImage" :has-dark-background="NoDarkBackground"
-                    :section-class=CalloutFullWidth></page-block>
+                    :section-class=CalloutFullWidth>
+
+        </page-block>
 
 
         <section class="group group--default    ">
@@ -44,14 +46,16 @@
                                 </div>
                                 <div class="quote__source">
                                     <div class="quote__image"
-                                         style="background-image: url(../assets/Hadi.jpg)">
+                                         v-bind:style="{ backgroundImage: 'url(' + HadiImage + ')' }"
+
+                                        >
 
 
                                     </div>
 
 
                                     <div class="quote__details">
-                                        <a class="quote__author" href="/Hadi Shafiee">
+                                        <a class="quote__author" href="/Hadi-Shafiee">
                                             HADI SHAFIEE, PHD
 
                                         </a>
@@ -117,15 +121,15 @@
                                 global health, vaccine delivery, and fertility.</p>
                         </div>
                         <div class="quote__source">
-                            <!--<div class="quote__image"-->
-                            <!--style="background-image: url(../assets/Hadi.jpg)">-->
+                            <div class="quote__image"
+                                 v-bind:style="{ backgroundImage: 'url(' + HadiImage + ')' }">
 
 
-                            <!--</div>-->
-                            <div>
-                                <vs-avatar size="large"
-                                           src="../assets/Hadi.jpg"/>
                             </div>
+                            <!--<div>-->
+                                <!--<vs-avatar size="large"-->
+                                           <!--src="../assets/Hadi.jpg"/>-->
+                            <!--</div>-->
 
 
                             <div class="quote__details">
@@ -144,65 +148,7 @@
         </section>
 
 
-        <section class="hero hero--detail has-mobile-bg">
-            <div class="hero__background ng-isolate-scope is-loaded"
-                 data-ng-lazy-background="/static/images/research/research-overview_hero-short.jpg"
-                 style="background-image: url(&quot;/static/images/research/research-overview_hero-short.jpg&quot;);">
-            </div>
-            <div class="hero__background--mobile ng-isolate-scope is-loaded"
-                 data-ng-lazy-background="/static/images/research/research-overview_hero-short-m.jpg"
-                 style="background-image: url(&quot;/static/images/research/research-overview_hero-short-m.jpg&quot;);"></div>
-
-
-            <div class="hero__content-wrapper   ">
-                <div class="hero__content">
-
-
-                </div>
-
-
-                <div class="content hero__content-inner    ">
-                    <div class="content__text">
-                        <span class="content__brow">Researchers</span>
-                        <div class="content__header">
-                            <h1 class="content__title ">
-
-                                <vs-row>
-                                    <vs-col v-tooltip="'col - 4'" vs-align="center" vs-justify="center" vs-offset="4"
-                                            vs-type="flex" vs-w="4">
-                                        Researchers
-                                    </vs-col>
-                                </vs-row>
-                            </h1>
-                        </div>
-                        <div class="content__body">
-                            <p>Some thing about People.</p>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            <div>
-
-
-                <p>
-                    <br>
-                    <br>
-
-
-                    <br>
-
-
-                </p>
-
-            </div>
-
-
-        </section>
-        <section>
+            <section>
             <vs-row>
                 <vs-col v-tooltip="'col - 10'" vs-align="center" vs-justify="center" vs-offset="1" vs-type="flex"
                         vs-w="10">
@@ -226,7 +172,7 @@
                         </vs-tab>
 
 
-                        <vs-tab vs-label="Graduate Researchers">
+                        <vs-tab vs-label="Research Staff">
                             <div class="at-grid" data-column="4">
 
                                 <div :key="index" class="at-column" v-for="index in 6">
@@ -276,7 +222,7 @@
                             </div>
 
                         </vs-tab>
-                        <vs-tab vs-label="Undergraduate Researchers">
+                        <vs-tab vs-label="Student Researchers">
                             <div class="at-grid" data-column="4">
 
                                 <div :key="index" class="at-column" v-for="index in 8">
@@ -382,243 +328,243 @@
         </section>
 
 
-        <section class="group group--pub    ">
-            <div class="group__wrapper">
+        <!--<section class="group group&#45;&#45;pub    ">-->
+            <!--<div class="group__wrapper">-->
 
-                <div class="group__content-wrapper">
-
-
-                    <div class="content group__content    ">
-                        <div class="content__text">
-
-                            <span class="content__brow">Alumni</span>
-                            <div class="content__header">
-                                <h2 class="content__title ">
-                                    Alumni
-                                </h2>
-
-                            </div>
-
-                            <div class="content__body">
-                                <p>Some thing about alumni</p>
-                            </div>
-                        </div>
+                <!--<div class="group__content-wrapper">-->
 
 
-                    </div>
-                </div>
+                    <!--<div class="content group__content    ">-->
+                        <!--<div class="content__text">-->
 
-                <div class="group__gallery-wrapper">
+                            <!--<span class="content__brow">Alumni</span>-->
+                            <!--<div class="content__header">-->
+                                <!--<h2 class="content__title ">-->
+                                    <!--Alumni-->
+                                <!--</h2>-->
 
+                            <!--</div>-->
 
-                    <div class="gallery gallery--pub gallery--1-columns ">
-
-
-                        <vs-row>
-                            <vs-col v-tooltip="'col - 12'" vs-align="center" vs-justify="center" vs-offset="0"
-                                    vs-type="flex"
-                                    vs-w="12">
-                                <v-expansion-panel>
-                                    <v-expansion-panel-content>
-                                        <div slot="header">
-
-                                            <vs-row>
-                                                <vs-col v-tooltip="'col - 4'" vs-align="center" vs-justify="center"
-                                                        vs-offset="5" vs-type="flex" vs-w="4">
-                                                    <h2 class="search__title">Alumni</h2>
-                                                </vs-col>
-                                            </vs-row>
-
-                                        </div>
+                            <!--<div class="content__body">-->
+                                <!--<p>Some thing about alumni</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
 
 
-                                        <vs-tabs vs-alignment="fixed" vs-position="top">
-                                            <vs-tab vs-label="Postdoctoral Fellows">
+                    <!--</div>-->
+                <!--</div>-->
 
-                                                <div class="at-grid" data-column="4">
-
-                                                    <div :key="index" class="at-column" v-for="index in 3">
-                                                        <ProfileCard/>
+                <!--<div class="group__gallery-wrapper">-->
 
 
-                                                    </div>
+                    <!--<div class="gallery gallery&#45;&#45;pub gallery&#45;&#45;1-columns ">-->
 
 
-                                                </div>
+                        <!--<vs-row>-->
+                            <!--<vs-col v-tooltip="'col - 12'" vs-align="center" vs-justify="center" vs-offset="0"-->
+                                    <!--vs-type="flex"-->
+                                    <!--vs-w="12">-->
+                                <!--<v-expansion-panel>-->
+                                    <!--<v-expansion-panel-content>-->
+                                        <!--<div slot="header">-->
+
+                                            <!--<vs-row>-->
+                                                <!--<vs-col v-tooltip="'col - 4'" vs-align="center" vs-justify="center"-->
+                                                        <!--vs-offset="5" vs-type="flex" vs-w="4">-->
+                                                    <!--<h2 class="search__title">Alumni</h2>-->
+                                                <!--</vs-col>-->
+                                            <!--</vs-row>-->
+
+                                        <!--</div>-->
 
 
-                                            </vs-tab>
+                                        <!--<vs-tabs vs-alignment="fixed" vs-position="top">-->
+                                            <!--<vs-tab vs-label="Postdoctoral Fellows">-->
+
+                                                <!--<div class="at-grid" data-column="4">-->
+
+                                                    <!--<div :key="index" class="at-column" v-for="index in 3">-->
+                                                        <!--<ProfileCard/>-->
 
 
-                                            <vs-tab vs-label="Graduate Researchers">
-                                                <div class="at-grid" data-column="4">
-
-                                                    <div :key="index" class="at-column" v-for="index in 6">
-                                                        <div class="at-user">
+                                                    <!--</div>-->
 
 
-                                                            <div class="at-user__avatar"><img alt=""
-                                                                                              src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>
-                                                            </div>
+                                                <!--</div>-->
 
-                                                            <div class="at-user__name">First Last</div>
-                                                            <div class="at-user__title">Position</div>
-                                                            <ul class="at-social">
+
+                                            <!--</vs-tab>-->
+
+
+                                            <!--<vs-tab vs-label="Graduate Researchers">-->
+                                                <!--<div class="at-grid" data-column="4">-->
+
+                                                    <!--<div :key="index" class="at-column" v-for="index in 6">-->
+                                                        <!--<div class="at-user">-->
+
+
+                                                            <!--<div class="at-user__avatar"><img alt=""-->
+                                                                                              <!--src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>-->
+                                                            <!--</div>-->
+
+                                                            <!--<div class="at-user__name">First Last</div>-->
+                                                            <!--<div class="at-user__title">Position</div>-->
+                                                            <!--<ul class="at-social">-->
+                                                                <!--&lt;!&ndash;<li class="at-social__item"><a href="">&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;</svg></a></li>&ndash;&gt;-->
+
+                                                                <!--<li class="at-social__item">-->
+                                                                    <!--<a href="">-->
+                                                                        <!--<img alt="" height="18"-->
+                                                                             <!--src="images/google_scholar_1094619.png"-->
+                                                                             <!--width="18"/>-->
+
+                                                                    <!--</a>-->
+                                                                <!--</li>-->
                                                                 <!--<li class="at-social__item"><a href="">-->
-                                                                <!--<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">-->
-                                                                <!--<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>-->
-                                                                <!--</svg></a></li>-->
-
-                                                                <li class="at-social__item">
-                                                                    <a href="">
-                                                                        <img alt="" height="18"
-                                                                             src="images/google_scholar_1094619.png"
-                                                                             width="18"/>
-
-                                                                    </a>
-                                                                </li>
-                                                                <li class="at-social__item"><a href="">
-                                                                    <svg height="18" viewBox="0 0 24 24" width="18"
-                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"
-                                                                              fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </a></li>
-                                                                <li class="at-social__item"><a href="">
-                                                                    <svg height="18" viewBox="0 0 24 24" width="18"
-                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"
-                                                                              fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </a></li>
-                                                            </ul>
-
-
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-
-                                            </vs-tab>
-                                            <vs-tab vs-label="Undergraduate Researchers">
-                                                <div class="at-grid" data-column="4">
-
-                                                    <div :key="index" class="at-column" v-for="index in 8">
-                                                        <div class="at-user">
-
-
-                                                            <div class="at-user__avatar"><img alt=""
-                                                                                              src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>
-                                                            </div>
-
-                                                            <div class="at-user__name">First Last</div>
-                                                            <div class="at-user__title">Position</div>
-                                                            <ul class="at-social">
+                                                                    <!--<svg height="18" viewBox="0 0 24 24" width="18"-->
+                                                                         <!--xmlns="http://www.w3.org/2000/svg">-->
+                                                                        <!--<path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"-->
+                                                                              <!--fill-rule="evenodd"></path>-->
+                                                                    <!--</svg>-->
+                                                                <!--</a></li>-->
                                                                 <!--<li class="at-social__item"><a href="">-->
-                                                                <!--<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">-->
-                                                                <!--<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>-->
-                                                                <!--</svg></a></li>-->
-
-                                                                <li class="at-social__item">
-                                                                    <a href="">
-                                                                        <img alt="" height="18"
-                                                                             src="images/google_scholar_1094619.png"
-                                                                             width="18"/>
-
-                                                                    </a>
-                                                                </li>
-                                                                <li class="at-social__item"><a href="">
-                                                                    <svg height="18" viewBox="0 0 24 24" width="18"
-                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"
-                                                                              fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </a></li>
-                                                                <li class="at-social__item"><a href="">
-                                                                    <svg height="18" viewBox="0 0 24 24" width="18"
-                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"
-                                                                              fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </a></li>
-                                                            </ul>
+                                                                    <!--<svg height="18" viewBox="0 0 24 24" width="18"-->
+                                                                         <!--xmlns="http://www.w3.org/2000/svg">-->
+                                                                        <!--<path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"-->
+                                                                              <!--fill-rule="evenodd"></path>-->
+                                                                    <!--</svg>-->
+                                                                <!--</a></li>-->
+                                                            <!--</ul>-->
 
 
-                                                        </div>
-                                                    </div>
+                                                        <!--</div>-->
+                                                    <!--</div>-->
 
 
-                                                </div>
-                                            </vs-tab>
-                                            <vs-tab vs-label="High School Interns">
-                                                <div class="at-grid" data-column="4">
+                                                <!--</div>-->
 
-                                                    <div :key="index" class="at-column" v-for="index in 2">
-                                                        <div class="at-user">
+                                            <!--</vs-tab>-->
+                                            <!--<vs-tab vs-label="Undergraduate Researchers">-->
+                                                <!--<div class="at-grid" data-column="4">-->
+
+                                                    <!--<div :key="index" class="at-column" v-for="index in 8">-->
+                                                        <!--<div class="at-user">-->
 
 
-                                                            <div class="at-user__avatar"><img alt=""
-                                                                                              src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>
-                                                            </div>
+                                                            <!--<div class="at-user__avatar"><img alt=""-->
+                                                                                              <!--src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>-->
+                                                            <!--</div>-->
 
-                                                            <div class="at-user__name">First Last</div>
-                                                            <div class="at-user__title">Position</div>
-                                                            <ul class="at-social">
+                                                            <!--<div class="at-user__name">First Last</div>-->
+                                                            <!--<div class="at-user__title">Position</div>-->
+                                                            <!--<ul class="at-social">-->
+                                                                <!--&lt;!&ndash;<li class="at-social__item"><a href="">&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;</svg></a></li>&ndash;&gt;-->
+
+                                                                <!--<li class="at-social__item">-->
+                                                                    <!--<a href="">-->
+                                                                        <!--<img alt="" height="18"-->
+                                                                             <!--src="images/google_scholar_1094619.png"-->
+                                                                             <!--width="18"/>-->
+
+                                                                    <!--</a>-->
+                                                                <!--</li>-->
                                                                 <!--<li class="at-social__item"><a href="">-->
-                                                                <!--<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">-->
-                                                                <!--<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>-->
-                                                                <!--</svg></a></li>-->
-
-                                                                <li class="at-social__item">
-                                                                    <a href="">
-                                                                        <img alt="" height="18"
-                                                                             src="images/google_scholar_1094619.png"
-                                                                             width="18"/>
-
-                                                                    </a>
-                                                                </li>
-                                                                <li class="at-social__item"><a href="">
-                                                                    <svg height="18" viewBox="0 0 24 24" width="18"
-                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"
-                                                                              fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </a></li>
-                                                                <li class="at-social__item"><a href="">
-                                                                    <svg height="18" viewBox="0 0 24 24" width="18"
-                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"
-                                                                              fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </a></li>
-                                                            </ul>
+                                                                    <!--<svg height="18" viewBox="0 0 24 24" width="18"-->
+                                                                         <!--xmlns="http://www.w3.org/2000/svg">-->
+                                                                        <!--<path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"-->
+                                                                              <!--fill-rule="evenodd"></path>-->
+                                                                    <!--</svg>-->
+                                                                <!--</a></li>-->
+                                                                <!--<li class="at-social__item"><a href="">-->
+                                                                    <!--<svg height="18" viewBox="0 0 24 24" width="18"-->
+                                                                         <!--xmlns="http://www.w3.org/2000/svg">-->
+                                                                        <!--<path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"-->
+                                                                              <!--fill-rule="evenodd"></path>-->
+                                                                    <!--</svg>-->
+                                                                <!--</a></li>-->
+                                                            <!--</ul>-->
 
 
-                                                        </div>
-                                                    </div>
+                                                        <!--</div>-->
+                                                    <!--</div>-->
 
 
-                                                </div>
-                                            </vs-tab>
-                                        </vs-tabs>
+                                                <!--</div>-->
+                                            <!--</vs-tab>-->
+                                            <!--<vs-tab vs-label="High School Interns">-->
+                                                <!--<div class="at-grid" data-column="4">-->
+
+                                                    <!--<div :key="index" class="at-column" v-for="index in 2">-->
+                                                        <!--<div class="at-user">-->
 
 
-                                    </v-expansion-panel-content>
-                                </v-expansion-panel>
-                            </vs-col>
+                                                            <!--<div class="at-user__avatar"><img alt=""-->
+                                                                                              <!--src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>-->
+                                                            <!--</div>-->
+
+                                                            <!--<div class="at-user__name">First Last</div>-->
+                                                            <!--<div class="at-user__title">Position</div>-->
+                                                            <!--<ul class="at-social">-->
+                                                                <!--&lt;!&ndash;<li class="at-social__item"><a href="">&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;</svg></a></li>&ndash;&gt;-->
+
+                                                                <!--<li class="at-social__item">-->
+                                                                    <!--<a href="">-->
+                                                                        <!--<img alt="" height="18"-->
+                                                                             <!--src="images/google_scholar_1094619.png"-->
+                                                                             <!--width="18"/>-->
+
+                                                                    <!--</a>-->
+                                                                <!--</li>-->
+                                                                <!--<li class="at-social__item"><a href="">-->
+                                                                    <!--<svg height="18" viewBox="0 0 24 24" width="18"-->
+                                                                         <!--xmlns="http://www.w3.org/2000/svg">-->
+                                                                        <!--<path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"-->
+                                                                              <!--fill-rule="evenodd"></path>-->
+                                                                    <!--</svg>-->
+                                                                <!--</a></li>-->
+                                                                <!--<li class="at-social__item"><a href="">-->
+                                                                    <!--<svg height="18" viewBox="0 0 24 24" width="18"-->
+                                                                         <!--xmlns="http://www.w3.org/2000/svg">-->
+                                                                        <!--<path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"-->
+                                                                              <!--fill-rule="evenodd"></path>-->
+                                                                    <!--</svg>-->
+                                                                <!--</a></li>-->
+                                                            <!--</ul>-->
 
 
-                        </vs-row>
+                                                        <!--</div>-->
+                                                    <!--</div>-->
 
 
-                    </div>
+                                                <!--</div>-->
+                                            <!--</vs-tab>-->
+                                        <!--</vs-tabs>-->
 
 
-                </div>
+                                    <!--</v-expansion-panel-content>-->
+                                <!--</v-expansion-panel>-->
+                            <!--</vs-col>-->
 
-            </div>
-        </section>
+
+                        <!--</vs-row>-->
+
+
+                    <!--</div>-->
+
+
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</section>-->
 
 
         <section class="group group--pub  has-white-background  ">
@@ -668,7 +614,7 @@
                                 </div>
 
                             </vs-tab>
-                            <vs-tab vs-label="Graduate Researchers">
+                            <vs-tab vs-label="Research Staff">
 
                                 <div class="at-grid" data-column="4">
 
@@ -682,7 +628,7 @@
                                 </div>
 
                             </vs-tab>
-                            <vs-tab vs-label="Undergraduate Researchers">
+                            <vs-tab vs-label="Student Researchers">
                                 <div class="at-grid" data-column="4">
 
                                     <div :key="index" class="at-column" v-for="index in 8">
@@ -721,6 +667,9 @@
         </section>
 
 
+        <page-block :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+                    :section-class=CalloutFullWidth></page-block>
+
     </div>
 
 </template>
@@ -730,11 +679,14 @@
     import PageBlock from "@/components/PageBlock";
     import ProfileCard from "@/views/ProfileCard";
     import ProfileCardAlumni from "@/views/ProfileCardAlumni";
+    import hadi from "@/assets/images/hadi1.jpg"
 
     export default {
         name: "people",
         data: function () {
             return {
+
+                HadiImage: hadi,
 
                 CalloutFullWidth: 'callout--fullwidth',
                 CalloutGrid: 'callout--grid',

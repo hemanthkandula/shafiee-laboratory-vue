@@ -14,192 +14,31 @@
 
         <!-- swiper -->
         <swiper :options="swiperOption">
-            <swiper-slide>
+            <swiper-slide :key="index" v-for="(news ,index) in NewsDB">
                 <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-1/" title="News 1"><span class="hidden-text">News 1 </span></a>
-                    <div class="card__image" style="background-image: url(a)"></div>
+                    <a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>
+                    <div class="card__image" v-bind:style="{ backgroundImage: 'url(' + news.img + ')' }"></div>
                     <div class="content card--in-carousel    ">
                         <div class="content__text">
                             <div class="content__header">
                                 <div class="content__title ">
-                                    News 1
+                                    {{news.title}}
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
                             <div class="content__body">
-                                <p>News 2</p>
+                                <p> {{ news.description}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </swiper-slide>
 
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" href="/news-2/" target="_blank" title="News 2"><span class="hidden-text">News 2</span></a>
-                    <div class="card__image" style="background-image: url()"></div>
-                    <div class="content card--in-carousel    ">
-                        <div class="content__text">
-                            <div class="content__header">
-                                <div class="content__title ">
-                                    News 2
-                                </div>
-                            </div>
-                            <div class="content__body">
-                                <p>News 2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
 
     </section>
@@ -212,7 +51,11 @@
 
     import 'swiper/dist/css/swiper.css'
 
+
     import {swiper, swiperSlide} from 'vue-awesome-swiper'
+    import db from '@/db'
+
+
 
 
     export default {
@@ -230,23 +73,89 @@
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
                     }
-                }
+                },
+
+                newsdata: null,
+                meta : [],
+                NewsDB: []
+
+
             }
+        },
+        // mounted(){
+        //
+        //     // axios.get('https://www.bostonherald.com/2019/03/02/smartphone-ovulation-test-a-breakthrough-at-the-brigham/')
+        //     //     .then(response => {
+        //     //         // JSON responses are automatically parsed.
+        //     //         this.newsdata = response.data
+        //     //     })
+        //     //     .catch(e => {
+        //     //         this.errors.push(e)
+        //     //     })
+        //     var accesscontrolurl = 'https://cors-anywhere.herokuapp.com/';
+        //
+        //     this.$http.get(accesscontrolurl+'https://www.bostonherald.com/2019/03/02/smartphone-ovulation-test-a-breakthrough-at-the-brigham/')
+        //         .then(response => (this.newsdata = response.data))
+        //
+        //
+        //     var parser = new DOMParser();
+        //
+        //     var htmlDoc = parser.parseFromString(this.newsdata, 'text/html');
+        //
+        //     // this.meta = this.newsdata[data]
+        //
+        //
+        //     var title = htmlDoc.getElementsByTagName('meta')
+        //
+        //     this.meta = htmlDoc.item(0).innerHTML
+        //
+        //
+        //
+        // }
+
+        firestore() {
+            return {
+                NewsDB: db.collection('News').orderBy("id")
+
+            }
+
         }
+
+
+
     }
 </script>
 
 <style scoped>
     .swiper-slide {
-        width: 40%;
+        width: 30%;
     }
 
-    /*.swiper-slide:nth-child(2n) {*/
-    /*width: 40%;*/
-    /*}*/
+    .card__link[target=_blank]::after {
 
-    /*.swiper-slide:nth-child(3n) {*/
-    /*width: 20%;*/
-    /*}*/
+
+        background: center/cover no-repeat url(../assets/icons/link_icon.png);
+        bottom: 12px;
+        content: '';
+        height: 14px;
+        opacity: 0;
+        position: absolute;
+        right: 12px;
+        transition: opacity .4s;
+        width: 14px
+    }
+
+
+
+
+
+
+
+
+
 </style>

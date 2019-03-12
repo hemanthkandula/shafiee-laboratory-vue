@@ -1,7 +1,7 @@
 <template>
     <div class="home">
 
-        <vue-scroll-progress-bar @complete="handleComplete" height="2rem" />
+
 
 
 
@@ -15,7 +15,7 @@
         </news-slider>
 
 
-        <ResearchAreas/>
+        <!--<ResearchAreas/>-->
 
 
         <page-block :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
@@ -27,6 +27,8 @@
 
         <page-block :div-class="BlockRight" :has-dark-background="NoDarkBackground"
                     :section-class=CalloutGrid></page-block>
+            <page-block :div-class="BlockCtaLeft" :has-dark-background="DarkBackground"
+                        :section-class=CalloutFullWidth></page-block>
 
 
     </div>
@@ -37,7 +39,6 @@
     import RecentPublication from '@/components/RecentPubications'
     import NewsSlider from "@/components/NewsSlider";
     import PageBlock from "@/components/PageBlock";
-    import ResearchAreas from "@/views/ResearchAreas";
     import Hextest from "@/components/hextest";
 
     export default {
@@ -45,7 +46,6 @@
         components: {
             Hextest,
 
-            ResearchAreas,
 
 
             PageBlock,

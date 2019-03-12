@@ -1,6 +1,19 @@
 <template>
     <div>
 
+        <vs-row>
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+                <vs-images scale>
+                    <vs-image :key="index" :src="`https://picsum.photos/400/400?image=3${index}`" v-for="(image, index) in 9" />
+                    <vs-image :key="index" :src="`https://picsum.photos/400/400?image=4${index}`" v-for="(image, index) in 7" />
+                </vs-images>
+            </vs-col>
+        </vs-row>
+
+
+
+
+
 
         <section class="search search--default is-list-view is-ready" data-pk="">
             <vs-row>

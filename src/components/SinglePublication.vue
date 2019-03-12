@@ -130,8 +130,7 @@
                         <a class="icon icon--close card__link-abstract-close"
                            ng-click="AbstractPreviewCtrl.close($event)"></a>
                         <p> HIV-1 infection is a major
-                            <heal></heal>
-                            th threat in both developed and developing countries. The integration of mobile health
+                            health threat in both developed and developing countries. The integration of mobile health
                             approaches and bioengineered catalytic motors can allow the development of sensitive and
                             portable technologies for HIV-1 management. Here, we report a platform that integrates
                             cellphone-based optical sensing, loop-mediated isothermal DNA amplification and micromotor
