@@ -1,14 +1,12 @@
 <template>
     <div>
 
-        <vs-row>
-            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
-                <vs-images scale>
-                    <vs-image :key="index" :src="`https://picsum.photos/400/400?image=3${index}`" v-for="(image, index) in 9" />
-                    <vs-image :key="index" :src="`https://picsum.photos/400/400?image=4${index}`" v-for="(image, index) in 7" />
-                </vs-images>
-            </vs-col>
-        </vs-row>
+
+
+
+
+
+        <CoversSlider></CoversSlider>
 
 
 
@@ -17,9 +15,9 @@
 
         <section class="search search--default is-list-view is-ready" data-pk="">
             <vs-row>
-                <vs-col v-tooltip="'col - 5'" vs-align="center" vs-justify="center" vs-offset="5" vs-type="flex"
+                <vs-col v-tooltip="'col - 5'" vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
                         vs-w="4">
-                    <h2 class="search__title">Publications</h2>
+                    <h2 class="search__title">Journal Publications</h2>
 
                     <div>
 
@@ -84,12 +82,13 @@
     // import {db} from '../main'
 
     import db from '@/db'
+    import CoversSlider from "@/components/CoversSlider";
 
 
 
     export default {
         name: "publications",
-        components: {PageBlock, SinglePublication},
+        components: {CoversSlider, PageBlock, SinglePublication},
         data: function () {
             return {
 

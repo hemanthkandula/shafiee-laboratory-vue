@@ -13,9 +13,24 @@
 
 
         <section class='tl'>
-                <HexVideo :key="index+'-lab1'" v-for="(news ,index) in 5"
-                          :current-playing="CurrentPlaying[index]"
-                              :index="index"/>
+
+
+            <article  :key="index+'-lab1'" v-for="(news ,index) in 5">
+
+
+                <div class="Inhexvideo">
+
+
+
+                    <!--@ended="PickVideo(CurrentPlaying[index])"-->
+
+                    <video @ended="printindex(index)"
+
+                            class="videohex" autoplay="" muted="" playsinline=""
+                               :src="CurrentPlaying[index]"></video>
+                </div>
+
+            </article>
 
 
 
@@ -30,9 +45,24 @@
 
             </article>
 
-            <HexVideo :key="idx +'-lab2'" v-for="(news ,idx) in 5"
-                      :current-playing="CurrentPlaying[idx+5]" :pick-video="PickVideo(CurrentPlaying[idx+5])"
-                      />
+
+
+            <article  :key="index+'-lab2'" v-for="(news ,index) in 5">
+
+
+                <div class="Inhexvideo">
+
+
+                    <!--@ended="PickVideo(CurrentPlaying[index])"-->
+
+                    <!--@ended="PickVideo(CurrentPlaying[index+5])"-->
+                    <video  @ended="printindex(index+5)"
+
+                            class="videohex" autoplay="" muted="" playsinline=""
+                            :src="CurrentPlaying[index+5]"></video>
+                </div>
+
+            </article>
 
 
 
@@ -73,13 +103,12 @@
     import vid18 from "@/assets/videos/18.mp4";
     import vid19 from "@/assets/videos/19.mp4";
     import vid20 from "@/assets/videos/20.mp4";
-    import HexVideo from "@/components/HexVideo";
 
 
     export default {
 
         name: "hextest",
-        components: {HexVideo, ParticlesJS},
+        components: { ParticlesJS},
 
 
 
@@ -93,7 +122,10 @@
                 videos: [vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
                     vid14,vid15,vid16,vid17,vid18,vid19,vid20],
 
+                AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
+                    vid14,vid15,vid16,vid17,vid18,vid19,vid20 ],
 
+                CurrentPlaying:[]
 
 
 
@@ -105,18 +137,23 @@
 
         props:{
 
-            AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                vid14,vid15,vid16,vid17,vid18,vid19,vid20 ],
 
-            CurrentPlaying:[]
         },
 
         created() {
 
             while(this.CurrentPlaying.length < 10){
-                let r = Math.floor(Math.random()*20) + 1;
+                let r = Math.floor(Math.random()*19) + 1;
                 if(this.CurrentPlaying.indexOf(this.videos[r]) === -1) this.CurrentPlaying.push(this.videos[r]);
+                console.log(r)
+
             }
+
+            Array.prototype.diff = function(a) {
+                return this.filter(function(i) {return a.indexOf(i) < 0;});
+            };
+
+            this.AvailablePlaying =  this.AvailablePlaying .diff(  this.CurrentPlaying );
 
 
 
@@ -124,28 +161,77 @@
         },
 
 
-            computed:{
+            methods:{
+
+
+            printindex:function(index){
+
+                console.log(index)
+
+
+                let currentvideo = this.CurrentPlaying[index] ;
+
+
+
+                let random = Math.floor(Math.random() * (this.AvailablePlaying.length - 1 )) + 1 ;
+
+                console.log("random")
+                console.log(random)
+
+                let video = this.AvailablePlaying[random];
+                this.AvailablePlaying.splice(random, 1);
+                this.AvailablePlaying.splice(index, 0, currentvideo);
+
+
+
+                this.CurrentPlaying.splice(index, 1);
+                this.CurrentPlaying.splice(index, 0, video);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            },
 
 
 
             /**
              * @return {string}
              */
-            PickVideo: function (currentPlayingElement) {
+            PickVideo: function ( currentPlayingElement) {
 
 
 
                 var index = this.CurrentPlaying.indexOf(currentPlayingElement);
 
+                console.log(index)
+                console.log(currentPlayingElement)
 
 
 
                 this.AvailablePlaying = this.arrayDiff1(this.CurrentPlaying,this.AvailablePlaying)
 
-                let random = Math.floor(Math.random() * (this.AvailablePlaying.length - 1 + 1)) + 1 ;
+                console.log(this.AvailablePlaying)
+
+
+                let random = Math.floor(Math.random() * (this.AvailablePlaying.length - 1 )) + 1 ;
                 let video = this.AvailablePlaying[random];
 
-                this.CurrentPlaying[index] = video
+                this.CurrentPlaying.splice(index, 1)
+
+                this.CurrentPlaying.splice(index, 0, video);
+
+
+                // this.CurrentPlaying[index] = video
 
 
                 // this.CurrentPlaying.splice(index, 0, video);
@@ -154,7 +240,11 @@
                 this.AvailablePlaying.splice(0, 0, currentPlayingElement);
 
 
-                console.log(currentPlayingElement)
+                console.log(this.CurrentPlaying[index])
+
+
+
+
 
 
 

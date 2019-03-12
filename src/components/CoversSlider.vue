@@ -1,0 +1,174 @@
+<template>
+
+
+
+
+    <section class="group group--default    ">
+
+
+        <vs-row>
+            <vs-col v-tooltip="'col - 5'" vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
+                    vs-w="4">
+                <h2 class="search__title">JOURNAL COVER ARTICLES
+                </h2>
+
+                <div>
+
+
+                </div>
+            </vs-col>
+        </vs-row>
+        <div class="group__content-wrapper">
+            <div class="content group__content has-no-margin   ">
+                <div class="content__text">
+                    <span class="content__brow"> <br></span>
+                    <div class="content__header">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- swiper -->
+        <swiper :options="swiperOption">
+            <swiper-slide :key="index" v-for="(news ,index) in NewsDB">
+
+                <div class="card card--default   card--in-carousel " data-card-type="card">
+                    <a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>
+
+
+                    <!--<div class="swiper__image" v-bind:style="{  backgroundImage: 'url(' + news.img + ')' }"></div>-->
+                    <div class="swiper__image" v-bind:style="{  backgroundImage: 'url(http://shafieelab.bwh.harvard.edu/wp-content/uploads/2015/01/Small_web_scaled.png)' }"></div>
+
+
+                </div>
+
+
+            </swiper-slide>
+
+
+
+            <div class="swiper-pagination" slot="pagination"></div>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+
+    </section>
+
+
+</template>
+
+<script>
+
+
+    import 'swiper/dist/css/swiper.css'
+
+
+    import {swiper, swiperSlide} from 'vue-awesome-swiper'
+
+    import db from '@/db'
+
+
+
+
+    export default {
+        name: "CoversSlider",
+        components: {
+            swiper,
+            swiperSlide
+        },
+        data() {
+            return {
+                swiperOption: {
+
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+
+                    },
+
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    }
+                },
+
+                newsdata: null,
+                meta : [],
+                NewsDB: []
+
+
+            }
+        },
+
+        firestore() {
+            return {
+                NewsDB: db.collection('News').orderBy("id")
+
+            }
+
+        }
+
+
+
+    }
+</script>
+
+<style scoped>
+    .swiper-slide {
+        width: 25%;
+        height: 50%;
+    }
+
+
+    .swiper__image {
+        background: center/cover no-repeat #f1f3f4;
+
+        height: 100%;
+        width: 100%;
+        object-fit: contain
+    }
+
+    .card__link[target=_blank]::after {
+
+
+        background: center/cover no-repeat url(../assets/icons/link_icon.png);
+        bottom: 12px;
+        content: '';
+        height: 14px;
+        opacity: 0;
+        position: absolute;
+        right: 12px;
+        transition: opacity .4s;
+        width: 14px
+    }
+
+
+
+    .swiper-inner {
+        width: 100%;
+        height: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+
+
+
+
+</style>
