@@ -119,8 +119,11 @@
                 <!--<div class="card__link-tooltip">Copy BibTex</div>-->
                 <!--</div>-->
 
-                <div class="card__link--icon card__link--icon-abstract ng-scope" data-card-abstract=""
-                     onclick="abstractselect(this)">
+                <div class="card__link--icon card__link--icon-abstract   ng-scope"
+
+                     v-bind:class="{ 'is-active': showMobileMenu }"
+                     v-on:click="showMobileMenu = !showMobileMenu">
+
                     <a class="icon icon--info card__link-info">
 
                         <img alt="info" src="../assets/icons/icon-info.svg"/>
@@ -128,21 +131,10 @@
                     <div class="card__link-tooltip">Preview Abstract</div>
                     <div class="card__link-abstract t--card-description">
                         <a class="icon icon--close card__link-abstract-close"
-                           ng-click="AbstractPreviewCtrl.close($event)"></a>
-                        <p> HIV-1 infection is a major
-                            health threat in both developed and developing countries. The integration of mobile health
-                            approaches and bioengineered catalytic motors can allow the development of sensitive and
-                            portable technologies for HIV-1 management. Here, we report a platform that integrates
-                            cellphone-based optical sensing, loop-mediated isothermal DNA amplification and micromotor
-                            motion for molecular detection of HIV-1. The presence of HIV-1 RNA in a sample results in
-                            the formation of large-sized amplicons that reduce the motion of motors. The change in the
-                            motors motion can be accurately measured using a cellphone system as the biomarker for
-                            target nucleic acid detection. The presented platform allows the qualitative detection of
-                            HIV-1 (n= 54) with 99.1% specificity and 94.6% sensitivity at a clinically relevant
-                            threshold value of 1000 virus particles/ml. The cellphone system has the potential to enable
-                            …
+                           ></a>
+                        <p> {{ Description}}
                         </p>
-                        <a href="/research/pubs/pubid">View details</a>
+                        <a :href=url>View details</a>
                     </div>
                 </div>
 
@@ -208,6 +200,9 @@
                 googlescholaricon: GoogleScholarIcon,
                 infoicon: InfoIcon,
 
+                showMobileMenu: false
+
+
             }
         },
         props: {
@@ -257,7 +252,13 @@
             Description: {
                 type: String,
                 required: true
-            }
+            },
+
+
+        URL: {
+            type: String,
+            required: true
+        }
 
 
         }

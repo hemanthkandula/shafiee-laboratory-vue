@@ -145,7 +145,7 @@
             while(this.CurrentPlaying.length < 10){
                 let r = Math.floor(Math.random()*19) + 1;
                 if(this.CurrentPlaying.indexOf(this.videos[r]) === -1) this.CurrentPlaying.push(this.videos[r]);
-                console.log(r)
+                // console.log(r)
 
             }
 
@@ -166,7 +166,6 @@
 
             printindex:function(index){
 
-                console.log(index)
 
 
                 let currentvideo = this.CurrentPlaying[index] ;
@@ -175,8 +174,6 @@
 
                 let random = Math.floor(Math.random() * (this.AvailablePlaying.length - 1 )) + 1 ;
 
-                console.log("random")
-                console.log(random)
 
                 let video = this.AvailablePlaying[random];
                 this.AvailablePlaying.splice(random, 1);
@@ -213,14 +210,12 @@
 
                 var index = this.CurrentPlaying.indexOf(currentPlayingElement);
 
-                console.log(index)
-                console.log(currentPlayingElement)
+
 
 
 
                 this.AvailablePlaying = this.arrayDiff1(this.CurrentPlaying,this.AvailablePlaying)
 
-                console.log(this.AvailablePlaying)
 
 
                 let random = Math.floor(Math.random() * (this.AvailablePlaying.length - 1 )) + 1 ;
@@ -237,10 +232,10 @@
                 // this.CurrentPlaying.splice(index, 0, video);
 
 
+
                 this.AvailablePlaying.splice(0, 0, currentPlayingElement);
 
 
-                console.log(this.CurrentPlaying[index])
 
 
 
@@ -285,6 +280,12 @@
 </script>
 
 <style scoped>
+
+
+    .t1{
+
+
+    }
 
 
     .centerhex{

@@ -52,7 +52,7 @@
                                                     :link="Publication.URL" :pages="Publication.Pages"
                                                     :pub-date="Publication.Pubdate" :pubdate="Publication.Pubdate"
                                                     :title="Publication.Title" :volume="Publication.Volume"
-                                                    v-for="(Publication,idx) in PublicationsDB">
+                                                    v-for="(Publication,idx) in PublicationsDB" :u-r-l="Publication.URL">
                                     <!--{{ Publication.Authors }}-->
 
                                 </single-publication>
@@ -69,8 +69,7 @@
 
 
         </section>
-        <page-block :div-class="BlockHalfImage" :has-dark-background="NoDarkBackground"
-                    :section-class=CalloutFullWidth></page-block>
+
 
 
     </div>
@@ -78,7 +77,7 @@
 
 <script>
     import SinglePublication from "@/components/SinglePublication";
-    import PageBlock from "@/components/PageBlock";
+
     // import {db} from '../main'
 
     import db from '@/db'
@@ -88,7 +87,7 @@
 
     export default {
         name: "publications",
-        components: {CoversSlider, PageBlock, SinglePublication},
+        components: {CoversSlider, SinglePublication},
         data: function () {
             return {
 

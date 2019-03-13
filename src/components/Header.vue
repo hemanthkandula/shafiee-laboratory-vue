@@ -34,98 +34,95 @@
 
         </router-link>
       </a>
-      <nav aria-label="Navigation" class="header__nav" id="header__nav">
+
+                <nav aria-label="Navigation" class="header__nav" id="header__nav">
 
 
-        <a class="header__lockup">
+                    <a class="header__lockup">
 
-          <router-link exact to="/">
-            <div class="header__logo">
-              <img alt="logo" height="39"
-                   src="../assets/logo.png"
-                   width="200">
-
-
-            </div>
-          </router-link>
-
-        </a>
-        <div>
-          <a>
+                        <router-link exact to="/">
+                            <div class="header__logo">
+                                <img alt="logo" height="39"
+                                     src="../assets/logo.png"
+                                     width="200">
 
 
-          </a>
-        </div>
+                            </div>
+                        </router-link>
+
+                    </a>
 
 
-        <div aria-level="1" class="header__item">
 
-          <router-link exact to="/">
-            <a class="header__link">
-              Home
-            </a>
+                    <div aria-level="1" class="header__item">
 
-          </router-link>
+                        <router-link exact to="/">
+                            <a class="header__link">
+                                Home
+                            </a>
 
-        </div>
+                        </router-link>
 
-        <div aria-level="1" class="header__item">
+                    </div>
 
-          <router-link exact to="/research">
-            <a class="header__link">
-              Research
-            </a>
+                    <div aria-level="1" class="header__item">
 
-          </router-link>
+                        <router-link exact to="/research">
+                            <a class="header__link">
+                                Research Projects
+                            </a>
 
-        </div>
+                        </router-link>
 
-        <div aria-level="1" class="header__item">
-          <router-link exact to="/publications">
-            <a class="header__link">
-              Publications
-            </a>
-          </router-link>
-        </div>
+                    </div>
 
-
-        <div aria-level="1" class="header__item">
-          <router-link exact to="/people">
-            <a class="header__link">
-              People
-            </a>
-          </router-link>
-        </div>
+                    <div aria-level="1" class="header__item">
+                        <router-link exact to="/publications">
+                            <a class="header__link">
+                                Publications
+                            </a>
+                        </router-link>
+                    </div>
 
 
-        <div aria-level="1" class="header__item">
-          <router-link exact to="/positions">
+                    <div aria-level="1" class="header__item">
+                        <router-link exact to="/people">
+                            <a class="header__link">
+                                People
+                            </a>
+                        </router-link>
+                    </div>
 
-            <a class="header__link">
-              Positions
+
+                    <div aria-level="1" class="header__item">
+                        <router-link exact to="/positions">
+
+                            <a class="header__link">
+                                Positions
 
 
-            </a>
+                            </a>
 
 
-          </router-link>
-        </div>
+                        </router-link>
+                    </div>
 
 
 
 
 
-        <div aria-level="1" class="header__item">
-          <router-link exact to="/contact">
-            <a class="header__link">
-              Contact Us
-            </a>
+                    <div aria-level="1" class="header__item">
+                        <router-link exact to="/#contact">
+                            <a class="header__link">
+                                Contact Us
+                            </a>
 
-          </router-link>
-        </div>
+                        </router-link>
+                    </div>
 
 
-      </nav>
+                </nav>
+
       <div class="header__overlay"></div>
     </div>
 

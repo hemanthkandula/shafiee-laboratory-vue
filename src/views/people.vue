@@ -122,7 +122,7 @@
                         </div>
                         <div class="quote__source">
                             <div class="quote__image"
-                                 v-bind:style="{ backgroundImage: 'url(' + HadiImage + ')' }">
+                                v-bind:style="{ backgroundImage: 'url(' + HadiImage + ')' }">
 
 
                             </div>

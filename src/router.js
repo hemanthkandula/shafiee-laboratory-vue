@@ -15,6 +15,21 @@ Vue.use(Router);
 export default new Router({
 
     mode: 'history',
+
+    scrollBehavior: function(to, from, savedPosition) {
+        if (to.hash) {
+
+            from;
+            savedPosition;
+            return {selector: to.hash}
+        }
+        else if (savedPosition) {
+            return savedPosition
+        }
+        else {
+            return { x: 0, y: 0 }
+        }
+    },
     routes: [
         {
             path: '/',

@@ -18,17 +18,22 @@
         <!--<ResearchAreas/>-->
 
 
+        <page-block :div-class="BlockRight" :has-dark-background="DarkBackground"
+                    :background-image="lab"
+                    :section-class=CalloutFullWidth></page-block>
         <page-block :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
                     :section-class=CalloutGrid></page-block>
 
-        <page-block :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+        <page-block :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
 
-        <page-block :div-class="BlockRight" :has-dark-background="NoDarkBackground"
-                    :section-class=CalloutGrid></page-block>
-            <page-block :div-class="BlockCtaLeft" :has-dark-background="DarkBackground"
-                        :section-class=CalloutFullWidth></page-block>
+       <contact id="contact">
+
+
+       </contact>
+
+
 
 
     </div>
@@ -40,11 +45,15 @@
     import NewsSlider from "@/components/NewsSlider";
     import PageBlock from "@/components/PageBlock";
     import Hextest from "@/components/hextest";
+    import Contact from "@/views/contact";
+    import lab2 from "@/assets/images/lab2.jpg"
 
     export default {
         name: 'home',
         components: {
+                Contact,
             Hextest,
+
 
 
 
@@ -64,7 +73,8 @@
                 BlockCtaLeft: 'block--cta-left',
                 BlockCtaRight: 'block--cta-right',
                 DarkBackground: true,
-                NoDarkBackground: false
+                NoDarkBackground: false,
+                lab:lab2
 
 
             }

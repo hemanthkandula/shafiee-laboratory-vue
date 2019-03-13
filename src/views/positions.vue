@@ -62,6 +62,8 @@
         </section>
 
 
+
+
     </div>
 
 </template>
@@ -72,7 +74,7 @@
 
     export default {
         name: "positions",
-        components: {PositionCard, PageBlock},
+        components: { PositionCard, PageBlock},
         data: function () {
             return {
 
