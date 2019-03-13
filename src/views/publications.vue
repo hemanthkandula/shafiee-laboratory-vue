@@ -15,7 +15,7 @@
 
         <section class="search search--default is-list-view is-ready" data-pk="">
             <vs-row>
-                <vs-col v-tooltip="'col - 5'" vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
+                <vs-col  vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
                         vs-w="4">
                     <h2 class="search__title">Journal Publications</h2>
 
@@ -80,8 +80,10 @@
 
     // import {db} from '../main'
 
-    import db from '@/db'
+    import fs from '@/db/fs'
     import CoversSlider from "@/components/CoversSlider";
+
+
 
 
 
@@ -120,17 +122,28 @@
                 Serial: '',
 
 
-                newReptile: ''
+                newReptile: '',
+
+
+
+
+
+
             }
 
         },
         firestore() {
             return {
-                PublicationsDB: db.collection('Publications').orderBy("Serial")
+
+
+                PublicationsDB: fs.collection('Publications').orderBy("Serial")
 
             }
 
-        }
+        },
+
+
+
     }
 </script>
 

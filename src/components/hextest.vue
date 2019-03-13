@@ -104,6 +104,8 @@
     import vid19 from "@/assets/videos/19.mp4";
     import vid20 from "@/assets/videos/20.mp4";
 
+    import vid21 from "@/assets/videos/21.mp4";
+
 
     export default {
 
@@ -120,10 +122,10 @@
             return {
                 videosrc : "../assets/videos/",
                 videos: [vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                    vid14,vid15,vid16,vid17,vid18,vid19,vid20],
+                    vid14,vid15,vid16,vid17,vid18,vid19,vid20,vid21],
 
                 AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                    vid14,vid15,vid16,vid17,vid18,vid19,vid20 ],
+                    vid14,vid15,vid16,vid17,vid18,vid19,vid20,vid21 ],
 
                 CurrentPlaying:[]
 
@@ -249,7 +251,8 @@
 
                 return (video)
 
-            },  arrayDiff1: function (a1, a2) {
+            },
+                arrayDiff1: function (a1, a2) {
 
         var a = [], diff = [];
 

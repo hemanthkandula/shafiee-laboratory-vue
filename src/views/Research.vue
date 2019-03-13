@@ -1,23 +1,62 @@
 <template>
     <div class="news">
 
-        <page-block :div-class="BlockLeft" :has-dark-background="DarkBackground"
+        <page-block  button="Research Projects"
+                     button_link="/research"
+                     description="Some thing to  Projects"
+                     title="See our projects "
+
+
+                :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth ></page-block>
 
 
-        <page-block :div-class="BlockLeft" :has-dark-background="DarkBackground"
+        <page-block  button="Explore Project"
+                     button_link="/research"
+                     description="Project 1 intro"
+                     title="Project 1"
+
+
+                :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutGrid :background-image="SP"></page-block>
 
-        <page-block :div-class="BlockRight" :has-dark-background="DarkBackground"
+        <page-block
+
+                button="Explore Project"
+                button_link="/research"
+                description="Project 2 intro"
+                title="Project 2"
+
+
+
+                :div-class="BlockRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutGrid :background-image="DC"></page-block>
 
-        <page-block :div-class="BlockLeft" :has-dark-background="DarkBackground"
+        <page-block
+                button="Explore Project"
+                button_link="/research"
+                description="Project 3 intro"
+                title="Project 3"
+                :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutGrid :background-image="NC"></page-block>
 
-        <page-block :div-class="BlockRight" :has-dark-background="DarkBackground"
+        <page-block
+                button="Explore Project"
+                button_link="/research"
+                description="Project 4 intro"
+                title="Project 4"
+
+                :div-class="BlockRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutGrid :background-image="SC"></page-block>
 
-        <page-block :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
+        <page-block
+
+                button="Explore Project"
+                button_link="/research"
+                description="Project 5 intro"
+                title="Project 5"
+
+                :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
                     :section-class=CalloutGrid :background-image="PC"></page-block>
 
 

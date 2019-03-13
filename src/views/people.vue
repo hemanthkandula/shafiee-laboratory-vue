@@ -2,7 +2,14 @@
     <div class="people">
 
 
-        <page-block :div-class="BlockHalfImage" :has-dark-background="NoDarkBackground"
+        <page-block
+                button="See people"
+                button_link="/people"
+                description="Something about people"
+                title="Our Team"
+
+
+                :div-class="BlockHalfImage" :has-dark-background="NoDarkBackground"
                     :section-class=CalloutFullWidth>
 
         </page-block>
@@ -47,6 +54,8 @@
                                 <div class="quote__source">
                                     <div class="quote__image"
                                          v-bind:style="{ backgroundImage: 'url(' + HadiImage + ')' }"
+
+
 
                                         >
 
@@ -550,7 +559,14 @@
         </section>
 
 
-        <page-block :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+        <page-block   button="Positions"
+                      button_link="/positions"
+                      description="Something to  Join Us"
+                      title="Join Us"
+
+
+
+                      :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
     </div>

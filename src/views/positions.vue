@@ -4,7 +4,13 @@
     <div>
 
 
-        <page-block :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+        <page-block
+                button="Positions"
+                button_link="/positions"
+                description="Something to  Join Us"
+                title="Join Us"
+
+                :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
 

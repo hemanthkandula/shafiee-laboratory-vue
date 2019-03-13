@@ -17,20 +17,24 @@
             <div class="block__content-wrapper">
                 <div class="content block__content    ">
                     <div class="content__text">
-                        <span class="content__brow"> page Block</span>
+                        <span class="content__brow"> {{Title}}</span>
                         <div class="content__header">
                             <h3 class="content__title ">
-                                page Block
+                                {{Title}}
                             </h3>
 
                         </div>
                         <div class="content__body">
-                            <p>Our teams advance the state of the art through research, engineering.</p>
+                            <p>{{Description}}.</p>
                         </div>
                     </div>
                     <div class="content__ctas">
-                        <a class="button" href="/positions/">
-                            page Block text here
+                        <a class="button" >
+                            <router-link exact :to=Button_link>
+                            {{Button}}
+
+                            </router-link>
+
                         </a>
                     </div>
                 </div>
@@ -75,6 +79,26 @@
                 type: Boolean,
                 required: true
 
+            },
+
+            Title:{
+
+                type: String,
+                required: true
+            },
+            Button:{
+                type: String,
+                required: true
+            },
+
+            Button_link:{
+                type: String,
+                required: true
+            },
+
+            Description:{
+                type: String,
+                required: true
             }
         }
     }

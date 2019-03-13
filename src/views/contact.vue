@@ -9,16 +9,13 @@
 
 
 
-
-        <section-contact>
+        <section>
             <div class="Container Container--maxWidth Contact-footer-container">
                 <div class="Contact-footer--left Accordion">
-                    <div class="Contact-footer--left-contentWrapper">
-                        <div>
-                            <h3 class="Heading Heading3">Form here </h3>
-                        </div>
+                    <!--<div class="Contact-footer&#45;&#45;left-contentWrapper">-->
+                    <contact-form></contact-form>
 
-                    </div>
+                    <!--</div>-->
                 </div>
                 <div class="Contact-footer--right">
                     <div class="Contact-footer--right-background"  v-bind:style="{ backgroundImage: 'url(' + Maps + ')' }" >
@@ -33,7 +30,13 @@
                     </div>
                 </div>
             </div>
-        </section-contact>
+        </section>
+
+
+<!--<contact-form></contact-form>-->
+
+
+
 
 
 
@@ -45,9 +48,15 @@
 <script>
 
     import Maps from "@/assets/images/map.png"
+    import ContactForm from "@/components/ContactForm";
     export default {
         name: "contact",
-        components: {},
+        components: {
+            ContactForm
+
+
+
+        },
 
         data: function () {
             return {
@@ -73,6 +82,15 @@
 </script>
 
 <style scoped>
+
+
+    @import '../assets/js/contact/css/component.css';
+    @import '../assets/js/contact/css/cs-select.css';
+    @import '../assets/js/contact/css/cs-skin-boxes.css';
+    @import '../assets/js/contact/css/demo.css';
+    /*@import '../assets/js/contact/css/normalize.css';*/
+
+
 
 
 
@@ -138,7 +156,8 @@
         .Contact-footer--left .Contact-footer--left-contentWrapper div:first-of-type{margin-bottom:0;}
         .Contact-footer--left div{display:inline-block;margin-bottom:0;background-color:#f5f5f5;width:100%;float:left;padding:0;}
         @media (min-width:56.25rem){
-            .Contact-footer--left div{margin-bottom:45px;background-color:transparent;width:50%;float:left;padding-left:.83333%;padding-right:.83333%;}
+            .Contact-footer--left div{margin-bottom:45px;background-color:transparent;
+            float:left;padding-left:.83333%;padding-right:.83333%;}
             .Contact-footer--left div:nth-of-type(3),.Contact-footer--left div:nth-of-type(4){margin-bottom:0;}
         }
         .Contact-footer--left div .Heading3{height:54px;margin:0;padding:0 0 0 15px;color:#404040;border-top:1px solid #ddd;border-bottom:1px solid #ddd;background:#e6e6e6;font-size:18px;font-weight:600;line-height:54px;}

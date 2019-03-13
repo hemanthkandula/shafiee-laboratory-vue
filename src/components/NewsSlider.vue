@@ -53,7 +53,7 @@
 
 
     import {swiper, swiperSlide} from 'vue-awesome-swiper'
-    import db from '@/db'
+    import fs from '@/db/fs'
 
 
 
@@ -120,7 +120,7 @@
 
         firestore() {
             return {
-                NewsDB: db.collection('News').orderBy("id")
+                NewsDB: fs.collection('News').orderBy("id")
 
             }
 

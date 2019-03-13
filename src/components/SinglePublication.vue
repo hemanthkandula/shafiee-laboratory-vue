@@ -100,7 +100,8 @@
 
                 <div class="card__link--icon">
                     <a class="icon icon--google-scholar card__link-search-scholar"
-                       href="https://scholar.google.co.in/scholar?hl=en&as_sdt=0%2C22&q=DNA+engineered+micromotors+powered+by+metal+nanoparticles+for+motion+based+cellphone+diagnostics&btnG="
+
+                       :href =makehref(Title)
                        target="_blank">
                         <img alt="GS" src="../assets/icons/icon-google-scholar.svg"/>
                     </a>
@@ -134,7 +135,7 @@
                            ></a>
                         <p> {{ Description}}
                         </p>
-                        <a :href=url>View details</a>
+                        <a :href=URL>View details</a>
                     </div>
                 </div>
 
@@ -204,6 +205,20 @@
 
 
             }
+        },
+        methods:{
+          makehref:function (title) {
+
+              const gs = 'https://scholar.google.co.in/scholar?q=';
+
+              title = title.replace(/\s+/g, '+')
+
+              return gs+title;
+
+
+
+
+          }
         },
         props: {
             Authors: {

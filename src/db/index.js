@@ -12,4 +12,7 @@ const config = {
 
 const firebaseapp = firebase.initializeApp(config)
 
-export default firebaseapp.firestore()
+export default firebaseapp
+
+
+// export default firebaseapp.firestore()

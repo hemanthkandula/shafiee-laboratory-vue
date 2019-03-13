@@ -20,15 +20,39 @@
 
         <page-block :div-class="BlockRight" :has-dark-background="DarkBackground"
                     :background-image="lab"
-                    :section-class=CalloutFullWidth></page-block>
-        <page-block :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
+                    button="People"
+                    button_link="/people"
+                    description="Some thing about people"
+                    title="Our Team"
+
+
+                    :section-class=CalloutFullWidth >
+
+
+        </page-block>
+        <page-block   button="Positions"
+                      button_link="/positions"
+                      description="Some thing to  join us"
+                      title="Join Us"
+
+                :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
                     :section-class=CalloutGrid></page-block>
 
-        <page-block :div-class="BlockLeft" :has-dark-background="DarkBackground"
+        <page-block
+                button="Research Project"
+                button_link="/positions"
+                description="Some thing to  Projects"
+                title="See our projects "
+
+
+                :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
 
        <contact id="contact">
+
+
+
 
 
        </contact>
@@ -51,7 +75,7 @@
     export default {
         name: 'home',
         components: {
-                Contact,
+            Contact,
             Hextest,
 
 

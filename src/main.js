@@ -10,6 +10,10 @@ Vue.use(Vuetify);
 
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 
+import VeeValidate from 'vee-validate'
+Vue.use(VeeValidate)
+
+
 
 import Vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css' //Vuesax styles
@@ -57,7 +61,9 @@ Vue.use(VueAxios, axios)
 
 
 
+import { VueReCaptcha } from 'vue-recaptcha-v3'
 
+Vue.use(VueReCaptcha, {siteKey: '6LfqfJcUAAAAAENlF5Rq8WAhI_H9pawTJP7N3k6X'})
 
 
 

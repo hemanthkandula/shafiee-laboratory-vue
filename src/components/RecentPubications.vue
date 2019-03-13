@@ -30,7 +30,8 @@
                      gallery--1-columns">
                     <!--<div class="gallery__wrapper">-->
 
-                    <single-publication :authors="PublicationsDB[idx-1].Authors"
+                    <single-publication :u-r-l="PublicationsDB[idx-1].URL"
+                                        :authors="PublicationsDB[idx-1].Authors"
                                         :description="PublicationsDB[idx-1].Description"
                                         :issue="PublicationsDB[idx-1].Issue"
                                         :journal="PublicationsDB[idx-1].Journal"
@@ -54,7 +55,7 @@
 
 <script>
     import SinglePublication from "@/components/SinglePublication";
-    import db from '@/db'
+    import fs from '@/db/fs'
 
     export default {
         props: {
@@ -100,7 +101,7 @@
         },
         firestore() {
             return {
-                PublicationsDB: db.collection('Publications').orderBy("Serial")
+                PublicationsDB: fs.collection('Publications').orderBy("Serial")
 
             }
 
