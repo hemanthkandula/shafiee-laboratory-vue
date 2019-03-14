@@ -8,12 +8,13 @@
             Contact Us
         </h3>
 
-        <form>
+        <form @submit.prevent="submit" >
 
         <v-container grid-list-md>
         <v-layout wrap>
             <v-flex xs12 sm8 md6>
                 <v-text-field
+
                         v-model="firstname"
 
                         v-validate="'required'"
@@ -80,19 +81,51 @@
                 ></v-textarea>
             </v-flex>
 
-            <v-btn raised  @click="submit">submit</v-btn>
+            <v-btn raised  type="submit">submit</v-btn>
             <v-btn raised  @click="clear">clear</v-btn>
+
 
         </v-layout>
     </v-container>
     <small>*indicates required field</small>
         </form>
+
+
+        <v-snackbar
+
+
+                :color="color"
+
+
+                v-model="snackbar"
+                :bottom="true"
+                :left="false"
+                :multi-line="true"
+                :right="true"
+                :timeout="6000"
+                :top="false"
+                :vertical="false"
+        >
+            {{ text }}
+            <v-btn
+                    dark
+                    flat
+                    @click="snackbar = false"
+            >
+                Close
+            </v-btn>
+        </v-snackbar>
     </div>
 </template>
 
 <script>
+    // import Vue from 'vue'
+    // import { VueReCaptcha } from 'vue-recaptcha-v3'
+    //
+    // Vue.use(VueReCaptcha, {siteKey: '6LfqfJcUAAAAAENlF5Rq8WAhI_H9pawTJP7N3k6X'})
 
 
+    import axios from 'axios';
 
     export default {
         name: "ContactForm",
@@ -108,6 +141,11 @@
             lastname: '',
 
             message: '',
+
+                text:'',
+                color:'',
+
+                snackbar: false,
 
 
             email: '',
@@ -142,13 +180,62 @@
         },
 
         methods: {
-            submit () {
-                console.error("validation")
-                console.error(this.$validator.validateAll())
+            postNow: function() {
+                console.log(this.name);
 
+                axios.post('https://script.google.com/macros/s/AKfycbzbakA-lzRD8k28pnKyVzNjF_2NdkszW-yoCeDUuf7VJk9ghxkF/exec', {
+                    name: 'Fred',
+                    email: 'Flintstone',
+                    subject:'subject',
+                    message: 'message'
+                })
+                    .then(function (response) {
+                        this.color= 'green';
+                        this.text= 'Message sent post'
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+
+                        this.color= 'red';
+                        this.text= 'dailed'
+
+                    });
+
+            }
+
+
+                ,
+            submit () {
+
+                this.$validator.validate().then(result => {
+
+                    if (result) {
+                        // do stuff if not valid.
+
+                        this.color= 'green';
+                        this.text= 'Message sent '
+                        this.postNow()
+
+
+                    }
+                    else {
+
+                        this.color= 'red';
+                        this.text= 'error'
+
+
+
+                    }
+
+                    this.snackbar= true
+
+                });
 
 
             },
+
+
             clear () {
                 this.Firstname = ''
                 this.Lastname = ''

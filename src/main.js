@@ -61,9 +61,7 @@ Vue.use(VueAxios, axios)
 
 
 
-import { VueReCaptcha } from 'vue-recaptcha-v3'
 
-Vue.use(VueReCaptcha, {siteKey: '6LfqfJcUAAAAAENlF5Rq8WAhI_H9pawTJP7N3k6X'})
 
 
 

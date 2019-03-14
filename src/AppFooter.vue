@@ -96,7 +96,7 @@
                             <div class="Footer-copyright">Copyright © 2019 Shafiee Laboratory | All rights reserved</div>
                         </div>
                         <div class="Footer-information-right">
-                            <p><a href="https://mvpdesign.com/" class="mvpmarketlink" target="_blank">some thing about it </a></p>
+                            <p><a href="https://" class="mvpmarketlink" target="_blank">some thing about it </a></p>
                         </div>
                     </div>
                 </div>

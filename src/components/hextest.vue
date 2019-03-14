@@ -18,11 +18,14 @@
             <article  :key="index+'-lab1'" v-for="(news ,index) in 5">
 
 
-                <div class="Inhexvideo">
+                <div class="Inhexvideo ">
 
 
 
                     <!--@ended="PickVideo(CurrentPlaying[index])"-->
+
+                    <div class="overlay"></div>
+
 
                     <video @ended="printindex(index)"
 
@@ -51,6 +54,10 @@
 
 
                 <div class="Inhexvideo">
+
+
+                    <div class="overlay"></div>
+
 
 
                     <!--@ended="PickVideo(CurrentPlaying[index])"-->
@@ -145,7 +152,7 @@
         created() {
 
             while(this.CurrentPlaying.length < 10){
-                let r = Math.floor(Math.random()*19) + 1;
+                let r = Math.floor(Math.random()*20) + 1;
                 if(this.CurrentPlaying.indexOf(this.videos[r]) === -1) this.CurrentPlaying.push(this.videos[r]);
                 // console.log(r)
 
@@ -297,6 +304,104 @@
 
 
     }
+
+
+
+    .Inhexvideo {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    //padding: 20px;
+        border-radius: 5px;
+        background-attachment: scroll;
+        overflow: hidden;
+    }
+    .Inhexvideo video {
+
+        z-index: 1;
+    }
+    .Inhexvideo .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background: black;
+        opacity: 0.5;
+    }
+
+    .overlay:hover {
+        opacity: 0;
+
+    }
+
+
+
+
+
+
+
+    /*.Inhexvideo {*/
+
+        /*color: rgba(71, 121, 94, .9);*/
+
+        /*width: 200px;*/
+        /*height: 200px;*/
+        /*!* center content using flex box *!*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        /*!* overlay *!*/
+        /*box-shadow: 0 0 0 100px inset, 0 0 5px grey;*/
+        /*!* hover out transition *!*/
+        /*transition: box-shadow 1s;*/
+        /*float: left;*/
+        /*margin: 10px;*/
+    /*}*/
+
+
+    /*!* Inhexvideoe names *!*/
+
+    /*.Inhexvideo::after {*/
+        /*width: 80%;*/
+        /*height: 80%;*/
+        /*display: block;*/
+        /*white-space: pre;*/
+        /*font: 15pt 'sigmar one';*/
+        /*color: white;*/
+        /*border: 2px solid;*/
+        /*text-align: center;*/
+        /*!* center content using flex box *!*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        /*!* hover out transition *!*/
+        /*transition: opacity 1s .5s;*/
+    /*}*/
+
+
+    /*!* reveal Inhexvideoe picture on hover *!*/
+
+    /*.Inhexvideo:hover {*/
+        /*box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;*/
+        /*transition: box-shadow 1s;*/
+    /*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .videohex{
         position: absolute;
