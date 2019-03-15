@@ -1,6 +1,6 @@
 <template>
 
-<div>
+<>
 
 
     <section class="group group--default    ">
@@ -9,7 +9,7 @@
         <vs-row>
             <vs-col v-tooltip="'col - 5'" vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
                     vs-w="4">
-                <h2 class="search__title">JOURNAL COVER ARTICLES
+                <h2 class="search__title">Journal Cover Articles
                 </h2>
 
                 <div>
@@ -18,6 +18,8 @@
                 </div>
             </vs-col>
         </vs-row>
+
+
         <div class="group__content-wrapper">
             <div class="content group__content has-no-margin   ">
                 <div class="content__text">
@@ -35,19 +37,24 @@
         <swiper :options="swiperOption">
             <swiper-slide :key="index" v-for="(cover ,index) in Coversurls.length">
 
-                <div class="card card--default   card--in-carousel " data-card-type="card">
                     <!--<a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>-->
 
 
                     <!--<div class="swiper__image" v-bind:style="{  backgroundImage: 'url(' + news.img + ')' }"></div>-->
 
-                    <div class="swiper__image" v-bind:style="{ backgroundImage: 'url(' + Coversurls[index] + ')' }">
+                    <!--<div class="" v-bind:style="{ backgroundImage: 'url(' + Coversurls[index] + ')' }">-->
+                        <img
+
+                                alt="img" :src="Coversurls[index]"
+
+                        >
 
 
-                    </div>
 
 
-                </div>
+
+
+
 
 
             </swiper-slide>
@@ -81,14 +88,14 @@
 
     import  logo from "@/assets/homecen.jpg"
 
-    import c1 from "@/assets/images/covers/1.jpg"
+    import c1 from "@/assets/images/covers/1.png"
     import c2 from "@/assets/images/covers/2.jpg"
-    import c3 from "@/assets/images/covers/3.jpg"
-    import c4 from "@/assets/images/covers/4.jpg"
-    import c5 from "@/assets/images/covers/5.jpg"
+    import c3 from "@/assets/images/covers/3.png"
+    import c4 from "@/assets/images/covers/4.png"
+    import c5 from "@/assets/images/covers/5.png"
     import c6 from "@/assets/images/covers/6.jpg"
     import c7 from "@/assets/images/covers/7.jpg"
-    import c8 from "@/assets/images/covers/8.jpg"
+    import c8 from "@/assets/images/covers/8.png"
 
 
 
@@ -266,7 +273,22 @@
         object-fit: contain
 
 
+
     }
+
+
+    .swiper-inner {
+        width: 100%;
+        height: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    /*.swiper-slide {*/
+        /*background-position: center;*/
+        /*background-size: cover;*/
+        /*width: 300px;*/
+        /*height: 300px;*/
+    /*}*/
 
     .card__link[target=_blank]::after {
 
@@ -292,6 +314,14 @@
     }
 
 
+
+    @media only screen and (max-width: 767px){
+        .swiper-slide {
+            width: 40%;
+            height: 80%;
+        }
+
+    }
 
 
 

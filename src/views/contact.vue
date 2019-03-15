@@ -19,7 +19,7 @@
                 </div>
                 <div class="Contact-footer--right">
                     <div class="Contact-footer--right-background"  v-bind:style="{ backgroundImage: 'url(' + Maps + ')' }" >
-                   >
+
                         <div class="Contact-footer--right-content">
                             <div>
                                 <p><strong>Shafiee Laboratory</strong></p>

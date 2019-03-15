@@ -14,7 +14,7 @@
 
         <!-- swiper -->
         <swiper :options="swiperOption">
-            <swiper-slide :key="index" v-for="(news ,index) in NewsDB">
+            <swiper-slide  :key="index" v-for="(news ,index) in NewsDB">
                 <div class="card card--default   card--in-carousel " data-card-type="card">
                     <a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>
                     <div class="card__image" v-bind:style="{ backgroundImage: 'url(' + news.img + ')' }"></div>
@@ -133,7 +133,9 @@
 
 <style scoped>
     .swiper-slide {
-        width: 30%;
+        width: 50%;
+
+
     }
 
     .card__link[target=_blank]::after {
@@ -149,6 +151,19 @@
         transition: opacity .4s;
         width: 14px
     }
+
+
+    @media only screen and (max-width: 767px){
+        .swiper-slide {
+            width: 100%;
+
+
+        }
+
+    }
+
+
+
 
 
 

@@ -3,18 +3,31 @@
 
 
         <div class="at-user__avatar"><img alt=""
-                                          src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"/>
+                                          :src=ProImage />
         </div>
 
-        <div class="at-user__name">First Last</div>
-        <div class="at-user__title">Position</div>
+        <div class="at-user__name">{{ ProName }}</div>
+        <!--<div class="at-user__title">Position</div>-->
 
 
     </div>
 </template>
 <script>
     export default {
-        name: 'ProfileCard'
+        name: 'ProfileCard',
+        props:{
+
+            ProName: {
+                type: String,
+                // required: true
+            },
+            ProImage: {
+                type: String,
+                // required: true
+            },
+
+        }
+
     }
 </script>
 <style scoped>

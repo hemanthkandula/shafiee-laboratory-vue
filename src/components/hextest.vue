@@ -342,6 +342,9 @@
 
 
 
+
+
+
     /*.Inhexvideo {*/
 
         /*color: rgba(71, 121, 94, .9);*/
@@ -467,6 +470,8 @@
         grid-gap: 0vmin;
         max-width: 200vmin;
         padding-left: 5vmin;
+
+        padding-right: 5vmin;
 
         margin: .5rem auto;
     }
@@ -619,6 +624,12 @@
     @media only screen and (max-width: 450px) {
         figure p {display: none;}
         figure h2 {font-size: 1rem;}
+    }
+
+
+    @media only screen and (max-width: 767px){
+
+
     }
 
 </style>

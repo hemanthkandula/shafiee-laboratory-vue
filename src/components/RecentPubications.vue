@@ -18,9 +18,14 @@
                         </div>
                     </div>
                     <div class="content__ctas">
-                        <a class="button" href="/research/pubs/">
+
+                        <router-link  class="button" exact to="/publications">
                             See our publications
-                        </a>
+
+                        </router-link>
+
+
+
                     </div>
                 </div>
             </div>

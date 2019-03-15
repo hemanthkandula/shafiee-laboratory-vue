@@ -56,7 +56,8 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 
 
-
+import VirtualScrollList from 'vue-virtual-scroll-list'
+Vue.component('virtual-list', VirtualScrollList)
 
 
 

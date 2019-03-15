@@ -29,13 +29,12 @@
                         </div>
                     </div>
                     <div class="content__ctas">
-                        <a class="button" >
-                            <router-link exact :to=Button_link>
+                            <router-link class="button" exact :to=Button_link>
                             {{Button}}
 
                             </router-link>
 
-                        </a>
+
                     </div>
                 </div>
             </div>

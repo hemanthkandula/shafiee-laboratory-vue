@@ -168,8 +168,10 @@
 
                             <div class="at-grid" data-column="4">
 
-                                <div :key="index" class="at-column" v-for="index in 3">
-                                    <ProfileCard/>
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['5']">
+                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                    </ProfileCard>
 
 
                                 </div>
@@ -184,8 +186,12 @@
                         <vs-tab vs-label="Research Staff">
                             <div class="at-grid" data-column="4">
 
-                                <div :key="index" class="at-column" v-for="index in 6">
-                                    <ProfileCard/>
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['6']">
+                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                    </ProfileCard>
+
+
                                 </div>
 
 
@@ -195,8 +201,12 @@
                         <vs-tab vs-label="Student Researchers">
                             <div class="at-grid" data-column="4">
 
-                                <div :key="index" class="at-column" v-for="index in 8">
-                                    <ProfileCard/>
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['7']">
+                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                    </ProfileCard>
+
+
                                 </div>
 
 
@@ -205,8 +215,12 @@
                         <vs-tab vs-label="High School Interns">
                             <div class="at-grid" data-column="4">
 
-                                <div :key="index" class="at-column" v-for="index in 2">
-                                    <ProfileCard/>
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['8']">
+                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                    </ProfileCard>
+
+
                                 </div>
 
 
@@ -493,51 +507,73 @@
 
                         <vs-tabs vs-alignment="center" vs-position="right">
                             <vs-tab vs-label="Postdoctoral Fellows">
+                                <virtual-list :size="40" :remain="12">
+
 
                                 <div class="at-grid" data-column="4">
 
-                                    <div :key="index" class="at-column" v-for="index in 3">
-                                        <ProfileCardAlumni/>
+                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['1']">
+                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                        </ProfileCardAlumni>
 
 
                                     </div>
 
 
                                 </div>
+                                </virtual-list>
 
                             </vs-tab>
                             <vs-tab vs-label="Research Staff">
 
+                                <virtual-list :size="40" :remain="12">
+
+
                                 <div class="at-grid" data-column="4">
 
-                                    <div :key="index" class="at-column" v-for="index in 3">
-                                        <ProfileCardAlumni/>
+                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['2']">
+                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                        </ProfileCardAlumni>
 
 
                                     </div>
 
-
                                 </div>
+                                </virtual-list>
+
 
                             </vs-tab>
                             <vs-tab vs-label="Student Researchers">
+                                <virtual-list :size="40" :remain="12">
                                 <div class="at-grid" data-column="4">
 
-                                    <div :key="index" class="at-column" v-for="index in 8">
-                                        <ProfileCardAlumni/>
+
+
+                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['3']">
+                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                        </ProfileCardAlumni>
 
 
                                     </div>
 
 
+
+
                                 </div>
+                                </virtual-list>
+
 
                             </vs-tab>
                             <vs-tab vs-label="High School Interns">
                                 <div class="at-grid" data-column="4">
 
-                                    <div :key="index" class="at-column" v-for="index in 11">
-                                        <ProfileCardAlumni/>
+                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">
+                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                        </ProfileCardAlumni>
 
 
                                     </div>
@@ -569,6 +605,37 @@
                       :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
+
+
+
+        <v-snackbar
+
+
+                :color="color"
+
+
+                v-model="snackbar"
+                :bottom="true"
+                :left="false"
+                :multi-line="true"
+                :right="true"
+                :timeout="6000"
+                :top="false"
+                :vertical="false"
+        >
+            {{ message }}
+            <v-btn
+                    dark
+                    flat
+                    @click="snackbar = false"
+            >
+                Close
+            </v-btn>
+        </v-snackbar>
+
+
+
+
     </div>
 
 </template>
@@ -579,11 +646,27 @@
     import ProfileCard from "@/views/ProfileCard";
     import ProfileCardAlumni from "@/views/ProfileCardAlumni";
     import hadi from "@/assets/images/hadi1.jpg"
+    // import cheerio from 'cheerio'
+    // import axios from 'axios';
+
+
+
+
+    import fs from '@/db/fs'
+
 
     export default {
         name: "people",
         data: function () {
             return {
+
+                baseurl:'http://localhost:8080/people-assets/',
+
+
+
+                snackbar:false,
+
+                message: '',
 
                 HadiImage: hadi,
 
@@ -602,23 +685,145 @@
                 BlockHalfImage: 'block--half-image',
 
 
-                hover: 'scale',
-                hovers: [
-                    {text: 'Default', value: 'default'},
-                    {text: 'Blur', value: 'blur'},
-                    {text: 'Zoom', value: 'zoom'},
-                    {text: 'Dark', value: 'dark'},
-                    {text: 'Scale', value: 'scale'},
-                    {text: 'Curtain', value: 'curtain'},
-                ]
+
+                peopleDB:[],
+                position_filtered:[]
             }
         },
 
         components: {ProfileCardAlumni, ProfileCard, PageBlock},
+
+        watch:{
+
+
+            peopleDB:function () {
+
+
+                this.position_filtered = this.groupBy(this.peopleDB, 'position');
+
+                this.message = this.position_filtered['1'];
+
+
+                this.snackbar = true
+
+
+
+
+
+
+            }
+        },
+
+
+
+        methods:{
+
+            geturl:function(url){
+
+                return this.baseurl+url
+
+
+
+            },
+
+
+
+
+
+
+            filternames:function (position) {
+
+               // let position_filtered = this.groupBy(this.NewsDB,'position');
+
+
+
+               return this.position_filtered[position]
+
+
+                // switch (position) {
+                //
+                //     case 1:
+                //
+                //         break;
+                //     case 2:
+                //         position;
+                //         break;
+                //     case 3:
+                //         position;
+                //         break;
+                //     case 4:
+                //         position;
+                //         break;
+                //     case 5:
+                //         position;
+                //         break;
+                //     case 6:
+                //         position;
+                //         break;
+                //     case 7:
+                //         position;
+                //         break;
+                //     case 8:
+                //         position;
+                //         break;
+                //
+                //
+                //
+                //
+                //
+                // }
+
+            },
+
+
+            groupBy:function(objectArray, property) {
+
+                return objectArray.reduce(function (acc, obj)
+                    {
+                        var key = obj[property];
+                        if (!acc[key]) {
+                            acc[key] = [];
+                        }
+                        acc[key].push(obj);
+                        return acc;
+                    },
+                    {});
+            }
+
+
+
+
+
+        }
+        ,
+
+        firestore() {
+
+
+
+
+
+
+            return {
+                peopleDB: fs.collection('People').orderBy('name')
+
+
+            }
+
+        }
     }
 </script>
 
 <style scoped>
+
+
+    .group--pub .group__gallery-wrapper {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
 
 
     .at-section__title {

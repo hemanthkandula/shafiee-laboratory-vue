@@ -21,7 +21,7 @@
                             <div> <span class="Footer-contact-title">Phone:</span> <span> <a href="tel:(617) 768 – 8315"> <span itemprop="telephone" contactoption="TollFree">(617) 768 – 8315</span> </a> </span></div>
                             <div> <span class="Footer-contact-title">Email:</span> <span> <a href="mailto:hshafiee[at]bwh.harvard.edu" title="hshafiee[at]bwh.harvard.edu"> <span itemprop="email">hshafiee[at]bwh.harvard.edu</span> </a> </span></div>
                         </div>
-                        <div class="Footer-address" itemscope="" itemprop="address" itemtype="http://schema.org/PostalAddress">
+                        <div class="Footer-address" itemscope="" itemprop="address" itemtype="W1    http://schema.org/PostalAddress">
                             <h3>MAILING &nbsp;ADDRESS</h3>
                             <div itemprop="streetAddress">65 Landsdowne Street</div>
                             <div> <span class="inline">Cambridge, MA 02139</span></div>
@@ -96,7 +96,7 @@
                             <div class="Footer-copyright">Copyright © 2019 Shafiee Laboratory | All rights reserved</div>
                         </div>
                         <div class="Footer-information-right">
-                            <p><a href="https://" class="mvpmarketlink" target="_blank">some thing about it </a></p>
+                            <p><a href="https://" target="_blank">some thing about it </a></p>
                         </div>
                     </div>
                 </div>
@@ -224,22 +224,22 @@
         }
         .Icon{position:relative;display:inline-block;min-width:1em;min-height:1em;}
         .Icon:after,.Icon:before{position:absolute;z-index:1;display:block;content:"";-webkit-transition:.35s;transition:.35s;background-repeat:no-repeat;background-position:center;background-size:1em 1em;width:1em;height:1em;}
-        .Icon--youtube:before{background-image:url(http://www.achieve3000.com/wp-content/themes/achieve-3000/app/assets/dist/images/icons/social/icon-youtube.svg);}
-        .Icon--youtube:after{background-image:url(http://www.achieve3000.com/wp-content/themes/achieve-3000/app/assets/dist/images/icons/social/icon-youtube-white.svg);z-index:2;opacity:.35;}
+        .Icon--youtube:before{background-image:url(./assets/icons/icon-youtube.svg);}
+        .Icon--youtube:after{background-image:url(./assets/icons/icon-youtube-white.svg);z-index:2;opacity:.35;}
         .Icon--youtube:before{opacity:0;}
         .no-touchevents .Icon--youtube:before{opacity:1;}
         .no-touchevents .Icon--youtube:after{z-index:2;opacity:0;}
         .no-touchevents .Icon--youtube:hover:after{opacity:1;z-index:2;}
         .no-touchevents .Icon--youtube:hover:before{opacity:0;}
-        .Icon--linkedin:before{background-image:url(http://www.achieve3000.com/wp-content/themes/achieve-3000/app/assets/dist/images/icons/social/icon-linkedin.svg);}
-        .Icon--linkedin:after{background-image:url(http://www.achieve3000.com/wp-content/themes/achieve-3000/app/assets/dist/images/icons/social/icon-linkedin-white.svg);z-index:2;opacity:.35;}
+        .Icon--linkedin:before{background-image:url(./assets/icons/icon-linkedin.svg);}
+        .Icon--linkedin:after{background-image:url(./assets/icons/icon-linkedin-white.svg);z-index:2;opacity:.35;}
         .Icon--linkedin:before{opacity:0;}
         .no-touchevents .Icon--linkedin:before{opacity:1;}
         .no-touchevents .Icon--linkedin:after{z-index:2;opacity:0;}
         .no-touchevents .Icon--linkedin:hover:after{opacity:1;z-index:2;}
         .no-touchevents .Icon--linkedin:hover:before{opacity:0;}
-        .Icon--facebook:before{background-image:url(http://www.achieve3000.com/wp-content/themes/achieve-3000/app/assets/dist/images/icons/social/icon-facebook.svg);}
-        .Icon--facebook:after{background-image:url(http://www.achieve3000.com/wp-content/themes/achieve-3000/app/assets/dist/images/icons/social/icon-facebook-white.svg);z-index:2;opacity:.35;}
+        .Icon--facebook:before{background-image:url(./assets/icons/icon-facebook.svg);}
+        .Icon--facebook:after{background-image:url(./assets/icons/icon-facebook-white.svg);z-index:2;opacity:.35;}
         .Icon--facebook:before{opacity:0;}
         .no-touchevents .Icon--facebook:before{opacity:1;}
         .no-touchevents .Icon--facebook:after{z-index:2;opacity:0;}

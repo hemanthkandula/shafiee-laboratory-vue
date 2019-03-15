@@ -12,7 +12,7 @@
 
         <v-container grid-list-md>
         <v-layout wrap>
-            <v-flex xs12 sm8 md6>
+            <v-flex xs12 sm12 md6>
                 <v-text-field
 
                         v-model="firstname"
@@ -31,7 +31,7 @@
                         label="First Name*" ></v-text-field>
             </v-flex>
 
-            <v-flex xs12 sm8 md6>
+            <v-flex xs12 sm12 md6>
                 <v-text-field
 
                         v-validate="'required'"
@@ -183,12 +183,22 @@
             postNow: function() {
                 console.log(this.name);
 
-                axios.post('https://script.google.com/macros/s/AKfycbzbakA-lzRD8k28pnKyVzNjF_2NdkszW-yoCeDUuf7VJk9ghxkF/exec', {
-                    name: 'Fred',
-                    email: 'Flintstone',
-                    subject:'subject',
-                    message: 'message'
-                })
+                let data = new FormData();
+                data.append('name',this.firstname+" "+this.lastname);
+                data.append('email',this.email);
+                data.append('subject','subject');
+
+                data.append('message', this.message);
+
+
+                axios.post('https://script.google.com/macros/s/AKfycbzbakA-lzRD8k28pnKyVzNjF_2NdkszW-yoCeDUuf7VJk9ghxkF/exec',
+
+
+                    data
+
+                ,  { headers: {
+                        'Content-type': 'application/x-www-form-urlencoded',}
+                    })
                     .then(function (response) {
                         this.color= 'green';
                         this.text= 'Message sent post'
@@ -212,9 +222,9 @@
 
                     if (result) {
                         // do stuff if not valid.
-
-                        this.color= 'green';
-                        this.text= 'Message sent '
+                        //
+                        // this.color= 'green';
+                        // this.text= 'Message sent '
                         this.postNow()
 
 
@@ -237,9 +247,9 @@
 
 
             clear () {
-                this.Firstname = ''
-                this.Lastname = ''
-                this.Message = ''
+                this.firstname = ''
+                this.lastname = ''
+                this.message = ''
 
 
                 this.email = ''
