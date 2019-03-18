@@ -2,7 +2,13 @@
     <div class="at-user" :href= ProUrl  >
 
 
-        <vs-avatar size="large" :src=ProImage />
+        <!--<vs-avatar size="500%" :src=ProImage />-->
+
+
+        <div class="at-user__avatar">
+            <img alt=""
+                                          :src=ProImage />
+        </div>
 
 
         <div class="at-user__name">{{ProName}}</div>
@@ -90,8 +96,8 @@
     }
 
     .at-user__avatar {
-        width: 98px;
-        height: 98px;
+        width: 40%;
+        height: 40%;
         border-radius: 100%;
         margin: 0 auto 20px;
         overflow: hidden;

@@ -133,7 +133,7 @@
 
 <style scoped>
     .swiper-slide {
-        width: 50%;
+        width: 30%;
 
 
     }
@@ -155,7 +155,7 @@
 
     @media only screen and (max-width: 767px){
         .swiper-slide {
-            width: 100%;
+            width: 90%;
 
 
         }

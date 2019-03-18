@@ -6,7 +6,16 @@
 
 
 <!--<homehexagon> </homehexagon>-->
-        <hextest></hextest>
+        <hextest v-if="!isMobile()"></hextest>
+
+        <hex-test-mobile v-else></hex-test-mobile>
+
+
+
+
+
+
+
         <recent-publication>
         </recent-publication>
 
@@ -71,10 +80,13 @@
     import Hextest from "@/components/hextest";
     import Contact from "@/views/contact";
     import lab2 from "@/assets/images/lab2.jpg"
+    import HexTestMobile from "@/components/HexTestMobile";
 
     export default {
         name: 'home',
         components: {
+            HexTestMobile,
+
             Contact,
             Hextest,
 
@@ -102,6 +114,19 @@
 
 
             }
+        },
+        methods:{
+
+            isMobile:function() {
+                if( screen.width <= 760 ) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+
+
         }
 
     }

@@ -608,30 +608,30 @@
 
 
 
-        <v-snackbar
+        <!--<v-snackbar-->
 
 
-                :color="color"
+                <!--:color="color"-->
 
 
-                v-model="snackbar"
-                :bottom="true"
-                :left="false"
-                :multi-line="true"
-                :right="true"
-                :timeout="6000"
-                :top="false"
-                :vertical="false"
-        >
-            {{ message }}
-            <v-btn
-                    dark
-                    flat
-                    @click="snackbar = false"
-            >
-                Close
-            </v-btn>
-        </v-snackbar>
+                <!--v-model="snackbar"-->
+                <!--:bottom="true"-->
+                <!--:left="false"-->
+                <!--:multi-line="true"-->
+                <!--:right="true"-->
+                <!--:timeout="6000"-->
+                <!--:top="false"-->
+                <!--:vertical="false"-->
+        <!--&gt;-->
+            <!--{{ message }}-->
+            <!--<v-btn-->
+                    <!--dark-->
+                    <!--flat-->
+                    <!--@click="snackbar = false"-->
+            <!--&gt;-->
+                <!--Close-->
+            <!--</v-btn>-->
+        <!--</v-snackbar>-->
 
 
 
@@ -664,9 +664,9 @@
 
 
 
-                snackbar:false,
-
-                message: '',
+                // snackbar:false,
+                //
+                // message: '',
 
                 HadiImage: hadi,
 
@@ -701,10 +701,10 @@
 
                 this.position_filtered = this.groupBy(this.peopleDB, 'position');
 
-                this.message = this.position_filtered['1'];
-
-
-                this.snackbar = true
+                // this.message = this.position_filtered['1'];
+                //
+                //
+                // this.snackbar = true
 
 
 

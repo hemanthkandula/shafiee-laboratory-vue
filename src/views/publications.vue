@@ -14,17 +14,13 @@
 
 
         <section class="search search--default is-list-view is-ready" data-pk="">
-            <vs-row>
-                <vs-col  vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
-                        vs-w="4">
+
+            <v-layout wrap text-xs-center>
+                <v-flex xs12 sm12 md12>
                     <h2 class="search__title">Journal Publications</h2>
 
-                    <div>
-
-
-                    </div>
-                </vs-col>
-            </vs-row>
+                </v-flex>
+            </v-layout>
 
             <div class="search__wrapper ">
 

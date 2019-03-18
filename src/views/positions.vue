@@ -70,6 +70,11 @@
 
 
 
+        <apply-form></apply-form>
+
+
+
+
     </div>
 
 </template>
@@ -77,10 +82,11 @@
 <script>
     import PageBlock from "@/components/PageBlock";
     import PositionCard from "@/views/PositionCard";
+    import ApplyForm from "@/components/ApplyForm";
 
     export default {
         name: "positions",
-        components: { PositionCard, PageBlock},
+        components: {ApplyForm, PositionCard, PageBlock},
         data: function () {
             return {
 

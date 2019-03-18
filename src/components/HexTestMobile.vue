@@ -15,7 +15,7 @@
         <section class='tl'>
 
 
-            <article  :key="index+'-lab1'" v-for="(news ,index) in 5">
+            <article  :key="index+'-lab1'" v-for="(news ,index) in 3">
 
 
                 <div class="Inhexvideo ">
@@ -50,7 +50,7 @@
 
 
 
-            <article  :key="index+'-lab2'" v-for="(news ,index) in 5">
+            <article  :key="index+'-lab2'" v-for="(news ,index) in 3">
 
 
                 <div class="Inhexvideo">
@@ -118,7 +118,7 @@
 
     export default {
 
-        name: "hextest",
+        name: "HexTestMobile",
         components: { ParticlesJS},
 
 
@@ -468,7 +468,7 @@
 
         height: 90vh;
         display: grid;
-        grid-template-columns: repeat(16, 2fr);
+        grid-template-columns: repeat(12, 2fr);
         grid-gap: 0vmin;
         max-width: 200vmin;
         padding-left: 5vmin;
@@ -490,32 +490,32 @@
     }
     /* making the honeycomb */
     article:nth-of-type(1) {
-        grid-column: 1 / span 3;
+        grid-column: 3 / span 4;
         grid-row: 1;
     }
     article:nth-of-type(2) {
-        grid-column: 5 / span 3;
+        grid-column: 7 / span 4;
         grid-row: 1;
     }
 
     article:nth-of-type(3) {
-        grid-column: 9 / span 3;
-        grid-row: 1;
+        grid-column: 1 / span 4;
+        grid-row: 2;
     }
 
     article:nth-of-type(4) {
-        grid-column: 13 / span 3;
-        grid-row: 1;
+        grid-column: 5 / span 4;
+        grid-row: 2;
     }
 
 
     article:nth-of-type(5) {
-        grid-column: 3 / span 3;
+        grid-column: 9 / span 4;
         grid-row: 2;
     }
     article:nth-of-type(6) {
-        grid-column: 7 / span 3;
-        grid-row: 2;
+        grid-column: 3 / span 4;
+        grid-row: 3;
 
 
 
@@ -523,37 +523,37 @@
     }
 
     article:nth-of-type(7) {
-        grid-column: 11 / span 3;
-        grid-row: 2;
-
-    }
-
-
-    article:nth-of-type(8) {
-        grid-column: 1 / span 3;
+        grid-column: 7 / span 4;
         grid-row: 3;
-    }
-    article:nth-of-type(9) {
-        grid-column: 5 / span 3;
-        grid-row: 3;
+
     }
 
-    article:nth-of-type(10) {
-        grid-column: 9 / span 3;
-        grid-row: 3;
-    }
 
-    article:nth-of-type(11) {
-        grid-column: 13 / span 3;
-        grid-row: 3;
-    }
+    /*article:nth-of-type(8) {*/
+        /*grid-column: 1 / span 3;*/
+        /*grid-row: 3;*/
+    /*}*/
+    /*article:nth-of-type(9) {*/
+        /*grid-column: 5 / span 3;*/
+        /*grid-row: 3;*/
+    /*}*/
+
+    /*article:nth-of-type(10) {*/
+        /*grid-column: 9 / span 3;*/
+        /*grid-row: 3;*/
+    /*}*/
+
+    /*article:nth-of-type(11) {*/
+        /*grid-column: 13 / span 3;*/
+        /*grid-row: 3;*/
+    /*}*/
 
 
     /* A small adjustment in the vertical */
     article:nth-of-type(-n+2) {
         margin-bottom: calc(var(--height) * -.3);
     }
-    article:nth-of-type(n+5):nth-of-type(-n+11) {
+    article:nth-of-type(n+6):nth-of-type(-n+11) {
         margin-top: calc(var(--height) * -.3);
     }
 
@@ -629,35 +629,21 @@
     }
 
 
-    @media only screen and (max-width: 767px){
+    @media only screen and (max-width: 424px){
 
 
         section {
 
-            height: 90vh;
+            height: 100vw;
             display: grid;
-            grid-template-columns: repeat(16, 2fr);
-            grid-gap: 5vmin;
+            grid-template-columns: repeat(12, 2fr);
+            grid-gap: 0vmin;
             max-width: 200vmin;
             padding-left: 5vmin;
 
             padding-right: 5vmin;
 
             margin: .5rem auto;
-        }
-
-        article {
-
-            
-
-            background: var(--negroC);
-            width: var(--width);
-            height: var(--height);
-            overflow: hidden;
-            transition: 1s;
-            clip-path: url(#hexa-v);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            filter: drop-shadow(0 0 1px #fff);
         }
 
 

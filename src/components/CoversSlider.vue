@@ -1,24 +1,19 @@
 <template>
 
-<>
+<div>
 
 
     <section class="group group--default    ">
 
 
-        <vs-row>
-            <vs-col v-tooltip="'col - 5'" vs-align="center" vs-justify="center" vs-offset="4" vs-type="flex"
-                    vs-w="4">
+        <v-layout wrap text-xs-center>
+                <v-flex xs12 sm12 md12>
+
+
                 <h2 class="search__title">Journal Cover Articles
                 </h2>
-
-                <div>
-
-
-                </div>
-            </vs-col>
-        </vs-row>
-
+            </v-flex>
+        </v-layout>
 
         <div class="group__content-wrapper">
             <div class="content group__content has-no-margin   ">
@@ -37,24 +32,19 @@
         <swiper :options="swiperOption">
             <swiper-slide :key="index" v-for="(cover ,index) in Coversurls.length">
 
+                <div class="card card--default   card--in-carousel " data-card-type="card">
                     <!--<a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>-->
 
 
                     <!--<div class="swiper__image" v-bind:style="{  backgroundImage: 'url(' + news.img + ')' }"></div>-->
 
-                    <!--<div class="" v-bind:style="{ backgroundImage: 'url(' + Coversurls[index] + ')' }">-->
-                        <img
-
-                                alt="img" :src="Coversurls[index]"
-
-                        >
+                    <div class="swiper__image" v-bind:style="{ backgroundImage: 'url(' + Coversurls[index] + ')' }">
 
 
+                    </div>
 
 
-
-
-
+                </div>
 
 
             </swiper-slide>
@@ -273,22 +263,7 @@
         object-fit: contain
 
 
-
     }
-
-
-    .swiper-inner {
-        width: 100%;
-        height: 400px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    /*.swiper-slide {*/
-        /*background-position: center;*/
-        /*background-size: cover;*/
-        /*width: 300px;*/
-        /*height: 300px;*/
-    /*}*/
 
     .card__link[target=_blank]::after {
 
@@ -317,12 +292,18 @@
 
     @media only screen and (max-width: 767px){
         .swiper-slide {
-            width: 40%;
-            height: 80%;
+            width: 35%;
+            height: 50%;
         }
 
     }
+    @media only screen and (max-width: 1023px){
+        .swiper-slide {
+            width: 35%;
+            height: 50%;
+        }
 
+    }
 
 
 

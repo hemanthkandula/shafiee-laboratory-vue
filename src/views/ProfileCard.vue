@@ -55,8 +55,8 @@
     }
 
     .at-user__avatar {
-        width: 98px;
-        height: 98px;
+        width: 50%;
+        height: 50%;
         border-radius: 100%;
         margin: 0 auto 20px;
         overflow: hidden;
