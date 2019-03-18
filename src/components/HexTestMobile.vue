@@ -42,7 +42,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video class="videohex" autoplay=""  muted="" playsinline=""
+                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
                            src="../assets/videos/3d.mp4"></video>
                 </div>
 
@@ -644,6 +644,19 @@
             padding-right: 5vmin;
 
             margin: .5rem auto;
+        }
+
+
+        #particles-j-s {
+            position: center;
+            width: 100%;
+            height: 100vw;
+
+            /*height: 100%;*/
+            z-index: 1000;
+
+            height: 90vh;
+
         }
 
 

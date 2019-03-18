@@ -39,23 +39,31 @@
 
 
         </page-block>
-        <page-block   button="Positions"
-                      button_link="/positions"
-                      description="Some thing to  join us"
-                      title="Join Us"
 
-                :div-class="BlockLeft" :has-dark-background="NoDarkBackground"
-                    :section-class=CalloutGrid></page-block>
 
         <page-block
                 button="Research Project"
-                button_link="/positions"
+                button_link="/Research"
                 description="Some thing to  Projects"
                 title="See our projects "
 
 
-                :div-class="BlockLeft" :has-dark-background="DarkBackground"
-                    :section-class=CalloutFullWidth></page-block>
+                :div-class="BlockCtaLeft" :has-dark-background="DarkBackground"
+                    :section-class=CalloutGrid></page-block>
+
+
+        <page-block
+                button="Positions"
+                button_link="/positions"
+                description="Something to  Join Us"
+                title="Join Us"
+
+                :background-image="joinus"
+
+
+
+                :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+                :section-class=CalloutFullWidth></page-block>
 
 
        <contact id="contact">
@@ -81,6 +89,9 @@
     import Contact from "@/views/contact";
     import lab2 from "@/assets/images/lab2.jpg"
     import HexTestMobile from "@/components/HexTestMobile";
+
+    import joinus from "@/assets/images/joinus1.jpg"
+
 
     export default {
         name: 'home',
@@ -111,6 +122,8 @@
                 DarkBackground: true,
                 NoDarkBackground: false,
                 lab:lab2
+                ,
+                joinus:joinus
 
 
             }

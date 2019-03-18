@@ -1,13 +1,13 @@
 <template>
     <div class="gallery__item">
-        <div class="card card--content    " data-card-type="card">
+        <div class="card card--content    " data-card-type="card" >
 
-            <router-link class="card__link" exact target="_blank" to="/apply">
+            <!--<router-link class="card__link" exact target="_blank" to="/apply">-->
 
 
                 <span class="hidden-text">{{ title}}</span>
 
-            </router-link>
+            <!--</router-link>-->
 
 
             <div class="content     ">
@@ -35,13 +35,12 @@
                 </div>
                 <div class="content__ctas">
 
-                    <router-link exact to="/apply">
-                        <a class="button"
+
+                        <a class="button" v-on:click="callparent"
                         >
 
                             Apply now
                         </a>
-                    </router-link>
 
                 </div>
 
@@ -54,7 +53,13 @@
         name: 'PositionCard',
         data: function () {
 
-            return {}
+            return {
+
+                dialog:{
+                    type:Boolean,
+                    default:true
+                }
+            }
 
         },
         props: {
@@ -70,6 +75,19 @@
             link: {
                 type: String,
                 required: true
+            },
+
+        },
+
+        methods:{
+
+            callparent:function () {
+
+                // console.error('applydialog')
+
+                this.$emit('applydialog', this.dialog)
+
+
             }
         }
 

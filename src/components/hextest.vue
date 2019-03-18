@@ -42,7 +42,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video class="videohex" autoplay=""  muted="" playsinline=""
+                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
                            src="../assets/videos/3d.mp4"></video>
                 </div>
 
@@ -471,9 +471,9 @@
         grid-template-columns: repeat(16, 2fr);
         grid-gap: 0vmin;
         max-width: 200vmin;
-        padding-left: 5vmin;
+        padding-left: 15vmin;
 
-        padding-right: 5vmin;
+        padding-right: 10vmin;
 
         margin: .5rem auto;
     }

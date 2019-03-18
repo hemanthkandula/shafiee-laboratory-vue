@@ -7221,10 +7221,31 @@ header.is-open .header__overlay {
 
 .quote--gallery.quote--left .quote__details {
     left: auto;
-    right: 280px;
+    right: auto;
     -webkit-transform: translate(100%, 0);
     transform: translate(100%, 0)
 }
+
+
+@media only screen and (max-width: 767px) {
+    .quote--gallery.quote--left .quote__details {
+        left: auto;
+        right: auto;
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0)
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+    .quote--gallery.quote--left .quote__details {
+        left: auto;
+        right: auto;
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0)
+    }
+}
+
+
 
 .quote--gallery.quote--left .quote__details::before {
     background-image: url(/static/images/icons/quote-line-blue.png);

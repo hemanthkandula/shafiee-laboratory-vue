@@ -1,13 +1,24 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+
+
     <v-layout row justify-center>
+
+
+
+
         <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
-            <template v-slot:activator="{ on }">
-                <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
-            </template>
+            <!--<template v-slot:activator="{ on }">-->
+                <!--<v-btn color="primary" dark v-on="on">Open Dialog</v-btn>-->
+            <!--</template>-->
 
 
             <v-card >
-                <v-toolbar dark color="primary">
+                <v-toolbar
+
+                        scroll-target="#scrolling"
+                        absolute
+
+                        dark color="#254E70">
                     <v-btn icon dark @click="dialog = false">
                         <v-icon>close</v-icon>
                     </v-btn>
@@ -17,6 +28,11 @@
                         <v-btn dark flat @click="dialog = false">Submit</v-btn>
                     </v-toolbar-items>
                 </v-toolbar>
+
+                <div
+                        id="scrolling"
+                        class="scroll-y"
+                >
 
                 <div style="background-color: whitesmoke" >
 
@@ -147,27 +163,42 @@
 
                     <br>
 
+
+
+                    <v-card>
+                        <vs-row>
+                    <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+                        <v-radio-group v-model="applying">
+                            <div>Applying for?</div>
+
+                            <v-radio label="Postdoctoral Position" value="Postdoctoral Position"></v-radio>
+
+                            <v-radio label="Research Assistant" value="Research Assistant"></v-radio>
+                            <v-radio label="Graduate and Undergraduate Students" value="Graduate and Undergraduate Students"></v-radio>
+
+                            <v-radio label="High School Interns" value="High School Interns"></v-radio>
+
+                        </v-radio-group>
+                    </vs-col>
+
+                        </vs-row>
+                    </v-card>
+
+                    <br>
+
                     <v-card>
                         <vs-row>
 
                             <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
 
-                                <h3>Higher education
+                                <h3>Highest level of education
 
                                 </h3>
                             </vs-col>
 
-                            <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
-                                <v-radio-group v-model="Edu">
-                                        <div>Attended <strong>university degree program?</strong>*</div>
 
 
-                                    <v-radio label="Yes" value="Yes"></v-radio>
-                                    <v-radio label="No" value="No"></v-radio>
-                                </v-radio-group>
-                            </vs-col>
 
-                            <div v-if="Edu==='Yes'">
                             <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
                                 <v-text-field
 
@@ -188,55 +219,47 @@
 
                                 </v-text-field>
                             </vs-col>
-
                                 <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+                                    <v-text-field
 
-                                <v-overflow-btn
-                                        v-model="degree"
+                                            v-model="degree"
 
-                                        v-validate="'required'"
-                                        required
+                                            v-validate="'required'"
 
-                                        :items="dropdown_font"
-                                        label="Degree*"
-                                        target="#dropdown-example"
 
-                                ></v-overflow-btn>
+
+
+                                            :error-messages="errors.collect('degree')"
+
+                                            data-vv-name="degree"
+
+                                            required
+
+                                            label="Degree and Degree status *" >
+
+                                    </v-text-field>
                                 </vs-col>
 
-                                <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
 
-                                <v-overflow-btn
-                                        v-model="degreestatus"
-
-                                        v-validate="'required'"
-                                        required
-                                        target="#dropdown-example"
-
-
-                                        :items="dropdown_font"
-                                        label="Degree Status"
-                                ></v-overflow-btn>
-                                </vs-col>
 
                             <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
 
                                 <v-text-field
 
-                                        v-model="address"
+                                        v-model="Major"
 
                                         v-validate="'required'"
 
 
 
 
-                                        :error-messages="errors.collect('Firstname')"
+                                        :error-messages="errors.collect('Major')"
 
-                                        data-vv-name="address"
+                                        data-vv-name="Major"
 
                                         required
 
-                                        label="Address*" >
+                                        label="Major/area of study*" >
 
                                 </v-text-field>
 
@@ -245,65 +268,25 @@
 
                                 <v-text-field
 
-                                        v-model="email"
+                                        v-model="Country"
 
                                         v-validate="'required'"
 
 
 
 
-                                        :error-messages="errors.collect('email')"
+                                        :error-messages="errors.collect('Country')"
 
-                                        data-vv-name="email"
-
-                                        required
-
-                                        label="Email*" >
-
-                                </v-text-field>
-                            </vs-col>
-                            <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
-
-                                <v-text-field
-
-                                        v-model="phone"
-
-                                        v-validate="'required'"
-
-
-
-
-                                        :error-messages="errors.collect('phone')"
-
-                                        data-vv-name="phone"
+                                        data-vv-name="Country"
 
                                         required
 
-                                        label="Phone*" >
-
-                                </v-text-field>
-                            </vs-col>
-                            <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
-
-                                <v-text-field
-
-                                        v-model="website"
-
-
-
-
-
-
-                                        data-vv-name="website"
-
-                                        required
-
-                                        label="Website" >
+                                        label="State and Country*" >
 
                                 </v-text-field>
                             </vs-col>
 
-                            </div>
+
 
                         </vs-row>
 
@@ -337,8 +320,7 @@
 
                             <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
                                 <v-radio-group v-model="work">
-                                    <div>Applying for your first job?
-                                   *</div>
+                                    <div>Applying for your first job? *</div>
 
 
                                     <v-radio label="Yes" value="Yes"></v-radio>
@@ -347,23 +329,32 @@
                             </vs-col>
 
                             <div v-if="work==='No'">
+
+                                <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
+
+                                    <h4>Current Job details
+
+
+
+                                    </h4>
+                                </vs-col>
                                 <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
                                     <v-text-field
 
-                                            v-model="firstname"
+                                            v-model="Employer"
 
                                             v-validate="'required'"
 
 
 
 
-                                            :error-messages="errors.collect('Firstname')"
+                                            :error-messages="errors.collect('Employer')"
 
-                                            data-vv-name="Firstname"
+                                            data-vv-name="Employer"
 
                                             required
 
-                                            label="Legal Name*" >
+                                            label="Employer name*" >
 
                                     </v-text-field>
                                 </vs-col>
@@ -372,20 +363,20 @@
 
                                     <v-text-field
 
-                                            v-model="address"
+                                            v-model="job"
 
                                             v-validate="'required'"
 
 
 
 
-                                            :error-messages="errors.collect('Firstname')"
+                                            :error-messages="errors.collect('job')"
 
-                                            data-vv-name="address"
+                                            data-vv-name="job"
 
                                             required
 
-                                            label="Address*" >
+                                            label="Job title*" >
 
                                     </v-text-field>
 
@@ -394,62 +385,42 @@
 
                                     <v-text-field
 
-                                            v-model="email"
+                                            v-model="Years"
 
                                             v-validate="'required'"
 
 
 
 
-                                            :error-messages="errors.collect('email')"
+                                            :error-messages="errors.collect('Years')"
 
-                                            data-vv-name="email"
+                                            data-vv-name="Years"
 
                                             required
 
-                                            label="Email*" >
+                                            label="Years of Experience*" >
 
                                     </v-text-field>
                                 </vs-col>
                                 <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
 
-                                    <v-text-field
-
-                                            v-model="phone"
+                                    <v-textarea
+                                            v-model="location"
 
                                             v-validate="'required'"
 
+                                            data-vv-name="location"
+                                            :error-messages="errors.collect('location')"
 
-
-
-                                            :error-messages="errors.collect('phone')"
-
-                                            data-vv-name="phone"
-
+                                            solo
                                             required
-
-                                            label="Phone*" >
-
-                                    </v-text-field>
-                                </vs-col>
-                                <vs-col vs-offset="2" v-tooltip="'col - 8'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="8">
-
-                                    <v-text-field
-
-                                            v-model="website"
+                                            name="input-7-4"
+                                            label="Write Address here."
+                                            auto-grow
+                                            value="" >
 
 
-
-
-
-
-                                            data-vv-name="website"
-
-                                            required
-
-                                            label="Website" >
-
-                                    </v-text-field>
+                                    </v-textarea>
                                 </vs-col>
 
                             </div>
@@ -536,7 +507,11 @@
 
 
                 </div>
+
+
+                </div>
             </v-card>
+
 
 
         </v-dialog>
@@ -548,7 +523,7 @@
         name: "ApplyForm",
         data () {
             return {
-                dialog: false,
+                // dialog: false,
                 notifications: false,
                 sound: true,
                 widgets: false,
@@ -558,10 +533,20 @@
                 Edu: 'Yes',
 
                 dropdown_font: ['Arial', 'Calibri', 'Courier', 'Verdana'],
+                applying:"Postdoctoral Position"
 
 
             }
-    }
+    },
+        props:{
+
+            dialog: {
+                type: Boolean,
+                required: true,
+                default:true
+            },
+        }
+
 
     }
 </script>

@@ -65,6 +65,24 @@
             </v-flex>
 
 
+            <v-flex xs12 >
+                <v-text-field
+
+                        v-validate="'required'"
+
+                        v-model="subject"
+
+                        :error-messages="errors.collect('subject')"
+
+                        data-vv-name="subject"
+
+                        required
+
+                        label="Subject*"
+                ></v-text-field>
+            </v-flex>
+
+
 
             <v-flex xs12>
                 <v-textarea
@@ -181,7 +199,7 @@
 
         methods: {
             postNow: function() {
-                console.log(this.name);
+                // console.log(this.name);
 
                 let data = new FormData();
                 data.append('name',this.firstname+" "+this.lastname);
@@ -202,15 +220,18 @@
                     .then(function (response) {
                         this.color= 'green';
                         this.text= 'Message sent post'
-                        console.log(response);
+                        // console.log(response);
+                        response;
                     })
                     .catch(function (error) {
-                        console.log(error);
+                        // console.log(error);
+                        error;
 
                         this.color= 'red';
                         this.text= 'dailed'
 
                     });
+
 
             }
 

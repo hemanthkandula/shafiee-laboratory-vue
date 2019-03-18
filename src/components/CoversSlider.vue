@@ -3,7 +3,7 @@
 <div>
 
 
-    <section class="group group--default    ">
+    <!--<section class="group group&#45;&#45;default    ">-->
 
 
         <v-layout wrap text-xs-center>
@@ -56,7 +56,7 @@
             <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
 
-    </section>
+    <!--</section>-->
 
 
 

@@ -10,6 +10,10 @@
                 description="Something to  Join Us"
                 title="Join Us"
 
+                :background-image="joinus"
+
+
+
                 :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth></page-block>
 
@@ -57,7 +61,7 @@
                     <div class="gallery__wrapper">
 
 
-                        <position-card :content="detail.Content" :key="detail.Tittle" :link="detail.Link"
+                        <position-card @applydialog="applydialog" :content="detail.Content" :key="detail.Tittle" :link="detail.Link"
                                        :title="detail.Tittle" v-for="detail in position"></position-card>
 
 
@@ -70,7 +74,7 @@
 
 
 
-        <apply-form></apply-form>
+        <apply-form :dialog="dialog"></apply-form>
 
 
 
@@ -83,12 +87,14 @@
     import PageBlock from "@/components/PageBlock";
     import PositionCard from "@/views/PositionCard";
     import ApplyForm from "@/components/ApplyForm";
+    import joinus from "@/assets/images/joinus1.jpg"
 
     export default {
         name: "positions",
         components: {ApplyForm, PositionCard, PageBlock},
         data: function () {
             return {
+                dialog:false,
 
                 CalloutFullWidth: 'callout--fullwidth',
                 CalloutGrid: 'callout--grid',
@@ -101,6 +107,7 @@
                 BlockCtaRight: 'block--cta-right',
                 DarkBackground: true,
                 NoDarkBackground: false,
+                joinus:joinus,
 
                 BlockHalfImage: 'block--half-image',
 
@@ -159,6 +166,12 @@
 
 
                 ]
+            }
+        },
+
+        methods:{
+            applydialog:function (variable) {
+                this.dialog=  variable;
             }
         }
     }

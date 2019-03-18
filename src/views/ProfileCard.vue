@@ -71,9 +71,9 @@
     .at-user__name {
         color: #313435;
         font-family: 'Roboto', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 500;
-        line-height: 2.625rem;
+        line-height: 1.5rem;
     }
 
     .at-user__title {

@@ -601,9 +601,9 @@
                       title="Join Us"
 
 
-
+                      :background-image="joinus"
                       :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
-                    :section-class=CalloutFullWidth></page-block>
+                    :section-class=CalloutGrid></page-block>
 
 
 
@@ -648,6 +648,7 @@
     import hadi from "@/assets/images/hadi1.jpg"
     // import cheerio from 'cheerio'
     // import axios from 'axios';
+    import joinus from "@/assets/images/joinus1.jpg"
 
 
 
@@ -661,6 +662,7 @@
             return {
 
                 baseurl:'http://localhost:8080/people-assets/',
+                joinus:joinus,
 
 
 
@@ -805,7 +807,7 @@
 
 
             return {
-                peopleDB: fs.collection('People').orderBy('name')
+                peopleDB: fs.collection('People').orderBy('id')
 
 
             }
