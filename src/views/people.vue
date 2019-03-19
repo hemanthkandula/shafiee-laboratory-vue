@@ -8,8 +8,10 @@
                 description="Something about people"
                 title="Our Team"
 
+                :background-image="peopleimg"
 
-                :div-class="BlockHalfImage" :has-dark-background="NoDarkBackground"
+
+                :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth>
 
         </page-block>
@@ -656,6 +658,9 @@
     import fs from '@/db/fs'
 
 
+    import peopleimg from '@/assets/images/people-eng.jpg'
+
+
     export default {
         name: "people",
         data: function () {
@@ -689,7 +694,8 @@
 
 
                 peopleDB:[],
-                position_filtered:[]
+                position_filtered:[],
+                peopleimg:peopleimg
             }
         },
 

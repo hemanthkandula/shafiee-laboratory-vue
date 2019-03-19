@@ -1,5 +1,6 @@
 <template>
 
+    <div>
 
 
     <div class="hexmain">
@@ -76,15 +77,27 @@
 
 
 
-
-
-
-
         </section>
 
 
 
+
+
     </div>
+
+    <v-layout align-end justify-center  fill-height>
+    <div class="arrow-all">
+
+        <!--<ArrowScroll/>-->
+    </div>
+
+    </v-layout>
+
+
+
+    </div>
+
+
 
 </template>
 
@@ -114,12 +127,13 @@
     import vid20 from "@/assets/videos/20.mp4";
 
     import vid21 from "@/assets/videos/21.mp4";
+    import ArrowScroll from "@/components/ArrowScroll";
 
 
     export default {
 
         name: "hextest",
-        components: { ParticlesJS},
+        components: {ArrowScroll, ParticlesJS},
 
 
 
@@ -292,6 +306,13 @@
 </script>
 
 <style scoped>
+
+
+    .arrow-all{
+
+
+
+    }
 
 
     .t1{
@@ -557,7 +578,6 @@
         margin-top: calc(var(--height) * -.3);
     }
 
-    /* Ornamentales */
 
     figure {
         display: flex;

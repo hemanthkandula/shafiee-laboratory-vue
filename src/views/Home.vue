@@ -62,7 +62,7 @@
 
 
 
-                :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+                :div-class="BlockRight" :has-dark-background="DarkBackground"
                 :section-class=CalloutFullWidth></page-block>
 
 
