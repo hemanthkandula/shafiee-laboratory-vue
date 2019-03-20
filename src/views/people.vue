@@ -666,7 +666,7 @@
         data: function () {
             return {
 
-                baseurl:'http://localhost:8080/people-assets/',
+                baseurl:'http://shafieelabdatalabeling.tk:5000/people-assets/',
                 joinus:joinus,
 
 

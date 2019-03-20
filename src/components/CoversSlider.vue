@@ -32,7 +32,7 @@
         <swiper :options="swiperOption">
             <swiper-slide :key="index" v-for="(cover ,index) in Coversurls.length">
 
-                <div class="card card--default   card--in-carousel " data-card-type="card">
+                <!--<div class="card card&#45;&#45;default   card&#45;&#45;in-carousel " data-card-type="card">-->
                     <!--<a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>-->
 
 
@@ -41,7 +41,7 @@
                     <div class="swiper__image" v-bind:style="{ backgroundImage: 'url(' + Coversurls[index] + ')' }">
 
 
-                    </div>
+                    <!--</div>-->
 
 
                 </div>
@@ -250,8 +250,8 @@
 
 <style scoped>
     .swiper-slide {
-        width: 25%;
-        height: 50%;
+        width: 300px;
+        height: 388px;
     }
 
 
@@ -292,15 +292,15 @@
 
     @media only screen and (max-width: 767px){
         .swiper-slide {
-            width: 35%;
-            height: 50%;
+            width: 20vw;
+            height: 60vw;
         }
 
     }
     @media only screen and (max-width: 1023px){
         .swiper-slide {
-            width: 35%;
-            height: 50%;
+            width: 300px;
+            height: 388px;
         }
 
     }

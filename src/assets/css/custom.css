@@ -30,8 +30,20 @@ canvas,
 progress,
 video {
     display: inline-block;
-    vertical-align: baseline
+    vertical-align: baseline;
+    filter:grayscale(100%);
+    z-index: 150;
+
 }
+
+video:hover {
+
+    filter:grayscale(0%);
+
+}
+
+
+
 
 audio:not([controls]) {
     display: none;

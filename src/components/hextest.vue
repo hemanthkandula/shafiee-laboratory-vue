@@ -25,10 +25,16 @@
 
                     <!--@ended="PickVideo(CurrentPlaying[index])"-->
 
-                    <div class="overlay"></div>
+                    <!--<div class="overlay"-->
+                         <!--@mouseover="hover = true"-->
+                         <!--@mouseleave="hover = false"-->
+
+                    <!--&gt;-->
+
+                    <!--</div>-->
 
 
-                    <video @ended="printindex(index)"
+                    <video  disableRemotePlayback  @ended="printindex(index)"
 
                             class="videohex" autoplay="" muted="" playsinline=""
                                :src="CurrentPlaying[index]"></video>
@@ -43,7 +49,10 @@
 
                 <div class="Inhexvideo">
 
-                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
+                    <video disableRemotePlayback
+                           style="    filter:grayscale(0%);
+"
+                            class="videohex" autoplay="" loop="" muted="" playsinline=""
                            src="../assets/videos/3d.mp4"></video>
                 </div>
 
@@ -57,14 +66,14 @@
                 <div class="Inhexvideo">
 
 
-                    <div class="overlay"></div>
+                    <!--<div class="overlay"></div>-->
 
 
 
                     <!--@ended="PickVideo(CurrentPlaying[index])"-->
 
                     <!--@ended="PickVideo(CurrentPlaying[index+5])"-->
-                    <video  @ended="printindex(index+5)"
+                    <video disableRemotePlayback  @ended="printindex(index+5)"
 
                             class="videohex" autoplay="" muted="" playsinline=""
                             :src="CurrentPlaying[index+5]">
@@ -127,13 +136,12 @@
     import vid20 from "@/assets/videos/20.mp4";
 
     import vid21 from "@/assets/videos/21.mp4";
-    import ArrowScroll from "@/components/ArrowScroll";
 
 
     export default {
 
         name: "hextest",
-        components: {ArrowScroll, ParticlesJS},
+        components: { ParticlesJS},
 
 
 
@@ -307,7 +315,9 @@
 
 <style scoped>
 
-
+    video {
+        filter:grayscale(100%);
+    }
     .arrow-all{
 
 
@@ -350,12 +360,15 @@
         top: 0px;
         left: 0px;
         z-index: 2;
-        background: black;
-        opacity: 0.5;
+        /*background: black;*/
+        opacity: 1;
+        filter:grayscale(100%);
+
     }
 
     .overlay:hover {
-        opacity: 0;
+        filter:grayscale(0%);
+
 
     }
 
@@ -668,7 +681,7 @@
 
         article {
 
-            
+
 
             background: var(--negroC);
             width: var(--width);

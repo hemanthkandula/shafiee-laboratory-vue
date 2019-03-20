@@ -164,8 +164,29 @@
     #particles-js {
         position: absolute;
         width: 100%;
-        height: 100%;
+            height: 90vh;
         z-index: -1;
+    }
+
+
+    @media only screen and (max-width: 767px){
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vw;
+            z-index: -1;
+        }
+    }
+
+    @media all and (orientation:portrait) {
+        /* Style adjustments for portrait mode goes here */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vw;
+            z-index: -1;
+        }
     }
 
 

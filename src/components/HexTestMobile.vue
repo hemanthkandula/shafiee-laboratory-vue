@@ -24,10 +24,10 @@
 
                     <!--@ended="PickVideo(CurrentPlaying[index])"-->
 
-                    <div class="overlay"></div>
+                    <!--<div class="overlay"></div>-->
 
 
-                    <video @ended="printindex(index)"
+                    <video disableRemotePlayback  @ended="printindex(index)"
 
                             class="videohex" autoplay="" muted="" playsinline=""
                                :src="CurrentPlaying[index]"></video>
@@ -42,7 +42,10 @@
 
                 <div class="Inhexvideo">
 
-                    <video class="videohex" autoplay="" loop="" muted="" playsinline=""
+                    <video disableRemotePlayback
+                           style="    filter:grayscale(0%);"
+
+                            class="videohex" autoplay="" loop="" muted="" playsinline=""
                            src="../assets/videos/3d.mp4"></video>
                 </div>
 
@@ -56,14 +59,14 @@
                 <div class="Inhexvideo">
 
 
-                    <div class="overlay"></div>
+                    <!--<div class="overlay"></div>-->
 
 
 
                     <!--@ended="PickVideo(CurrentPlaying[index])"-->
 
                     <!--@ended="PickVideo(CurrentPlaying[index+5])"-->
-                    <video  @ended="printindex(index+5)"
+                    <video  disableRemotePlayback  @ended="printindex(index+5)"
 
                             class="videohex" autoplay="" muted="" playsinline=""
                             :src="CurrentPlaying[index+5]">
@@ -431,7 +434,7 @@
         /*height: 100%;*/
         z-index: 1000;
 
-        height: 90vh;
+        height: 100vw;
 
     }
 
@@ -466,7 +469,7 @@
     /* Making the grid */
     section {
 
-        height: 90vh;
+        height: 100vw;
         display: grid;
         grid-template-columns: repeat(12, 2fr);
         grid-gap: 0vmin;
@@ -655,7 +658,6 @@
             /*height: 100%;*/
             z-index: 1000;
 
-            height: 90vh;
 
         }
 

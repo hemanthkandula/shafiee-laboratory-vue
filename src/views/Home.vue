@@ -6,9 +6,13 @@
 
 
 <!--<homehexagon> </homehexagon>-->
-        <hextest v-if="!isMobile()"></hextest>
 
-        <hex-test-mobile v-else></hex-test-mobile>
+        <hex-test-mobile v-if="Mobile"
+
+
+                ></hex-test-mobile>
+        <hextest v-else></hextest>
+
 
 
 
@@ -123,23 +127,82 @@
                 NoDarkBackground: false,
                 lab:lab2
                 ,
-                joinus:joinus
+                joinus:joinus,
+                Mobile:false,
+
 
 
             }
         },
         methods:{
 
+            checkMobile:function(){
+
+                if( screen.width <= 767 ) {
+                    this.Mobile = true
+
+                    // return true;
+                }
+
+                else if (screen.width +50< screen.height ){
+                    this.Mobile = true
+
+                }else {
+                    this.Mobile = false
+
+
+                }
+
+            },
+
+
+
+
             isMobile:function() {
-                if( screen.width <= 760 ) {
-                    return true;
+                this.checkMobile();
+
+                return this.Mobile;
+
+            },
+
+            onResize() {
+                // console.log('window has been resized', event)
+
+
+
+                if( screen.width <= 767 ) {
+                    this.Mobile = true
+
+                    // return true;
                 }
-                else {
-                    return false;
+
+                else if (screen.width +50< screen.height ){
+                    this.Mobile = true
+
+                }else {
+                    this.Mobile = false
+
+
                 }
+
             }
 
 
+        },
+
+
+        mounted() {
+
+            this.checkMobile();
+
+            window.addEventListener('resize', this.onResize)
+
+
+        },
+
+        beforeDestroy() {
+            // Unregister the event listener before destroying this Vue instance
+            window.removeEventListener('resize', this.onResize)
         }
 
     }
