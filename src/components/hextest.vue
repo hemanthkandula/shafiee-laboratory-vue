@@ -52,7 +52,7 @@
                     <video disableRemotePlayback
                            style="    filter:grayscale(0%);
 "
-                            class="videohex" autoplay="" loop="" muted="" playsinline=""
+                            class="videohex" autoplay=""  muted="" playsinline=""
                            src="../assets/videos/3d.mp4"></video>
                 </div>
 

@@ -99,11 +99,14 @@
 
 
                 <div class="card__link--icon">
+
                     <a class="icon icon--google-scholar card__link-search-scholar"
 
                        :href =makehref(Title)
                        target="_blank">
-                        <img alt="GS" src="../assets/icons/icon-google-scholar.svg"/>
+                        <!--<img alt="GS" src="../assets/icons/icon-google-scholar.svg"/>-->
+                        <img alt="info" src="../assets/icons/gs.jpg" width="26px" height="26px"/>
+
                     </a>
 
                     <div class="card__link-tooltip">Google Scholar</div>
@@ -127,7 +130,7 @@
 
                     <a class="icon icon--info card__link-info">
 
-                        <img alt="info" src="../assets/icons/icon-info.svg"/>
+                        <img alt="info" src="../assets/icons/icons-info.svg"/>
                     </a>
                     <div class="card__link-tooltip">Preview Abstract</div>
                     <div class="card__link-abstract t--card-description">
@@ -142,10 +145,10 @@
 
                 <div class="content card__content ">
                     <div class="content__title">
-                        <a :href="Link" class="card__title" title="Pub Name">{{Title}}</a>
+                        <a :href="Link" class="card__title1" title="Pub Name">{{Title}}</a>
                     </div>
                     <div class="content__body">
-                        <p class="content__authors">
+                        <p class="content__authors" >
 
                             {{Authors}}
 
@@ -280,3 +283,30 @@
     }
 
 </script>
+
+<style scoped>
+
+    @import url('https://fonts.googleapis.com/css?family=Arimo:400i|Eczar:700|Exo:900i|Kelly+Slab');
+    .card__title1 {
+        font-family: 'Eczar', serif;
+    }
+
+.content__authors {
+    font-family: 'Arimo', sans-serif;
+
+}
+    .year{
+
+        font-family: 'Kelly Slab', cursive;
+
+    }
+
+    .booktitle{
+        font-family: 'Exo', sans-serif;
+
+    }
+
+
+
+
+</style>

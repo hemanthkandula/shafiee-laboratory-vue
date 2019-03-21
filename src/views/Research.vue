@@ -1,14 +1,14 @@
 <template>
     <div class="news">
 
-        <page-block  button="Research Projects"
-                     button_link="/research"
-                     description="Some thing to  Projects"
-                     title="See our projects "
+        <!--<page-block  button="Research Projects"-->
+                     <!--button_link="/research"-->
+                     <!--description="Some thing to  Projects"-->
+                     <!--title="See our projects "-->
 
 
-                :div-class="BlockLeft" :has-dark-background="DarkBackground"
-                    :section-class=CalloutFullWidth ></page-block>
+                <!--:div-class="BlockLeft" :has-dark-background="DarkBackground"-->
+                    <!--:section-class=CalloutFullWidth ></page-block>-->
 
 
         <page-block  button="Explore Project"

@@ -46,9 +46,11 @@
 
             <div  :key="idx" v-for="(year,idx) in getallyesrs()">
             <v-checkbox v-model="checkboxyears"  :value=year  >
-                <template v-slot:label >
+                <template v-slot:label>
 
-                    <span  ><Strong>{{year}}</Strong></span>
+                    <span>
+                        <Strong>{{year}}</Strong>
+                    </span>
                     <!--<span class="filter__option-count ng-binding">144</span>-->
 
 
@@ -261,6 +263,7 @@
                 let sorted = [];
 
                 for(let key in this.filteryearslist) {
+                    if(key!==" ")
                     sorted[sorted.length] = key;
                 }
                 sorted.sort().reverse();

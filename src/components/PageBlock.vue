@@ -17,7 +17,7 @@
             <div class="block__content-wrapper">
                 <div class="content block__content    ">
                     <div class="content__text">
-                        <span class="content__brow"> {{Title}}</span>
+                        <!--<span class="content__brow"> {{Title}}</span>-->
                         <div class="content__header">
                             <h3 class="content__title ">
                                 {{Title}}

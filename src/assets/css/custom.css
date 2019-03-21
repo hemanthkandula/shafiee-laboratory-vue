@@ -4227,8 +4227,10 @@ section.hero+section.search.has-grey-background .filter__title:hover {
 }
 
 .card .card__link--icon .card__link-tooltip {
-    background: #9aa0a6;
-    border-radius: 5px;
+    /*background: #9aa0a6;*/
+    background: #254E70;
+
+    border-radius: 4px;
     color: #fff;
     left: 50%;
     opacity: 0;
@@ -4285,7 +4287,7 @@ section.hero+section.search.has-grey-background .filter__title:hover {
 
 .card__image {
     background: center/cover no-repeat #f1f3f4;
-    height: 140px;
+    height: 240px;
     overflow: hidden;
     width: 100%
 }

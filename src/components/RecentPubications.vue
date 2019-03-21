@@ -13,9 +13,7 @@
                                 Recent research publications
                             </h2>
                         </div>
-                        <div class="content__body">
-                            <p> research papers</p>
-                        </div>
+
                     </div>
                     <div class="content__ctas">
 
@@ -35,18 +33,24 @@
                      gallery--1-columns">
                     <!--<div class="gallery__wrapper">-->
 
+
+                    <div v-for="idx in 4" :key="idx">
+
                     <single-publication :u-r-l="PublicationsDB[idx-1].URL"
                                         :authors="PublicationsDB[idx-1].Authors"
                                         :description="PublicationsDB[idx-1].Description"
                                         :issue="PublicationsDB[idx-1].Issue"
                                         :journal="PublicationsDB[idx-1].Journal"
-                                        :key="idx" :link="PublicationsDB[idx-1].URL"
+                                        :link="PublicationsDB[idx-1].URL"
                                         :pages="PublicationsDB[idx-1].Pages" :pub-date="PublicationsDB[idx-1].Pubdate"
                                         :pubdate="PublicationsDB[idx-1].Pubdate" :title="PublicationsDB[idx-1].Title"
-                                        :volume="PublicationsDB[idx-1].Volume" v-for="idx in 4">
+                                        :volume="PublicationsDB[idx-1].Volume" >
 
 
                     </single-publication>
+
+                        </div>
+
 
 
                     <!--</div>-->
