@@ -286,24 +286,54 @@
 
 <style scoped>
 
-    @import url('https://fonts.googleapis.com/css?family=Arimo:400i|Eczar:700|Exo:900i|Kelly+Slab');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
     .card__title1 {
-        font-family: 'Eczar', serif;
+        font-family: 'Roboto', sans-serif;
+        /*color: #000;*/
+
+
     }
 
 .content__authors {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
 }
     .year{
 
-        font-family: 'Kelly Slab', cursive;
+        font-family: 'Roboto', sans-serif;
 
     }
 
     .booktitle{
         font-family: 'Exo', sans-serif;
 
+    }
+
+    a,
+    .t--link {
+        color: #000;
+        font-weight: 500;
+        position: relative;
+        text-decoration: none;
+        -webkit-text-decoration-color: rgba(66, 133, 244, 0);
+        text-decoration-color: rgba(66, 133, 244, 0);
+        transition: color .25s linear, -webkit-text-decoration-color .25s linear;
+        transition: text-decoration-color .25s linear, color .25s linear;
+        transition: text-decoration-color .25s linear, color .25s linear, -webkit-text-decoration-color .25s linear
+    }
+
+
+    .search.is-list-view .card .card__link-search-scholar:hover,
+    .search.is-list-view .card .card__link-copy-bibtex:hover,
+    .search.is-list-view .card .card__link-info:hover,
+    .card.card--publication-list .card__link-search-scholar:hover,
+    .search.is-list-view .card.card--publication .card__link-search-scholar:hover,
+    .card.card--publication-list .card__link-copy-bibtex:hover,
+    .search.is-list-view .card.card--publication .card__link-copy-bibtex:hover,
+    .card.card--publication-list .card__link-info:hover,
+    .search.is-list-view .card.card--publication .card__link-info:hover {
+        opacity: 0.7
+        
     }
 
 

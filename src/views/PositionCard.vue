@@ -3,7 +3,10 @@
         <div class="card card--content    " data-card-type="card" >
 
             <!--<router-link class="card__link" exact target="_blank" to="/apply">-->
+            <!--<a class="card__link" :onclick="callparent" ><span class="hidden-text">LINK </span></a>-->
 
+            <a class="card__link"  @click="callparent" :title="title">
+                <span class="hidden-text">Software Engineer, AI/ML</span></a>
 
                 <span class="hidden-text">{{ title}}</span>
 
@@ -36,8 +39,10 @@
                 <div class="content__ctas">
 
 
-                        <a class="button" v-on:click="callparent"
+                        <a class="button"
+                           v-on:click="callparent"
                         >
+
 
                             Apply now
                         </a>
@@ -85,7 +90,7 @@
 
                 // console.error('applydialog')
 
-                this.$emit('applydialog', this.dialog)
+                this.$emit('applydialog', this.title)
 
 
             }

@@ -171,12 +171,9 @@
                         <v-radio-group v-model="applying">
                             <div>Applying for?</div>
 
-                            <v-radio label="Postdoctoral Position" value="Postdoctoral Position"></v-radio>
+                            <v-radio :label="applyingpostion" :value="applyingpostion"></v-radio>
 
-                            <v-radio label="Research Assistant" value="Research Assistant"></v-radio>
-                            <v-radio label="Graduate and Undergraduate Students" value="Graduate and Undergraduate Students"></v-radio>
 
-                            <v-radio label="High School Interns" value="High School Interns"></v-radio>
 
                         </v-radio-group>
                     </vs-col>
@@ -544,6 +541,10 @@
                 type: Boolean,
                 required: true,
                 default:true
+            },applyingpostion: {
+                type: String,
+                required: true,
+                default:'Postdoctoral Position'
             },
         }
 

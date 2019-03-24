@@ -60,8 +60,10 @@
 
                     <div class="gallery__wrapper">
 
-
-                        <position-card @applydialog="applydialog" :content="detail.Content" :key="detail.Tittle" :link="detail.Link"
+                        <!--:onclick="applydialog(detail.Tittle)"-->
+                        <position-card
+                                       @applydialog="applydialog"
+                                       :content="detail.Content" :key="detail.Tittle" :link="detail.Link"
                                        :title="detail.Tittle" v-for="detail in position"></position-card>
 
 
@@ -74,7 +76,7 @@
 
 
 
-        <apply-form :dialog="dialog"></apply-form>
+        <apply-form :dialog="dialog" :applyingpostion="PositionApplying"></apply-form>
 
 
 
@@ -110,6 +112,7 @@
                 joinus:joinus,
 
                 BlockHalfImage: 'block--half-image',
+                PositionApplying: '',
 
 
                 position: [
@@ -171,7 +174,8 @@
 
         methods:{
             applydialog:function (variable) {
-                this.dialog=  variable;
+                this.PositionApplying = variable;
+                this.dialog=  !this.dialog
             }
         }
     }

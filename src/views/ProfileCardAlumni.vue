@@ -39,7 +39,7 @@
             </a>
             </li>
         </ul>
-        <div class="at-user__title">Position</div>
+        <!--<div class="at-user__title">Position</div>-->
 
 
 
