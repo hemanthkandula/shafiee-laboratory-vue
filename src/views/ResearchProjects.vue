@@ -37,7 +37,7 @@
 
                 <div class="gallery__wrapper">
 
-                    <div :key="index" class="gallery__item " v-for="(col,index) in 6">
+                    <div :key="index" class="gallery__item " v-for="(col,index) in 5">
                         <div class="card card--content    " data-card-type="card">
 
 
@@ -49,34 +49,49 @@
 
 
 
-                            <div class="content     ">
-                                <div class="content__text">
+                            <!--<div class="content     ">-->
+                                <!--<div class="content__text">-->
 
-                                    <div class="content__header">
-                                        <div class="content__title ">
-                                            Research Project 1
-                                        </div>
+                                    <!--<div class="content__header">-->
+                                        <!--<div class="content__title ">-->
+                                            <!--Research Project 1-->
+                                        <!--</div>-->
 
-                                    </div>
+                                    <!--</div>-->
 
-                                    <div class="content__body">
-                                        <p>Projects descrition</p>
-                                    </div>
-                                </div>
-                                <div class="content__ctas">
-
-
-                                    <router-link class="button" exact to='/project-description'>
-                                        Explore Project
+                                    <!--<div class="content__body">-->
+                                        <!--<p>Projects descrition</p>-->
+                                    <!--</div>-->
+                                    <!---->
+                                <!--</div>-->
+                                <!--<div class="content__ctas">-->
 
 
-                                    </router-link>
+                                    <!--<router-link class="button" exact to='/project-description'>-->
+                                        <!--Explore Project-->
+
+
+                                    <!--</router-link>-->
 
 
 
-                                </div>
+                                <!--</div>-->
 
-                            </div>  </div>
+                            <!--</div> -->
+
+                            <div class="cardimage" >
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
                     </div>
 
 
@@ -103,5 +118,13 @@
 </script>
 
 <style scoped>
+
+
+    .cardimage{
+
+        height: inherit;
+        width: inherit;
+        background-image: url(../assets/images/projects/male_infertility/male-infertility-test-smart-phone.jpg)
+    }
 
 </style>

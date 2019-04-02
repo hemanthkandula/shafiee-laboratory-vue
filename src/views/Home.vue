@@ -11,7 +11,9 @@
 
 
                 ></hex-test-mobile>
-        <hextest v-else></hextest>
+        <hextest v-else>
+
+        </hextest>
 
 
 
@@ -32,7 +34,6 @@
         <!--<ResearchAreas/>-->
 
 
-        <research-projects></research-projects>
 
         <page-block :div-class="BlockRight" :has-dark-background="DarkBackground"
                     :background-image="lab"
@@ -48,15 +49,19 @@
         </page-block>
 
 
-        <page-block
-                button="Research Project"
-                button_link="/Research"
-                description="Some thing to  Projects"
-                title="See our projects "
+        <research-projects></research-projects>
 
 
-                :div-class="BlockCtaLeft" :has-dark-background="DarkBackground"
-                    :section-class=CalloutGrid></page-block>
+
+        <!--<page-block-->
+                <!--button="Research Project"-->
+                <!--button_link="/Research"-->
+                <!--description="Some thing to  Projects"-->
+                <!--title="See our projects "-->
+
+
+                <!--:div-class="BlockCtaLeft" :has-dark-background="DarkBackground"-->
+                    <!--:section-class=CalloutGrid></page-block>-->
 
 
         <page-block

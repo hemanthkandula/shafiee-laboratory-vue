@@ -75,6 +75,9 @@ export default new Router({
             name: 'Publications',
             component: Publications
         },
+
+        { path: '/projects/:name', component: ProjectDescription },
+
         //
         // {
         //   path: '/about',
