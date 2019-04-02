@@ -8,6 +8,7 @@ import People from './views/people.vue'
 import Positions from './views/positions.vue'
 import Publications from './views/publications.vue'
 import Research from "@/views/Research";
+import ProjectDescription from "@/components/ProjectDescription";
 
 
 Vue.use(Router);
@@ -40,6 +41,11 @@ export default new Router({
             path: '/research',
             name: 'research',
             component: Research
+        },
+        {
+            path: '/project-description',
+            name: 'project',
+            component: ProjectDescription
         },
         {
             path: '/contact',

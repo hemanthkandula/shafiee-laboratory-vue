@@ -32,6 +32,8 @@
         <!--<ResearchAreas/>-->
 
 
+        <research-projects></research-projects>
+
         <page-block :div-class="BlockRight" :has-dark-background="DarkBackground"
                     :background-image="lab"
                     button="People"
@@ -96,11 +98,13 @@
     import HexTestMobile from "@/components/HexTestMobile";
 
     import joinus from "@/assets/images/joinus1.jpg"
+    import ResearchProjects from "@/views/ResearchProjects";
 
 
     export default {
         name: 'home',
         components: {
+            ResearchProjects,
             HexTestMobile,
 
             Contact,
