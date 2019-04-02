@@ -31,16 +31,16 @@ progress,
 video {
     display: inline-block;
     vertical-align: baseline;
-    filter:grayscale(100%);
+    /*filter:grayscale(100%);*/
     z-index: 150;
 
 }
 
-video:hover {
+/*video:hover {*/
 
-    filter:grayscale(0%);
+    /*filter:grayscale(0%);*/
 
-}
+/*}*/
 
 
 

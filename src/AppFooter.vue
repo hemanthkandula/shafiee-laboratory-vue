@@ -9,7 +9,7 @@
                     <a aria-label="" class="footer__logo" href="http://shafieelab.bwh.harvard.edu" target="_blank">
                         <img alt="logo"
                              height="39"
-                             src="./assets/logo.png"
+                             src="./assets/logo_white.png"
                              width="200">
                     </a>
                     <div class="Footer-top" itemscope="" itemtype="http://schema.org/Organization">

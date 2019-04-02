@@ -65,16 +65,16 @@
 
                     </div>
 
-                    <div aria-level="1" class="header__item">
+                    <!--<div aria-level="1" class="header__item">-->
 
-                        <router-link exact to="/research">
-                            <a class="header__link">
-                                Research Projects
-                            </a>
+                        <!--<router-link exact to="/research">-->
+                            <!--<a class="header__link">-->
+                                <!--Research Projects-->
+                            <!--</a>-->
 
-                        </router-link>
+                        <!--</router-link>-->
 
-                    </div>
+                    <!--</div>-->
 
                     <div aria-level="1" class="header__item">
                         <router-link exact to="/publications">

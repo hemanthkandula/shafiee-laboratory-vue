@@ -50,8 +50,7 @@
                 <div class="Inhexvideo">
 
                     <video disableRemotePlayback
-                           style="    filter:grayscale(0%);
-"
+
                             class="videohex" autoplay=""  muted="" playsinline=""
                            src="../assets/videos/3d.mp4"></video>
                 </div>
@@ -135,7 +134,7 @@
     import vid19 from "@/assets/videos/19.mp4";
     import vid20 from "@/assets/videos/20.mp4";
 
-    import vid21 from "@/assets/videos/21.mp4";
+    // import vid21 from "@/assets/videos/21.mp4";
 
 
     export default {
@@ -153,10 +152,10 @@
             return {
                 videosrc : "../assets/videos/",
                 videos: [vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                    vid14,vid15,vid16,vid17,vid18,vid19,vid20,vid21],
+                    vid14,vid15,vid16,vid17,vid18,vid19,vid20],
 
                 AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                    vid14,vid15,vid16,vid17,vid18,vid19,vid20,vid21 ],
+                    vid14,vid15,vid16,vid17,vid18,vid19,vid20 ],
 
                 CurrentPlaying:[]
 
@@ -176,7 +175,7 @@
         created() {
 
             while(this.CurrentPlaying.length < 10){
-                let r = Math.floor(Math.random()*20) + 1;
+                let r = Math.floor(Math.random()*19) + 1;
                 if(this.CurrentPlaying.indexOf(this.videos[r]) === -1) this.CurrentPlaying.push(this.videos[r]);
                 // console.log(r)
 
@@ -315,9 +314,9 @@
 
 <style scoped>
 
-    video {
-        filter:grayscale(100%);
-    }
+    /*video {*/
+        /*filter:grayscale(100%);*/
+    /*}*/
     .arrow-all{
 
 
@@ -366,11 +365,11 @@
 
     }
 
-    .overlay:hover {
-        filter:grayscale(0%);
+    /*.overlay:hover {*/
+        /*filter:grayscale(0%);*/
 
 
-    }
+    /*}*/
 
 
 

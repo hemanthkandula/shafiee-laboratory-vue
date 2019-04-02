@@ -8,13 +8,15 @@
                 description="Something about people"
                 title="Our Team"
 
-                :background-image="peopleimg"
 
 
                 :div-class="BlockLeft" :has-dark-background="DarkBackground"
                     :section-class=CalloutFullWidth>
 
         </page-block>
+
+        <!--:background-image="peopleimg"-->
+
 
 
         <section class="group group--default    ">
@@ -158,82 +160,289 @@
 
         </section>
 
-
-            <section>
-            <vs-row>
-                <vs-col v-tooltip="'col - 10'" vs-align="center" vs-justify="center" vs-offset="1" vs-type="flex"
-                        vs-w="10">
+<!-- wbv;olwf/wrv   ########################-->
 
 
-                    <vs-tabs vs-alignment="fixed" vs-position="bottom">
-                        <vs-tab vs-label="Postdoctoral Fellows">
-
-                            <div class="at-grid" data-column="4">
-
-                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['5']">
-                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
-
-                                    </ProfileCard>
 
 
-                                </div>
+        <section class="group group--default    has-grey-background">
 
 
-                            </div>
+            <div class="group__content-wrapper">
 
 
-                        </vs-tab>
+                <div class="content group__content    ">
+                    <div class="content__text">
+
+                        <div class="content__header">
+                            <h2 class="content__title ">
+                                Postdoctoral Fellows
+                            </h2>
+
+                        </div>
+
+                        <!--<div class="content__body">-->
+                            <!--<p> descroptio</p>-->
+                        <!--</div>-->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group__gallery-wrapper">
 
 
-                        <vs-tab vs-label="Research Staff">
-                            <div class="at-grid" data-column="4">
-
-                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['6']">
-                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
-
-                                    </ProfileCard>
 
 
-                                </div>
+                <div class="gallery gallery--content-card
+
+      gallery--3-columns
 
 
-                            </div>
 
-                        </vs-tab>
-                        <vs-tab vs-label="Student Researchers">
-                            <div class="at-grid" data-column="4">
+">
 
-                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['7']">
-                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
-
-                                    </ProfileCard>
+                    <div class="gallery__wrapper">
 
 
-                                </div>
 
 
-                            </div>
-                        </vs-tab>
-                        <vs-tab vs-label="High School Interns">
-                            <div class="at-grid" data-column="4">
 
-                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['8']">
-                                    <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+                        <div class="gallery__item" :key="index" v-for="(person ,index) in position_filtered['5']">
 
-                                    </ProfileCard>
+                            <div class="at-column" >
+                                <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
 
-
-                                </div>
+                                </ProfileCard>
 
 
                             </div>
-                        </vs-tab>
-                    </vs-tabs>
 
 
-                </vs-col>
-            </vs-row>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </section>
+
+
+        <section class="group group--default   ">
+
+
+            <div class="group__content-wrapper">
+
+
+                <div class="content group__content    ">
+                    <div class="content__text">
+
+                        <div class="content__header">
+                            <h2 class="content__title ">
+
+                                Research Staff
+                            </h2>
+
+                        </div>
+
+                        <!--<div class="content__body">-->
+                            <!--<p> descroptio</p>-->
+                        <!--</div>-->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group__gallery-wrapper">
+
+
+
+
+                <div class="gallery gallery--content-card
+
+      gallery--3-columns
+
+
+
+">
+
+                    <div class="gallery__wrapper">
+
+
+
+
+
+                        <div class="gallery__item" :key="index" v-for="(person ,index) in position_filtered['6']">
+
+                            <div class="at-column" >
+                                <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                </ProfileCard>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+        <section class="group group--default    has-grey-background">
+
+
+            <div class="group__content-wrapper">
+
+
+                <div class="content group__content    ">
+                    <div class="content__text">
+
+                        <div class="content__header">
+                            <h2 class="content__title ">
+                                Student Researchers
+                            </h2>
+
+                        </div>
+
+                        <!--<div class="content__body">-->
+                            <!--<p> descroptio</p>-->
+                        <!--</div>-->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group__gallery-wrapper">
+
+
+
+
+                <div class="gallery gallery--content-card
+
+      gallery--3-columns
+
+
+
+">
+
+                    <div class="gallery__wrapper">
+
+
+
+
+
+                        <div class="gallery__item" :key="index" v-for="(person ,index) in position_filtered['7']">
+
+                            <div class="at-column" >
+                                <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                </ProfileCard>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+        <section  v-if="highschoolexist" class="group group--default    ">
+
+
+            <div class="group__content-wrapper">
+
+
+                <div class="content group__content    ">
+                    <div class="content__text">
+
+                        <div class="content__header">
+                            <h2 class="content__title ">
+
+                High School Interns
+                            </h2>
+
+                        </div>
+
+                        <div class="content__body">
+                            <p> <br></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group__gallery-wrapper">
+
+
+
+
+                <div class="gallery gallery--content-card
+
+      gallery--3-columns
+
+
+
+">
+
+                    <div class="gallery__wrapper">
+
+
+
+
+
+                        <div class="gallery__item" :key="index" v-for="(person ,index) in position_filtered['8']">
+
+                            <div class="at-column" >
+                                <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
+
+                                </ProfileCard>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
 
 
         <!--<section class="group group&#45;&#45;pub    ">-->
@@ -475,7 +684,7 @@
         <!--</section>-->
 
 
-        <section class="group group--pub  has-white-background  ">
+        <section class="group group--pub  has-white-background  " >
             <div class="group__wrapper">
 
                 <div class="group__content-wrapper">
@@ -668,6 +877,7 @@
 
                 baseurl:'http://shafieelabdatalabeling.tk:5000/people-assets/',
                 joinus:joinus,
+                highschoolexist:true,
 
 
 
@@ -704,10 +914,14 @@
         watch:{
 
 
+
+
             peopleDB:function () {
 
 
                 this.position_filtered = this.groupBy(this.peopleDB, 'position');
+
+                this.highschoolexist = this.checkhighexists();
 
                 // this.message = this.position_filtered['1'];
                 //
@@ -725,6 +939,11 @@
 
 
         methods:{
+
+
+            checkhighexists:function(){
+                return this.position_filtered['8'].length !== 0;
+            },
 
             geturl:function(url){
 
@@ -1048,6 +1267,38 @@
         transform-origin: top center;
         -webkit-transform: scale(0.8);
         transform: scale(0.8);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .region-about .section-heading{width:84vw;text-align:center;margin:0 auto;padding:80px 8vw;}
+    @media all and (min-width:768px){
+        .region-about .section-heading{padding:100px 8vw;}
+    }
+    @media all and (min-width:1281px){
+        .region-about .section-heading{padding:140px 8vw;}
+    }
+    .region-about .executive-team .section-heading .title{font-weight:500;line-height:1.1em;font-family:'Clarkson',Helvetica,sans-serif;font-size:30px;margin:0;-webkit-margin-before:.83em;-webkit-margin-after:.83em;-webkit-margin-start:0;-webkit-margin-end:0;}
+    @media all and (min-width:768px){
+        .region-about .executive-team .section-heading .title{font-family:'Clarkson',Helvetica,sans-serif;font-size:34px;}
+    }
+    @media all and (min-width:1281px){
+        .region-about .executive-team .section-heading .title{font-family:'Clarkson',Helvetica,sans-serif;font-size:40px;}
     }
 
 

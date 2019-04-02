@@ -7,10 +7,12 @@
             <div class="group__content-wrapper">
                 <div class="content group__content    ">
                     <div class="content__text">
+                        <br>
+                        <br>
                         <span class="content__brow">Publications</span>
                         <div class="content__header">
                             <h2 class="content__title ">
-                                Recent research publications
+                                Selected Publications
                             </h2>
                         </div>
 
@@ -34,7 +36,7 @@
                     <!--<div class="gallery__wrapper">-->
 
 
-                    <div v-for="idx in 4" :key="idx">
+                    <div v-for="idx in 5" :key="idx">
 
                     <single-publication :u-r-l="PublicationsDB[idx-1].URL"
                                         :authors="PublicationsDB[idx-1].Authors"
@@ -110,7 +112,7 @@
         },
         firestore() {
             return {
-                PublicationsDB: fs.collection('Publications').orderBy("Serial")
+                PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
 
             }
 
