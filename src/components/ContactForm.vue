@@ -99,8 +99,8 @@
                 ></v-textarea>
             </v-flex>
 
-            <v-btn raised  type="submit">submit</v-btn>
-            <v-btn raised  @click="clear">clear</v-btn>
+            <v-btn raised  type="submit">Submit</v-btn>
+            <v-btn raised  @click="clear">Clear</v-btn>
 
 
         </v-layout>

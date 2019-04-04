@@ -37,53 +37,87 @@
 
                 <div class="gallery__wrapper">
 
-                    <div :key="index" class="gallery__item " v-for="(col,index) in 5">
-                        <div class="card card--content    " data-card-type="card">
+                    <div :key="index" class="gallery__item " v-for="(img,index) in projct_images">
+
+                        <div class="card card--content    " data-card-type="card"
+                             @mouseover="hover = true"
+                             @mouseleave="hover = false"
+                        >
 
 
-                            <a class="card__link" href="/project-description" title="research Area 1" target="_blank">
+                            <a class="card__link" :href=projectsurl+project_name[index] :title=project_name[index] target="_blank">
 
-                                <span class="hidden-text">research Area 1</span>
+                                <span class="hidden-text">project_name[index]</span>
                             </a>
 
 
 
+                            <div  class="cardimage"
 
-                            <!--<div class="content     ">-->
-                                <!--<div class="content__text">-->
+                                 v-bind:style="{ backgroundImage: 'url(' + img + ')' }"
 
-                                    <!--<div class="content__header">-->
-                                        <!--<div class="content__title ">-->
-                                            <!--Research Project 1-->
+                            >
+
+
+                                <!--<div class="content     ">-->
+                                    <!--<div class="content__text">-->
+                                        <!--<div>-->
+                                            <!--<div class="content__header">-->
+                                                <!--<div class="content__title ">-->
+                                                    <!--Research Project 1-->
+                                                <!--</div>-->
+
+                                            <!--</div>-->
+
+                                            <!--<div class="content__body">-->
+                                                <!--<p>Projects descrition</p>-->
+                                            <!--</div>-->
                                         <!--</div>-->
+                                    <!--</div>-->
+
+
+                                    <!--<div class="content__ctas">-->
+
+
+                                        <!--<router-link class="button" exact to='/project-description'>-->
+                                            <!--Explore Project-->
+
+
+                                        <!--</router-link>-->
+
+
 
                                     <!--</div>-->
 
-                                    <!--<div class="content__body">-->
-                                        <!--<p>Projects descrition</p>-->
-                                    <!--</div>-->
-                                    <!---->
-                                <!--</div>-->
-                                <!--<div class="content__ctas">-->
-
-
-                                    <!--<router-link class="button" exact to='/project-description'>-->
-                                        <!--Explore Project-->
-
-
-                                    <!--</router-link>-->
-
-
-
                                 <!--</div>-->
 
-                            <!--</div> -->
 
-                            <div class="cardimage" >
+
+
 
 
 
                             </div>
+                            <div class="content     ">
+
+
+
+                                <div class="content__ctas">
+
+
+                                    <router-link class="button" exact :to=projectsurl+removespaces(project_name[index])>
+                                        Explore Project
+
+
+                                    </router-link>
+
+
+
+                                </div>
+
+                            </div>
+
+
 
 
 
@@ -111,8 +145,55 @@
 </template>
 
 <script>
+
+    import maleinf from '../assets/images/project-images/maleinfertility.jpg'
+    import african from '../assets/images/project-images/african.jpg'
+    import ovulatuion from '../assets/images/project-images/ovulation2.jpg'
+    import zika from '../assets/images/project-images/rapidzikadet.jpg'
+
+    import paper from '../assets/images/project-images/paper.jpeg'
+
+
     export default {
         name: "ResearchProjects",
+        data:function () {
+            return{
+
+                // hover:false,
+
+                projectsurl:'projects/',
+
+                maleinf:maleinf,
+                african:african,
+                ovulatuion:ovulatuion,
+                paper:paper,
+                zika:zika
+                ,
+                projct_images:[maleinf,african,ovulatuion,zika,paper],
+                project_name:['A smartphone based test for male fertility',
+                                'AI-powered device to detect signs of ovulation',
+                                'Affordable cellphone-based tool to detect HIV',
+                    'Rapid Zika detection test uses smartphone technology',
+                    'Paper microchips detections and diagnostics'
+                               ]
+
+
+
+
+            }
+
+
+
+        },  methods:  {
+
+
+            removespaces:function (string) {
+
+                return string.split(' ').join('-')
+
+
+            }
+        }
 
     }
 </script>
@@ -122,9 +203,29 @@
 
     .cardimage{
 
-        height: inherit;
+        height: 70%;
         width: inherit;
-        background-image: url(../assets/images/projects/male_infertility/male-infertility-test-smart-phone.jpg)
+        background-size: cover;
+        /*background-size: 100% 100%;*/
+
+        /*background-image: url(../assets/images/projects/male_infertility/male-infertility-test-smart-phone.jpg)*/
     }
+
+    /*.card:hover> .content{*/
+        /*visibility: visible;*/
+
+    /*}*/
+
+
+    /*.card:hover> .cardimage{*/
+        /*background-image: none;*/
+        /*!*background-image: linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(0,0,0,1) 20%);*!*/
+
+
+    /*}*/
+
+    /*.content {*/
+        /*visibility: hidden;*/
+    /*}*/
 
 </style>

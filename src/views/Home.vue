@@ -22,7 +22,10 @@
 
 
 
-        <recent-publication>
+        <recent-publication SortBy="Selected"
+                            BlockTitle="Selected Publications"
+                            AllPubsButton="See our publications"
+        >
         </recent-publication>
 
         <news-slider>

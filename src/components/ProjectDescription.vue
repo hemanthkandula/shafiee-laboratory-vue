@@ -7,8 +7,11 @@
         <page-block
                 button="Project Title"
                 button_link="/Research"
-                description="Some intro"
-                title="Project"
+                description=""
+                :title=project_name[index]
+                :ButtonExist=FALSE
+
+
 
 
                 :div-class="BlockCtaLeft" :has-dark-background="DarkBackground"
@@ -21,17 +24,20 @@
 
                 <aside class="article-side article-side--left ">
 
-                    <h3 class="article-side__item-title">Research Areas</h3>
+                    <h3 class="article-side__item-title">News articles covered</h3>
                     <ul class="article-side__list ">
-                        <li>
-                            <a href="">            Area 1
-                            </a>          </li>
-                        <li>
-                            <a href="">    Area2
-                            </a>          </li>
+
+                        <li :key="index" v-for="(img,index) in 5">
+                            <a href="">
+                                Article name
+                            </a>
+                        </li>
+
                     </ul>
 
                 </aside>
+
+
 
 
 
@@ -43,7 +49,7 @@
 
                         <div class="content__header">
                             <h2 class="content__title ">
-                                Project Description
+                                About the project
                             </h2>
 
                         </div>
@@ -52,7 +58,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh cras pulvinar mattis nunc. Lorem dolor sed viverra ipsum nunc. Diam ut venenatis tellus in metus vulputate. In iaculis nunc sed augue lacus viverra. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Turpis nunc eget lorem dolor sed viverra. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Orci phasellus egestas tellus rutrum tellus. Odio morbi quis commodo odio. Tempus quam pellentesque nec nam aliquam sem et tortor. Dignissim diam quis enim lobortis scelerisque fermentum dui. Enim sed faucibus turpis in eu mi bibendum neque egestas. A arcu cursus vitae congue mauris rhoncus aenean. Lacinia at quis risus sed. Fames ac turpis egestas integer eget aliquet nibh.
 
-                                Nullam non nisi est sit amet facilisis. Vel facilisis volutpat est velit egestas. Libero nunc consequat interdum varius sit amet mattis. Consectetur a erat nam at lectus urna duis. Imperdiet nulla malesuada pellentesque elit. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Posuere morbi leo urna molestie. Ac turpis egestas integer eget aliquet nibh praesent. Cursus sit amet dictum sit. Duis at consectetur lorem donec massa sapien faucibus. Viverra accumsan in nisl nisi scelerisque eu ultrices. Nibh nisl condimentum id venenatis a condimentum. Volutpat est velit egestas dui id. Vestibulum sed arcu non odio euismod. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum.
                             </p>
                         </div>
                     </div>
@@ -62,12 +67,11 @@
 
                     <h3 class="article-side__item-title">Research Areas</h3>
                     <ul class="article-side__list ">
-                        <li>
-                            <a href="">            Area 1
-                            </a>          </li>
-                        <li>
-                            <a href="">    Area2
-                            </a>          </li>
+                        <li :key="index" v-for="(img,index) in 5">
+                            <a href="">
+                            Research Area name
+                            </a>
+                        </li>
                     </ul>
 
                 </aside>
@@ -88,11 +92,22 @@
 <script>
     import RecentPubications from "@/components/RecentPubications";
     import PageBlock from "@/components/PageBlock";
+
+
+    import maleinf from '../assets/images/project-images/sperm-image.png'
+    import HIV from '../assets/images/project-images/hiv-pub.png'
+    import ovulatuion from '../assets/images/project-images/ovulaton-pub.gif'
+    import zika from '../assets/images/project-images/rapidzikadet.jpg'
+
+    import paper from '../assets/images/project-images/paper.jpeg'
+
     export default {
         name: "ProjectDescription",
         components: {PageBlock, RecentPubications},
         data: function () {
             return {
+
+                FALSE:false,
                 CalloutFullWidth: 'callout--fullwidth',
                 CalloutGrid: 'callout--grid',
 
@@ -104,7 +119,43 @@
                 BlockCtaRight: 'block--cta-right',
                 DarkBackground: true,
                 NoDarkBackground: false,
-            }}
+
+                maleinf:maleinf,
+                african:HIV,
+                ovulatuion:ovulatuion,
+                paper:paper,
+                zika:zika,
+                index:null,
+
+                projct_images:[maleinf,ovulatuion,HIV,zika,paper],
+                project_name:['A smartphone based test for male fertility',
+                    'AI-powered device to detect signs of ovulation',
+                    'Affordable cellphone-based tool to detect HIV',
+                    'Rapid Zika detection test uses smartphone technology',
+                    'Paper microchips detections and diagnostics'
+                ]
+
+            }
+
+
+        },created() {
+
+            let name = this.$route.params['name'].toString().split('-').join(' ')
+
+            this.index = this.project_name.indexOf(name)
+
+        },
+        methods:{
+            getrouteindex:function (name) {
+
+
+                return this.project_name.indexOf(name.split('-').join(' '))
+
+
+
+
+            }
+        }
 
     }
 </script>

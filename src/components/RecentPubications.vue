@@ -12,7 +12,8 @@
                         <span class="content__brow">Publications</span>
                         <div class="content__header">
                             <h2 class="content__title ">
-                                Selected Publications
+
+                                {{ BlockTitle}}
                             </h2>
                         </div>
 
@@ -20,8 +21,9 @@
                     <div class="content__ctas">
 
                         <router-link  class="button" exact to="/publications">
-                            See our publications
 
+
+                            {{AllPubsButton}}
                         </router-link>
 
 
@@ -65,17 +67,36 @@
 </template>
 
 <script>
-    import SinglePublication from "@/components/SinglePublication";
+    import
+        SinglePublication from "@/components/SinglePublication";
     import fs from '@/db/fs'
 
     export default {
         props: {
-            tweet: Object
+            BlockTitle: {
+                type: String,
+                required: true
+                // default: 'Lucas'
+            },
+            AllPubsButton: {
+                type: String,
+                required: true
+                // default: 'Lucas'
+            },
+            SortBy: {
+                type: String,
+                required: true
+                // default: 'Lucas'
+            }
         },
         name: "RecentPubications",
         components: {SinglePublication},
         data: function () {
             return {
+
+                // SortBy:this.SortBy,
+
+
 
                 CalloutFullWidth: 'callout--fullwidth',
                 CalloutGrid: 'callout--grid',
@@ -112,7 +133,8 @@
         },
         firestore() {
             return {
-                PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
+                // PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
+                PublicationsDB: fs.collection('Publication').orderBy(this.SortBy,'desc')
 
             }
 

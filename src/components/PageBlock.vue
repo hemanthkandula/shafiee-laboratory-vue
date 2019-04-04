@@ -26,10 +26,10 @@
 
                         </div>
                         <div class="content__body">
-                            <p>{{Description}}.</p>
+                            <p>{{Description}}</p>
                         </div>
                     </div>
-                    <div class="content__ctas">
+                    <div v-if="ButtonExist" class="content__ctas">
                             <router-link class="button" exact :to=Button_link>
                             {{Button}}
 
@@ -60,6 +60,9 @@
 <script>
 
     import img from "@/assets/images/Spermcard.jpg"
+
+
+
     export default {
         data: function () {
 
@@ -76,7 +79,9 @@
             BackgroundImage: {
                 // default: 'Lucas'
             },
-
+            ButtonExist: {
+                default: true
+            },
 
 
 
