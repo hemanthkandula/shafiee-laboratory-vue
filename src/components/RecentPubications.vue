@@ -87,7 +87,11 @@
                 type: String,
                 required: true
                 // default: 'Lucas'
+            },
+            Tag: {
+                type: String,
             }
+
         },
         name: "RecentPubications",
         components: {SinglePublication},
@@ -127,18 +131,114 @@
                 Serial: '',
 
 
-                newReptile: ''
+                filteryearslist: [],
+                FilteredPublicationsDB: [],
+
             }
 
         },
         firestore() {
             return {
                 // PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
-                PublicationsDB: fs.collection('Publication').orderBy(this.SortBy,'desc')
+
+
+                PublicationsDB: fs.collection('Publication').orderBy(this.SortBy, 'desc')
+
+
+
+
+        }
+    }
+
+    ,watch:{
+
+
+            PublicationsDB:function () {
+                this.FilteredPublicationsDB =this.PublicationsDB
+
+
+                this.filteryearslist = this.groupBy(this.PublicationsDB, 'Projects');
+
+                if(this.SortBy==='Selected'){
+                    this.FilteredPublicationsDB =this.PublicationsDB
+
+                }
+                else {
+
+                    this.FilteredPublicationsDB = this.filterproject(this.Tag)
+                }
+
+
+            },
+
+    }
+
+
+
+        ,methods:{
+
+
+            groupBy:function(objectArray, property) {
+
+                return objectArray.reduce(function (acc, obj)
+                    {
+                        var key = obj[property];
+                        if (!acc[key]) {
+                            acc[key] = [];
+                        }
+                        acc[key].push(obj);
+                        return acc;
+                    },
+                    {});
+            },
+
+
+            filterproject:function (position) {
+
+                // console.error(position)
+
+
+                let pubs = []
+
+                // let position_filtered = this.groupBy(this.NewsDB,'position');
+                for (var i = 0; i < position.length; i++) {
+                    // console.error(position[i])
+
+                    var pub_one = this.filteryearslist[position[i]]
+
+                    for (var j = 0; j < pub_one.length; j++) {
+
+
+                        // console.error(pub_one[j])
+
+                        pubs.push(pub_one[j])
+
+                    }
+
+
+                }
+
+
+
+
+
+                return pubs
+
+
+
+
+
 
             }
 
         }
+
+
+
+
+
+
+
     }
 </script>
 

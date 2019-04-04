@@ -45,7 +45,7 @@
                         >
 
 
-                            <a class="card__link" :href=projectsurl+project_name[index] :title=project_name[index] target="_blank">
+                            <a class="card__link" :href=projectsurl+removespaces(project_name[index]) :title=project_name[index] target="_blank">
 
                                 <span class="hidden-text">project_name[index]</span>
                             </a>
@@ -171,8 +171,8 @@
                 ,
                 projct_images:[maleinf,african,ovulatuion,zika,paper],
                 project_name:['A smartphone based test for male fertility',
-                                'AI-powered device to detect signs of ovulation',
-                                'Affordable cellphone-based tool to detect HIV',
+                                'AI powered device to detect signs of ovulation',
+                                'Affordable cellphone based tool to detect HIV',
                     'Rapid Zika detection test uses smartphone technology',
                     'Paper microchips detections and diagnostics'
                                ]

@@ -11,10 +11,12 @@
                 :title=project_name[index]
                 :ButtonExist=FALSE
 
+                :background-image="projct_images[index]"
 
 
 
-                :div-class="BlockCtaLeft" :has-dark-background="DarkBackground"
+
+                :div-class="BlockCtaLeft" :has-dark-background="Backgrounds[index]"
                 :section-class=CalloutGrid></page-block>
 
 
@@ -84,7 +86,12 @@
 
 
 
-        <recent-pubications></recent-pubications>
+        <recent-pubications :Tag=tags[index]
+
+                                    SortBy="Projects"
+                            BlockTitle="Related Publications"
+                            AllPubsButton="All publications"
+        ></recent-pubications>
     </div>
     
 </template>
@@ -99,7 +106,7 @@
     import ovulatuion from '../assets/images/project-images/ovulaton-pub.gif'
     import zika from '../assets/images/project-images/rapidzikadet.jpg'
 
-    import paper from '../assets/images/project-images/paper.jpeg'
+    import paper from '../assets/images/project-images/paper-pub.png'
 
     export default {
         name: "ProjectDescription",
@@ -126,14 +133,17 @@
                 paper:paper,
                 zika:zika,
                 index:null,
+                Backgrounds:[true,false,false,false,false],
+
 
                 projct_images:[maleinf,ovulatuion,HIV,zika,paper],
                 project_name:['A smartphone based test for male fertility',
-                    'AI-powered device to detect signs of ovulation',
-                    'Affordable cellphone-based tool to detect HIV',
+                    'AI powered device to detect signs of ovulation',
+                    'Affordable cellphone based tool to detect HIV',
                     'Rapid Zika detection test uses smartphone technology',
                     'Paper microchips detections and diagnostics'
-                ]
+                ],
+                tags:['SPERM','OVULATION','HIV','ZIKA','PAPER']
 
             }
 
