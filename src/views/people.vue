@@ -716,85 +716,197 @@
                     <div class="gallery gallery--pub gallery--1-columns ">
 
 
-                        <vs-tabs vs-alignment="center" vs-position="right">
-                            <vs-tab vs-label="Postdoctoral Fellows">
-                                <virtual-list :size="40" :remain="12">
+                        <div class="content__header">
+                            <h3 class="content__title ">
+
+                                Postdoctoral Fellows
+                            </h3>
+
+                        </div>
+
+                        <virtual-list :size="40" :remain="12">
 
 
-                                <div class="at-grid" data-column="4">
+                            <div class="at-grid" data-column="4">
 
-                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['1']">
-                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['1']">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
 
-                                        </ProfileCardAlumni>
-
-
-                                    </div>
-
-
-                                </div>
-                                </virtual-list>
-
-                            </vs-tab>
-                            <vs-tab vs-label="Research Staff">
-
-                                <virtual-list :size="40" :remain="12">
-
-
-                                <div class="at-grid" data-column="4">
-
-                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['2']">
-                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
-
-                                        </ProfileCardAlumni>
-
-
-                                    </div>
-
-                                </div>
-                                </virtual-list>
-
-
-                            </vs-tab>
-                            <vs-tab vs-label="Student Researchers">
-                                <virtual-list :size="40" :remain="12">
-                                <div class="at-grid" data-column="4">
-
-
-
-                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['3']">
-                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
-
-                                        </ProfileCardAlumni>
-
-
-                                    </div>
-
-
-
-
-                                </div>
-                                </virtual-list>
-
-
-                            </vs-tab>
-                            <vs-tab vs-label="High School Interns">
-                                <div class="at-grid" data-column="4">
-
-                                    <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">
-                                        <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
-
-                                        </ProfileCardAlumni>
-
-
-                                    </div>
+                                    </ProfileCardAlumni>
 
 
                                 </div>
 
 
-                            </vs-tab>
-                        </vs-tabs>
+                            </div>
+                        </virtual-list>
+
+
+                        <section class="group group--pub  has-white-background  ">
+
+                        <div class="content__header">
+                            <h3 class="content__title ">
+
+                                Research Staff
+                            </h3>
+
+                        </div>
+                        <virtual-list :size="40" :remain="12">
+
+
+                            <div class="at-grid" data-column="4">
+
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['2']">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                    </ProfileCardAlumni>
+
+
+                                </div>
+
+                            </div>
+                        </virtual-list>
+                        </section >
+
+                        <section class="group group--pub  has-white-background  ">
+
+                        <div class="content__header">
+                            <h3 class="content__title ">
+
+                                Student Researchers
+                            </h3>
+
+                        </div>
+                        <virtual-list :size="40" :remain="12">
+                            <div class="at-grid" data-column="4">
+
+
+
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['3']">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                    </ProfileCardAlumni>
+
+
+                                </div>
+
+
+
+
+                            </div>
+                        </virtual-list>
+
+                        </section>
+                        <section class="group group--pub  has-white-background  ">
+
+                        <div class="content__header">
+                            <h3 class="content__title ">
+
+                                High School Interns
+                            </h3>
+
+
+
+                        </div>
+                        <virtual-list :size="40" :remain="12">
+
+                            <div class="at-grid" data-column="4">
+
+                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+
+                                    </ProfileCardAlumni>
+
+
+                                </div>
+
+
+                            </div>
+                        </virtual-list>
+
+                        </section>
+
+                        <!--<vs-tabs vs-alignment="center" vs-position="right">-->
+                            <!--<vs-tab vs-label="Postdoctoral Fellows">-->
+                                <!--<virtual-list :size="40" :remain="12">-->
+
+
+                                <!--<div class="at-grid" data-column="4">-->
+
+                                    <!--<div class="at-column" :key="index" v-for="(person ,index) in position_filtered['1']">-->
+                                        <!--<ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">-->
+
+                                        <!--</ProfileCardAlumni>-->
+
+
+                                    <!--</div>-->
+
+
+                                <!--</div>-->
+                                <!--</virtual-list>-->
+
+                            <!--</vs-tab>-->
+                            <!--<vs-tab vs-label="Research Staff">-->
+
+                                <!--<virtual-list :size="40" :remain="12">-->
+
+
+                                <!--<div class="at-grid" data-column="4">-->
+
+                                    <!--<div class="at-column" :key="index" v-for="(person ,index) in position_filtered['2']">-->
+                                        <!--<ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">-->
+
+                                        <!--</ProfileCardAlumni>-->
+
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                                <!--</virtual-list>-->
+
+
+                            <!--</vs-tab>-->
+                            <!--<vs-tab vs-label="Student Researchers">-->
+                                <!--<virtual-list :size="40" :remain="12">-->
+                                <!--<div class="at-grid" data-column="4">-->
+
+
+
+                                    <!--<div class="at-column" :key="index" v-for="(person ,index) in position_filtered['3']">-->
+                                        <!--<ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">-->
+
+                                        <!--</ProfileCardAlumni>-->
+
+
+                                    <!--</div>-->
+
+
+
+
+                                <!--</div>-->
+                                <!--</virtual-list>-->
+
+
+                            <!--</vs-tab>-->
+                            <!--<vs-tab vs-label="High School Interns">-->
+                                <!--<virtual-list :size="40" :remain="12">-->
+
+                                <!--<div class="at-grid" data-column="4">-->
+
+                                    <!--<div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">-->
+                                        <!--<ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">-->
+
+                                        <!--</ProfileCardAlumni>-->
+
+
+                                    <!--</div>-->
+
+
+                                <!--</div>-->
+                                <!--</virtual-list>-->
+
+                            <!--</vs-tab>-->
+                        <!--</vs-tabs>-->
 
 
                     </div>

@@ -38,17 +38,17 @@
                     <!--<div class="gallery__wrapper">-->
 
 
-                    <div v-for="idx in 5" :key="idx">
+                    <div v-for="idx in setcount(SortBy)" :key="idx">
 
-                    <single-publication :u-r-l="PublicationsDB[idx-1].URL"
-                                        :authors="PublicationsDB[idx-1].Authors"
-                                        :description="PublicationsDB[idx-1].Description"
-                                        :issue="PublicationsDB[idx-1].Issue"
-                                        :journal="PublicationsDB[idx-1].Journal"
-                                        :link="PublicationsDB[idx-1].URL"
-                                        :pages="PublicationsDB[idx-1].Pages" :pub-date="PublicationsDB[idx-1].Pubdate"
-                                        :pubdate="PublicationsDB[idx-1].Pubdate" :title="PublicationsDB[idx-1].Title"
-                                        :volume="PublicationsDB[idx-1].Volume" >
+                    <single-publication :u-r-l="FilteredPublicationsDB[idx-1].URL"
+                                        :authors="FilteredPublicationsDB[idx-1].Authors"
+                                        :description="FilteredPublicationsDB[idx-1].Description"
+                                        :issue="FilteredPublicationsDB[idx-1].Issue"
+                                        :journal="FilteredPublicationsDB[idx-1].Journal"
+                                        :link="FilteredPublicationsDB[idx-1].URL"
+                                        :pages="FilteredPublicationsDB[idx-1].Pages" :pub-date="FilteredPublicationsDB[idx-1].Pubdate"
+                                        :pubdate="FilteredPublicationsDB[idx-1].Pubdate" :title="FilteredPublicationsDB[idx-1].Title"
+                                        :volume="FilteredPublicationsDB[idx-1].Volume" >
 
 
                     </single-publication>
@@ -165,7 +165,9 @@
                 }
                 else {
 
-                    this.FilteredPublicationsDB = this.filterproject(this.Tag)
+                    this.FilteredPublicationsDB = this.filteryearslist[this.Tag]
+
+                    // console.error(this.filteryearslist[this.Tag])
                 }
 
 
@@ -226,6 +228,19 @@
 
 
 
+
+
+
+            }
+            ,
+            setcount:function (Sortby) {
+
+                if(Sortby==='Selected'){
+                    return 5
+                }
+                else {
+                    return this.FilteredPublicationsDB.length
+                }
 
 
 

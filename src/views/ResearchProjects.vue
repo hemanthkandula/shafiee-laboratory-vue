@@ -169,7 +169,7 @@
                 paper:paper,
                 zika:zika
                 ,
-                projct_images:[maleinf,african,ovulatuion,zika,paper],
+                projct_images:[maleinf,ovulatuion,african,zika,paper],
                 project_name:['A smartphone based test for male fertility',
                                 'AI powered device to detect signs of ovulation',
                                 'Affordable cellphone based tool to detect HIV',

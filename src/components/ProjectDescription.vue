@@ -8,7 +8,7 @@
                 button="Project Title"
                 button_link="/Research"
                 description=""
-                :title=project_name[index]
+                title=""
                 :ButtonExist=FALSE
 
                 :background-image="projct_images[index]"
@@ -20,30 +20,113 @@
                 :section-class=CalloutGrid></page-block>
 
 
+        <!--<section class="article    ">-->
+            <!--<div class="article__wrapper ">-->
+
+
+                <!--<aside class="article-side article-side&#45;&#45;left ">-->
+
+                    <!--<h3 class="article-side__item-title">News articles covered</h3>-->
+                    <!--<ul class="article-side__list ">-->
+
+                        <!--<li :key="index" v-for="(img,index) in 5">-->
+                            <!--<a href="">-->
+                                <!--Article name-->
+                            <!--</a>-->
+                        <!--</li>-->
+
+                    <!--</ul>-->
+
+                <!--</aside>-->
+
+
+
+
+
+
+
+
+                <!--<div class="content article__content    ">-->
+                    <!--<div class="content__text">-->
+
+                        <!--<div class="content__header">-->
+                            <!--<h2 class="content__title ">-->
+                                <!--{{project_name[index]}}-->
+                                <!--<br>-->
+                                <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                                <!--&lt;!&ndash;About the project&ndash;&gt;-->
+                            <!--</h2>-->
+
+                        <!--</div>-->
+
+                        <!--<div class="content__body">-->
+                            <!--&lt;!&ndash;<p>&ndash;&gt;-->
+                                <!--&lt;!&ndash;{{content}}&ndash;&gt;-->
+                            <!--&lt;!&ndash;</p>&ndash;&gt;-->
+
+                            <!--<span v-html="content"></span>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<aside class="article-side article-side&#45;&#45;right ">-->
+
+                    <!--<h3 class="article-side__item-title">Research Areas</h3>-->
+                    <!--<ul class="article-side__list ">-->
+                        <!--<li :key="index" v-for="(img,index) in 5">-->
+                            <!--<a href="">-->
+                            <!--Research Area name-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+
+                <!--</aside>-->
+
+
+
+            <!--</div>-->
+
+        <!--</section>-->
+
+
+
+
+
+
+
+
         <section class="article    ">
             <div class="article__wrapper ">
 
 
                 <aside class="article-side article-side--left ">
 
-                    <h3 class="article-side__item-title">News articles covered</h3>
-                    <ul class="article-side__list ">
 
-                        <li :key="index" v-for="(img,index) in 5">
-                            <a href="">
-                                Article name
-                            </a>
-                        </li>
+                    <div class="content article-side__card    ">
+                        <div class="content__text">
 
-                    </ul>
+                            <div class="content__header">
 
-                </aside>
+                            </div>
 
-
+                            <div class="content__body">
+                                <h4>
+                                    <a :href="sourcesurls[index]">Source</a>
+                                </h4>
 
 
 
+                                <img :src="sourcesImageURLS[index]" style="height: auto; width: 100%">
 
+                                <!--<img src="../assets/images/project-images/cnn.png" alt="">-->
+                                <p>{{ sourcestitle[index]}}</p>
+
+                            </div>
+                        </div>
+
+                    </div></aside>
 
 
                 <div class="content article__content    ">
@@ -51,36 +134,35 @@
 
                         <div class="content__header">
                             <h2 class="content__title ">
-                                About the project
+                                {{project_name[index]}}
                             </h2>
 
                         </div>
 
                         <div class="content__body">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh cras pulvinar mattis nunc. Lorem dolor sed viverra ipsum nunc. Diam ut venenatis tellus in metus vulputate. In iaculis nunc sed augue lacus viverra. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Turpis nunc eget lorem dolor sed viverra. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Orci phasellus egestas tellus rutrum tellus. Odio morbi quis commodo odio. Tempus quam pellentesque nec nam aliquam sem et tortor. Dignissim diam quis enim lobortis scelerisque fermentum dui. Enim sed faucibus turpis in eu mi bibendum neque egestas. A arcu cursus vitae congue mauris rhoncus aenean. Lacinia at quis risus sed. Fames ac turpis egestas integer eget aliquet nibh.
+                            <span v-html="content"></span>
 
-                            </p>
                         </div>
                     </div>
 
                 </div>
-                <aside class="article-side article-side--right ">
-
-                    <h3 class="article-side__item-title">Research Areas</h3>
-                    <ul class="article-side__list ">
-                        <li :key="index" v-for="(img,index) in 5">
-                            <a href="">
-                            Research Area name
-                            </a>
-                        </li>
-                    </ul>
-
-                </aside>
 
 
+            <aside class="article-side article-side--right ">
 
-            </div>
+                <h3 class="article-side__item-title">News articles covered</h3>
+                <ul class="article-side__list ">
+
+                    <li :key="index" v-for="(img,index) in 5">
+                        <a href="">
+                            Article name
+                        </a>
+                    </li>
+
+                </ul>
+
+            </aside>
+  </div>
 
         </section>
 
@@ -89,7 +171,7 @@
         <recent-pubications :Tag=tags[index]
 
                                     SortBy="Projects"
-                            BlockTitle="Related Publications"
+                            BlockTitle="Suggested Publications"
                             AllPubsButton="All publications"
         ></recent-pubications>
     </div>
@@ -107,6 +189,10 @@
     import zika from '../assets/images/project-images/rapidzikadet.jpg'
 
     import paper from '../assets/images/project-images/paper-pub.png'
+
+
+
+    import fs from '@/db/fs'
 
     export default {
         name: "ProjectDescription",
@@ -143,9 +229,42 @@
                     'Rapid Zika detection test uses smartphone technology',
                     'Paper microchips detections and diagnostics'
                 ],
-                tags:['SPERM','OVULATION','HIV','ZIKA','PAPER']
+                tags:['SPERM','OVULATION','HIV','ZIKA','PAPER'],
+                sourcesImageURLS:[
+
+                        'https://cdn.cnn.com/cnn/.e1mo/img/4.0/logos/logo_cnn_badge_2up.png',
+                    'https://www.bostonherald.com/wp-content/uploads/2018/11/HeraldDotComBanner.svg',
+                    'https://www.nanowerk.com/images/nanowerk-logo.svg',
+                    'https://www.sciencedaily.com/images/sd-logo.png',
+                    ''
+                ],
+                sourcesurls:[
+                    'https://www.cnn.com/2017/03/22/health/male-infertility-test-phone-app-study/index.html',
+                    'https://www.bostonherald.com/2019/03/02/smartphone-ovulation-test-a-breakthrough-at-the-brigham/',
+                    'https://www.nanowerk.com/nanotechnology-news2/newsid=51457.php',
+                    'https://www.sciencedaily.com/releases/2018/06/180628151646.htm',
+                    ''
+
+                ],
+                sourcestitle:[
+
+
+                    'Phone device tests male fertility with 98% accuracy, study shows',
+                    'Smartphone ovulation test a breakthrough at the Brigham',
+                    'Cellphone combined with nanotechnology to detect HIV viruses',
+                    'Rapid Zika detection test uses smartphone technology',
+                    ''
+
+                ],
+
+
+                ProjectsDB:[],
+                content:"null"
+
+
 
             }
+
 
 
         },created() {
@@ -154,7 +273,15 @@
 
             this.index = this.project_name.indexOf(name)
 
+        },watch:{
+
+            ProjectsDB:function () {
+                this.getcontent();
+
+            }
+
         },
+
         methods:{
             getrouteindex:function (name) {
 
@@ -164,12 +291,56 @@
 
 
 
+            },
+            getcontent:function () {
+
+                for(let pro in this.ProjectsDB){
+
+
+
+                    if(this.ProjectsDB[pro]['TAG']===this.tags[this.index]){
+                        this.content= this.ProjectsDB[pro]['Project decription']
+
+                        // console.log(this.ProjectsDB[pro])
+                        //
+                        // console.log(this.ProjectsDB[pro]['TAG'])
+
+
+                    }
+
+                }
+
             }
+        },
+
+    firestore() {
+        return {
+            // PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
+
+
+            ProjectsDB: fs.collection('Projects')
+
+
+
+
         }
+    }
 
     }
 </script>
 
 <style scoped>
+
+
+    .nav__logo {
+        background-image: url(../assets/images/project-images/cnn.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 60px;
+        height: 60px;
+        position: relative;
+        width: 60px;
+        z-index: 32;
+    }
 
 </style>
