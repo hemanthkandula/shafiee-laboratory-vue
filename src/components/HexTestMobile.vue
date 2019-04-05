@@ -110,11 +110,11 @@
     import vid13 from "@/assets/videos/13.mp4";
     import vid14 from "@/assets/videos/14.mp4";
     import vid15 from "@/assets/videos/15.mp4";
-    import vid16 from "@/assets/videos/16.mp4";
-    import vid17 from "@/assets/videos/17.mp4";
-    import vid18 from "@/assets/videos/18.mp4";
-    import vid19 from "@/assets/videos/19.mp4";
-    import vid20 from "@/assets/videos/20.mp4";
+    // import vid16 from "@/assets/videos/16.mp4";
+    // import vid17 from "@/assets/videos/17.mp4";
+    // import vid18 from "@/assets/videos/18.mp4";
+    // import vid19 from "@/assets/videos/19.mp4";
+    // import vid20 from "@/assets/videos/20.mp4";
 
     // import vid21 from "@/assets/videos/21.mp4";
 
@@ -134,10 +134,10 @@
             return {
                 videosrc : "../assets/videos/",
                 videos: [vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                    vid14,vid15,vid16,vid17,vid18,vid19,vid20],
+                    vid14,vid15],
 
                 AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                    vid14,vid15,vid16,vid17,vid18,vid19,vid20 ],
+                    vid14,vid15 ],
 
                 CurrentPlaying:[]
 
@@ -157,7 +157,7 @@
         created() {
 
             while(this.CurrentPlaying.length < 10){
-                let r = Math.floor(Math.random()*19) + 1;
+                let r = Math.floor(Math.random()*14) + 1;
                 if(this.CurrentPlaying.indexOf(this.videos[r]) === -1) this.CurrentPlaying.push(this.videos[r]);
                 // console.log(r)
 
