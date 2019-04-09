@@ -142,102 +142,102 @@
         },
         methods:{
 
-            getcovers: function (){
-
-                var storageRef = db.storage().ref();
-
-
-                var metadata = {
-                    contentType: 'image/jpeg',
-                };
-
-
-
-                storageRef.child('images/homecen.jpg').put(logo, metadata).then(function(snapshot) {
-                    // console.log('Uploaded', snapshot.totalBytes, 'bytes.');
-                    // console.log('File metadata:', snapshot.metadata);
-                    // Let's get a download URL for the file.
-                    snapshot.ref.getDownloadURL().then(function(url) {
-                        url;
-                        // console.log('File available at', url);
-                        // [START_EXCLUDE]
-                        // [END_EXCLUDE]
-                    });
-                }).catch(function(error) {
-                    error;
-                    // [START onfailure]
-                    // console.error('Upload failed:', error);
-                    // [END onfailure]
-                });
-                // [END oncomplete]
-
-
-
-
-
-
-
-
-
-
-            }
+            // getcovers: function (){
+            //
+            //     var storageRef = db.storage().ref();
+            //
+            //
+            //     var metadata = {
+            //         contentType: 'image/jpeg',
+            //     };
+            //
+            //
+            //
+            //     storageRef.child('images/homecen.jpg').put(logo, metadata).then(function(snapshot) {
+            //         // console.log('Uploaded', snapshot.totalBytes, 'bytes.');
+            //         // console.log('File metadata:', snapshot.metadata);
+            //         // Let's get a download URL for the file.
+            //         snapshot.ref.getDownloadURL().then(function(url) {
+            //             url;
+            //             // console.log('File available at', url);
+            //             // [START_EXCLUDE]
+            //             // [END_EXCLUDE]
+            //         });
+            //     }).catch(function(error) {
+            //         error;
+            //         // [START onfailure]
+            //         // console.error('Upload failed:', error);
+            //         // [END onfailure]
+            //     });
+            //     // [END oncomplete]
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            // }
 
         }
 
         ,
-        storage(){
-
-
-            const storageRef = dbstorage.ref();
-
-            // console.error(storageRef)
-
-
-            // console.error("getcover called ")
-
-
-
-            storageRef.child('images/c.jpg').getDownloadURL().then(function(url){
-
-                this.Coversurls.push(url)
-                // console.error("gi got ref")
-
-
-
-            }).catch(function(error) {
-
-
-
-
-                // A full list of error codes is available at
-                // https://firebase.google.com/docs/storage/web/handle-errors
-                switch (error.code) {
-
-
-
-
-
-
-                    case 'storage/object-not-found':
-                        // File doesn't exist
-                        break;
-
-                    case 'storage/unauthorized':
-                        // User doesn't have permission to access the object
-                        break;
-
-                    case 'storage/canceled':
-                        // User canceled the upload
-                        break;
-
-                    case 'storage/unknown':
-                        // Unknown error occurred, inspect the server response
-                        break;
-                }
-            });
-
-
-        }
+        // storage(){
+        //
+        //
+        //     const storageRef = dbstorage.ref();
+        //
+        //     // console.error(storageRef)
+        //
+        //
+        //     // console.error("getcover called ")
+        //
+        //
+        //
+        //     storageRef.child('images/c.jpg').getDownloadURL().then(function(url){
+        //
+        //         this.Coversurls.push(url)
+        //         // console.error("gi got ref")
+        //
+        //
+        //
+        //     }).catch(function(error) {
+        //
+        //
+        //
+        //
+        //         // A full list of error codes is available at
+        //         // https://firebase.google.com/docs/storage/web/handle-errors
+        //         switch (error.code) {
+        //
+        //
+        //
+        //
+        //
+        //
+        //             case 'storage/object-not-found':
+        //                 // File doesn't exist
+        //                 break;
+        //
+        //             case 'storage/unauthorized':
+        //                 // User doesn't have permission to access the object
+        //                 break;
+        //
+        //             case 'storage/canceled':
+        //                 // User canceled the upload
+        //                 break;
+        //
+        //             case 'storage/unknown':
+        //                 // Unknown error occurred, inspect the server response
+        //                 break;
+        //         }
+        //     });
+        //
+        //
+        // }
 
 
 

@@ -10,7 +10,9 @@
         <hex-test-mobile v-if="Mobile"
 
 
-                ></hex-test-mobile>
+                >
+
+        </hex-test-mobile>
         <hextest v-else>
 
         </hextest>

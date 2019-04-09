@@ -3,11 +3,11 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Contact from './views/contact.vue'
-import News from './views/news.vue'
+// import News from './views/news.vue'
 import People from './views/people.vue'
 import Positions from './views/positions.vue'
 import Publications from './views/publications.vue'
-import Research from "@/views/Research";
+// import Research from "@/views/Research";
 import ProjectDescription from "@/components/ProjectDescription";
 
 
@@ -37,31 +37,33 @@ export default new Router({
             name: 'home',
             component: Home
         },
+        // {
+        //     path: '/research',
+        //     name: 'research',
+        //     component: Research
+        // },
+        // {
+        //     path: '/project-description',
+        //     name: 'project',
+        //     component: ProjectDescription
+        // },
+        // {
+        //     path: '/contact',
+        //     name: 'contact',
+        //     component: Contact
+        // },
+        // {
+        //     path: '/about',
+        //     name: 'About',
+        //     component: About
+        // },
+        // {
+        //     path: '/news',
+        //     name: 'News',
+        //     component: News
+        // },
+
         {
-            path: '/research',
-            name: 'research',
-            component: Research
-        },
-        {
-            path: '/project-description',
-            name: 'project',
-            component: ProjectDescription
-        },
-        {
-            path: '/contact',
-            name: 'contact',
-            component: Contact
-        },
-        {
-            path: '/about',
-            name: 'About',
-            component: About
-        },
-        {
-            path: '/news',
-            name: 'News',
-            component: News
-        }, {
             path: '/people',
             name: 'People',
             component: People
@@ -70,12 +72,14 @@ export default new Router({
             path: '/positions',
             name: 'Positions',
             component: Positions
-        }, {
+        },
+
+        {
             path: '/publications',
             name: 'Publications',
             component: Publications
         },
-
+        //
         { path: '/projects/:name', component: ProjectDescription },
 
         //

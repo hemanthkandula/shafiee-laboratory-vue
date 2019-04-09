@@ -20,35 +20,36 @@
 
         <section class="group group--default    has-grey-background">
 
-
-            <vs-row>
-                <vs-col v-tooltip="'col - 4'" vs-align="center" vs-justify="center" vs-offset="5" vs-type="flex"
-                        vs-w="4">
-                    <h1 class="search__title">Positions</h1>
-
-                </vs-col>
-            </vs-row>
+            <v-layout align-center justify-center row fill-height>
 
 
-            <div class="group__content-wrapper">
+                    <h1 >Positions</h1>
+
+            </v-layout>
 
 
-                <vs-row>
-                    <vs-col v-tooltip="'col - 8'" vs-align="center" vs-justify="center" vs-offset="2" vs-type="flex"
-                            vs-w="8">
-                        <div class="content__body">
+            <v-layout align-center justify-center row fill-height>
+
+                <v-flex xs6 offset-xs1>
+
+
+
+
+
+
                             <p>Shafiee group is an equal opportunity employer and is committed to increasing the
                                 diversity of its group members. It welcomes applications from women, members of minority
                                 groups, protected veterans and individuals with disabilities
                                 , as well as from others who would bring additional dimensions to the group’s research
                                 missions.</p>
-                        </div>
-
-                    </vs-col>
-                </vs-row>
 
 
-            </div>
+
+
+
+                </v-flex>
+
+            </v-layout>
 
 
             <div class="group__gallery-wrapper">

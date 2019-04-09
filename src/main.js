@@ -15,17 +15,18 @@ Vue.use(VeeValidate)
 
 
 
-import Vuesax from 'vuesax'
-import 'vuesax/dist/vuesax.css' //Vuesax styles
-Vue.use(Vuesax);
+
+// import Vuesax from 'vuesax'
+// import 'vuesax/dist/vuesax.css' //Vuesax styles
+// Vue.use(Vuesax);
 
 
-import 'material-icons/iconfont/material-icons.css';
-
+// import 'material-icons/iconfont/material-icons.css';
+//
 import './assets/css/custom.css';
-import './assets/css/hexagons.css'
-
-import './assets/css/hexagonrotated.css'
+// import './assets/css/hexagons.css'
+//
+// import './assets/css/hexagonrotated.css'
 
 
 import VueFirestore from 'vue-firestore';
@@ -34,30 +35,30 @@ import VueFirestore from 'vue-firestore';
 Vue.use(VueFirestore);
 
 
-import VueMouseParallax from 'vue-mouse-parallax'
-
-Vue.use(VueMouseParallax)
-
-
+// import VueMouseParallax from 'vue-mouse-parallax'
+//
+// Vue.use(VueMouseParallax)
 
 
-import VueScrollProgressBar from 'vue-scroll-progressbar'
 
-Vue.use(VueScrollProgressBar)
+
+// import VueScrollProgressBar from 'vue-scroll-progressbar'
+//
+// Vue.use(VueScrollProgressBar)
 
 // /. end
 // import VueParticles from 'vue-particles'
 // Vue.use(VueParticles)
 
 
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+// import axios from 'axios'
+// import VueAxios from 'vue-axios'
+//
+// Vue.use(VueAxios, axios)
 
-Vue.use(VueAxios, axios)
 
-
-import VirtualScrollList from 'vue-virtual-scroll-list'
-Vue.component('virtual-list', VirtualScrollList)
+// import VirtualScrollList from 'vue-virtual-scroll-list'
+// Vue.component('virtual-list', VirtualScrollList)
 
 
 
@@ -75,3 +76,4 @@ new Vue({
 }).$mount('#app');
 
 
+Vue.config.performance = true
