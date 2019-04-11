@@ -4607,7 +4607,7 @@ section.hero+section.search.has-grey-background .filter__title:hover {
         padding: 15px 20px
     }
     .card--publication .content__title {
-        min-height: 66px
+        min-height: 40px
     }
     .card--publication .content__body {
         padding-right: 10px
@@ -4621,7 +4621,7 @@ section.hero+section.search.has-grey-background .filter__title:hover {
         white-space: nowrap
     }
     .card--publication .content__body .content__venue {
-        display: none
+        display: block;
     }
 }
 

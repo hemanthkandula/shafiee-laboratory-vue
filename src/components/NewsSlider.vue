@@ -16,10 +16,28 @@
         <swiper :options="swiperOption">
             <swiper-slide  :key="index" v-for="(news ,index) in NewsDB">
                 <div class="card card--default   card--in-carousel " data-card-type="card">
-                    <a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">News 1 </span></a>
-                    <div class="card__image" v-bind:style="{ backgroundImage: 'url(' + news.img + ')' }"></div>
+
+
+                    <a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">{{news.title}} </span></a>
+                    <div class="card__image" v-bind:style="{ backgroundImage: 'url(' + news.img + ')' }">
+                        <div class="icon-parent" style="width: 100%;    height: 50%;">
+                        <!--<div class="content__source"-->
+
+                             <!--v-bind:style="{ backgroundImage: 'url(' + news.icon + ')' }"-->
+
+
+                        <!--&gt;-->
+
+                        <!--</div>-->
+
+                            <img class="content__source"
+                                    :src="news.icon" alt="">
+                        </div>
+
+                    </div>
                     <div class="content card--in-carousel    ">
                         <div class="content__text">
+
                             <div class="content__header">
                                 <div class="content__title ">
                                     {{news.title}}
@@ -29,7 +47,9 @@
                             <div class="content__body">
                                 <p> {{ news.description}}</p>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
 
@@ -120,7 +140,7 @@
 
         firestore() {
             return {
-                NewsDB: fs.collection('News_Fea').orderBy("id")
+                NewsDB: fs.collection('News').orderBy("id")
 
             }
 
@@ -159,6 +179,13 @@
 
 
         }
+
+    }
+
+    .content__source{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
 
     }
 

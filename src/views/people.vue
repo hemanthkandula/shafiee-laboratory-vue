@@ -808,36 +808,39 @@
                         </virtual-list>
 
                         </section>
-                        <section class="group group--pub  has-white-background  ">
-
-                        <div class="content__header">
-                            <h3 class="content__title ">
-
-                                High School Interns
-                            </h3>
 
 
 
-                        </div>
-                        <virtual-list :size="40" :remain="12">
+                        <!--<section class="group group&#45;&#45;pub  has-white-background  ">-->
 
-                            <div class="at-grid" data-column="4">
+                        <!--<div class="content__header">-->
+                            <!--<h3 class="content__title ">-->
 
-                                <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">
-                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name"
-                                                       :pro-company="person.company"
-                                                       :pro-position="person.position"
-                                                       :pro-url="person.url">
-
-                                    </ProfileCardAlumni>
-
-                                </div>
+                                <!--High School Interns-->
+                            <!--</h3>-->
 
 
-                            </div>
-                        </virtual-list>
 
-                        </section>
+                        <!--</div>-->
+                        <!--<virtual-list :size="40" :remain="12">-->
+
+                            <!--<div class="at-grid" data-column="4">-->
+
+                                <!--<div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">-->
+                                    <!--<ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name"-->
+                                                       <!--:pro-company="person.company"-->
+                                                       <!--:pro-position="person.position"-->
+                                                       <!--:pro-url="person.url">-->
+
+                                    <!--</ProfileCardAlumni>-->
+
+                                <!--</div>-->
+
+
+                            <!--</div>-->
+                        <!--</virtual-list>-->
+
+                        <!--</section>-->
 
                         <!--<vs-tabs vs-alignment="center" vs-position="right">-->
                             <!--<vs-tab vs-label="Postdoctoral Fellows">-->
@@ -981,7 +984,7 @@
     import PageBlock from "@/components/PageBlock";
     import ProfileCard from "@/views/ProfileCard";
     import ProfileCardAlumni from "@/views/ProfileCardAlumni";
-    import hadi from "@/assets/images/hadi1.jpg"
+    import hadi from "@/assets/images/hadi-hd.jpg"
     // import cheerio from 'cheerio'
     // import axios from 'axios';
     import joinus from "@/assets/images/joinus1.jpg"
@@ -1001,7 +1004,7 @@
         data: function () {
             return {
 
-                baseurl:'http://shafieelab.bwh.harvard.edu/people-assets/',
+                baseurl:'/people-assets/',
                 joinus:joinus,
                 highschoolexist:true,
                 lab:lab2,
@@ -1159,7 +1162,7 @@
 
 
             return {
-                peopleDB: fs.collection('People_new').orderBy('id')
+                peopleDB: fs.collection('People').orderBy('id')
 
 
             }

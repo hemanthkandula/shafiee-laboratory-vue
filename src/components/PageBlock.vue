@@ -1,8 +1,8 @@
 <template>
     <div>
     <section :class="SectionClass" class="callout  ">
-        <div :class="[HasDarkBackground? HasDarkBackgrounds: '', DivClass ]"
-             class="block  has-light-mobile-bg has-mobile-bg">
+        <div :class="[HasDarkBackground? HasDarkBackgrounds: '',HasLightBackground_mobile? HasLightBackgrounds_mobile: '', DivClass ]"
+             class="block   has-mobile-bg">
 
         <div class="block__background--mobile ng-isolate-scope is-loaded"
 
@@ -69,6 +69,8 @@
             return {
 
                 HasDarkBackgrounds: 'has-dark-background',
+                HasLightBackgrounds_mobile: 'has-light-mobile-bg ',
+
                 Imag : img
             }
         }
@@ -96,6 +98,11 @@
             },
 
             HasDarkBackground: {
+                type: Boolean,
+                required: true
+
+            },
+            HasLightBackground_mobile: {
                 type: Boolean,
                 required: true
 

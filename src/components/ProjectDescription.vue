@@ -133,7 +133,7 @@
 
 
 
-                                <img :src="sourcesImageURLS[index]" style="height: auto; width: 100%">
+                                <img :src="sourcesImageURLS[index]" style="height: auto; width: 100%" alt="">
 
                                 <!--<img src="../assets/images/project-images/cnn.png" alt="">-->
                                 <p>{{ sourcestitle[index]}}</p>

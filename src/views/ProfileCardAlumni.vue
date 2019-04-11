@@ -12,7 +12,7 @@
 
 
         <div class="at-user__name">{{ProName}}</div>
-        <ul class="at-social" style="padding-left: 0px;">
+        <ul v-if="ProUrl !== ''" class="at-social" style="padding-left: 0px;">
             <!--<li class="at-social__item"><a href="">-->
             <!--<svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">-->
             <!--<path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>-->
@@ -74,7 +74,16 @@
             },
 
 
+        },
+        methods:{
+
+            linkdin_exsits:function () {
+                return this.ProUrl === "";
+
+
+            }
         }
+
 
     }
 </script>
@@ -123,7 +132,7 @@
         font-family: 'Roboto', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
-        line-height: 1rem;
+        line-height: 1.5rem;
     }
 
     .at-user__title {
