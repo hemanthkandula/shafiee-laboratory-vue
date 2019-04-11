@@ -336,6 +336,10 @@
         
     }
 
+    .icon--close {
+        background-image: url(../assets/icons/cross_out.svg)
+    }
+
 
 
 

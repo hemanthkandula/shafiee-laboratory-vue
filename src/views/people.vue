@@ -5,8 +5,11 @@
         <page-block
                 button="See people"
                 button_link="/people"
-                description="Something about people"
+                description=""
                 title="Our Team"
+
+                :background-image="lab"
+
 
 
 
@@ -828,7 +831,7 @@
 
                                     </ProfileCardAlumni>
 
-                                </div>git
+                                </div>
 
 
                             </div>
@@ -930,7 +933,7 @@
 
         <page-block   button="Positions"
                       button_link="/positions"
-                      description="Something to  Join Us"
+                      description=""
                       title="Join Us"
 
 
@@ -990,6 +993,7 @@
 
 
     import peopleimg from '@/assets/images/people-eng.jpg'
+    import lab2 from "@/assets/images/lab2.jpg"
 
 
     export default {
@@ -1000,6 +1004,7 @@
                 baseurl:'http://shafieelab.bwh.harvard.edu/people-assets/',
                 joinus:joinus,
                 highschoolexist:true,
+                lab:lab2,
 
 
 

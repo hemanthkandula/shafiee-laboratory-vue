@@ -44,7 +44,7 @@
                     :background-image="lab"
                     button="People"
                     button_link="/people"
-                    description="Some thing about people"
+                    description=""
                     title="Our Team"
 
 
@@ -72,7 +72,7 @@
         <page-block
                 button="Positions"
                 button_link="/positions"
-                description="Something to  Join Us"
+                description=""
                 title="Join Us"
 
                 :background-image="joinus"

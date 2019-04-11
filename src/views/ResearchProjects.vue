@@ -9,14 +9,14 @@
 
                     <div class="content__header">
                         <h2 class="content__title ">
-                            Research Projects
+                           Selected Research Projects
                         </h2>
 
                     </div>
 
-                    <div class="content__body">
-                        <p>text about it </p>
-                    </div>
+                    <!--<div class="content__body">-->
+                        <!--<p>text about it </p>-->
+                    <!--</div>-->
                 </div>
 
             </div>

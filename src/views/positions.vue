@@ -7,7 +7,7 @@
         <page-block
                 button="Positions"
                 button_link="/positions"
-                description="Something to  Join Us"
+                description=""
                 title="Join Us"
 
                 :background-image="joinus"
