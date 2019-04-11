@@ -3,21 +3,36 @@
     <div>
 
 
-
-        <page-block
-                button="Project Title"
-                button_link="/Research"
-                description=""
-                title=""
-                :ButtonExist=FALSE
-
-                :background-image="projct_images[index]"
+        <section class="callout callout--grid  ">
+            <div class="block block--default-right  has-mobile-bg">
+                <div class="block__background is-loaded"
 
 
+                     v-bind:style="{ backgroundImage: 'url(' + projct_images[index] + ')' }"
 
 
-                :div-class="BlockCtaLeft" :has-dark-background="Backgrounds[index]"
-                :section-class=CalloutGrid></page-block>
+                ></div>
+                <!--<div class="block__background&#45;&#45;mobile is-loaded"-->
+                     <!--style="background-image: url(/static/images/home/home_research-m.jpg);"></div>-->
+
+            </div></section>
+
+
+
+        <!--<page-block-->
+                <!--button="Project Title"-->
+                <!--button_link="/Research"-->
+                <!--description=""-->
+                <!--title=""-->
+                <!--:ButtonExist=FALSE-->
+
+                <!--:background-image="projct_images[index]"-->
+
+
+
+
+                <!--:div-class="BlockCtaLeft" :has-dark-background="Backgrounds[index]"-->
+                <!--:section-class=CalloutGrid></page-block>-->
 
 
         <!--<section class="article    ">-->
@@ -180,15 +195,16 @@
 
 <script>
     import RecentPubications from "@/components/RecentPubications";
-    import PageBlock from "@/components/PageBlock";
+    // import PageBlock from "@/components/PageBlock";
 
 
     import maleinf from '../assets/images/project-images/sperm-image.png'
     import HIV from '../assets/images/project-images/hiv-pub.png'
-    import ovulatuion from '../assets/images/project-images/ovulaton-pub.gif'
-    import zika from '../assets/images/project-images/rapidzikadet.jpg'
+    import ovulatuion from '../assets/images/project-images/ovulation-pub.png'
+    import zika from '../assets/images/project-images/zika-pub.png'
 
     import paper from '../assets/images/project-images/paper-pub.png'
+
 
 
 
@@ -197,7 +213,7 @@
 
     export default {
         name: "ProjectDescription",
-        components: {PageBlock, RecentPubications},
+        components: { RecentPubications},
         data: function () {
             return {
 
@@ -237,14 +253,14 @@
                     'https://www.bostonherald.com/wp-content/uploads/2018/11/HeraldDotComBanner.svg',
                     'https://www.nanowerk.com/images/nanowerk-logo.svg',
                     'https://www.sciencedaily.com/images/sd-logo.png',
-                    ''
+                    'http://shafieelab.bwh.harvard.edu/project-images/azonano.png'
                 ],
                 sourcesurls:[
                     'https://www.cnn.com/2017/03/22/health/male-infertility-test-phone-app-study/index.html',
                     'https://www.bostonherald.com/2019/03/02/smartphone-ovulation-test-a-breakthrough-at-the-brigham/',
                     'https://www.nanowerk.com/nanotechnology-news2/newsid=51457.php',
                     'https://www.sciencedaily.com/releases/2018/06/180628151646.htm',
-                    ''
+                    'https://www.azonano.com/news.aspx?newsID=32488'
 
                 ],
                 sourcestitle:[
@@ -254,7 +270,7 @@
                     'Smartphone ovulation test a breakthrough at the Brigham',
                     'Cellphone combined with nanotechnology to detect HIV viruses',
                     'Rapid Zika detection test uses smartphone technology',
-                    ''
+                    'New Biosensing Platform Remotely Detects and Monitors Treatment Options for HIV, E-coli'
 
                 ],
 
