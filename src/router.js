@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
-import Contact from './views/contact.vue'
+// import About from './views/About.vue'
+// import Contact from './views/contact.vue'
 // import News from './views/news.vue'
 import People from './views/people.vue'
 import Positions from './views/positions.vue'
 import Publications from './views/publications.vue'
 // import Research from "@/views/Research";
 import ProjectDescription from "@/components/ProjectDescription";
+
 
 
 Vue.use(Router);

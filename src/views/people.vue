@@ -373,74 +373,74 @@
         </section>
 
 
-        <section  v-if="highschoolexist" class="group group--default    ">
+        <!--<section  v-if="highschoolexist" class="group group&#45;&#45;default    ">-->
 
 
-            <div class="group__content-wrapper">
+            <!--<div class="group__content-wrapper">-->
 
 
-                <div class="content group__content    ">
-                    <div class="content__text">
+                <!--<div class="content group__content    ">-->
+                    <!--<div class="content__text">-->
 
-                        <div class="content__header">
-                            <h2 class="content__title ">
+                        <!--<div class="content__header">-->
+                            <!--<h2 class="content__title ">-->
 
-                High School Interns
-                            </h2>
+                <!--High School Interns-->
+                            <!--</h2>-->
 
-                        </div>
+                        <!--</div>-->
 
-                        <div class="content__body">
-                            <p> <br></p>
-                        </div>
-                    </div>
+                        <!--<div class="content__body">-->
+                            <!--<p> <br></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
-                </div>
-            </div>
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="group__gallery-wrapper">
-
-
-
-
-                <div class="gallery gallery--content-card
-
-      gallery--3-columns
-
-
-
-">
-
-                    <div class="gallery__wrapper">
+            <!--<div class="group__gallery-wrapper">-->
 
 
 
 
+                <!--<div class="gallery gallery&#45;&#45;content-card-->
 
-                        <div class="gallery__item" :key="index" v-for="(person ,index) in position_filtered['8']">
-
-                            <div class="at-column" >
-                                <ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">
-
-                                </ProfileCard>
+      <!--gallery&#45;&#45;3-columns-->
 
 
-                            </div>
 
+<!--">-->
 
-                        </div>
+                    <!--<div class="gallery__wrapper">-->
 
 
 
 
-                    </div>
-                </div>
-            </div>
+
+                        <!--<div class="gallery__item" :key="index" v-for="(person ,index) in position_filtered['8']">-->
+
+                            <!--<div class="at-column" >-->
+                                <!--<ProfileCard :pro-image="geturl(person.img)" :pro-name="person.name">-->
+
+                                <!--</ProfileCard>-->
+
+
+                            <!--</div>-->
+
+
+                        <!--</div>-->
 
 
 
 
-        </section>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+
+        <!--</section>-->
 
 
 
@@ -730,7 +730,10 @@
                             <div class="at-grid" data-column="4">
 
                                 <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['1']">
-                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name"
+                                                       :pro-company="person.company"
+                                                       :pro-position="person.position"
+                                                       :pro-url="person.url">
 
                                     </ProfileCardAlumni>
 
@@ -757,7 +760,10 @@
                             <div class="at-grid" data-column="4">
 
                                 <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['2']">
-                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name"
+                                                       :pro-company="person.company"
+                                                       :pro-position="person.position"
+                                                       :pro-url="person.url">
 
                                     </ProfileCardAlumni>
 
@@ -783,10 +789,12 @@
 
 
                                 <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['3']">
-                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name"
+                                                       :pro-company="person.company"
+                                                       :pro-position="person.position"
+                                                       :pro-url="person.url">
 
                                     </ProfileCardAlumni>
-
 
                                 </div>
 
@@ -813,12 +821,14 @@
                             <div class="at-grid" data-column="4">
 
                                 <div class="at-column" :key="index" v-for="(person ,index) in position_filtered['4']">
-                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name" :pro-url="person.url">
+                                    <ProfileCardAlumni :pro-image="geturl(person.img)" :pro-name="person.name"
+                                                       :pro-company="person.company"
+                                                       :pro-position="person.position"
+                                                       :pro-url="person.url">
 
                                     </ProfileCardAlumni>
 
-
-                                </div>
+                                </div>git
 
 
                             </div>
@@ -987,7 +997,7 @@
         data: function () {
             return {
 
-                baseurl:'http://shafieelabdatalabeling.tk:5000/people-assets/',
+                baseurl:'http://shafieelab.bwh.harvard.edu/people-assets/',
                 joinus:joinus,
                 highschoolexist:true,
 
@@ -1031,7 +1041,7 @@
             peopleDB:function () {
 
 
-                this.position_filtered = this.groupBy(this.peopleDB, 'position');
+                this.position_filtered = this.groupBy(this.peopleDB, 'tag');
 
                 this.highschoolexist = this.checkhighexists();
 
@@ -1144,7 +1154,7 @@
 
 
             return {
-                peopleDB: fs.collection('People').orderBy('id')
+                peopleDB: fs.collection('People_new').orderBy('id')
 
 
             }

@@ -72,11 +72,11 @@
 
     import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
-    import dbstorage from "@/db/storage"
+    // import dbstorage from "@/db/storage"
 
-    import db from "@/db/index"
+    // import db from "@/db/index"
 
-    import  logo from "@/assets/homecen.jpg"
+    // import  logo from "@/assets/homecen.jpg"
 
     import c1 from "@/assets/images/covers/1.png"
     import c2 from "@/assets/images/covers/2.jpg"

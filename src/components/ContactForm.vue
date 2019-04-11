@@ -70,11 +70,11 @@
 
                         v-validate="'required'"
 
-                        v-model="subject"
+                        v-model="Subject"
 
-                        :error-messages="errors.collect('subject')"
+                        :error-messages="errors.collect('Subject')"
 
-                        data-vv-name="subject"
+                        data-vv-name="Subject"
 
                         required
 
@@ -164,6 +164,7 @@
                 color:'',
 
                 snackbar: false,
+                Subject:'',
 
 
             email: '',
@@ -187,6 +188,10 @@
                         required: () => 'Message can not be empty',
                         // custom messages
                     },
+                    Subject: {
+                        required: () => 'Message can not be empty',
+                        // custom messages
+                    },
 
                 }
             }
@@ -204,7 +209,7 @@
                 let data = new FormData();
                 data.append('name',this.firstname+" "+this.lastname);
                 data.append('email',this.email);
-                data.append('subject','subject');
+                data.append('subject',this.Subject);
 
                 data.append('message', this.message);
 
@@ -271,6 +276,8 @@
                 this.firstname = ''
                 this.lastname = ''
                 this.message = ''
+
+                this.Subject= ''
 
 
                 this.email = ''

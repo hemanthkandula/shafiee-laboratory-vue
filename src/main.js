@@ -57,8 +57,8 @@ Vue.use(VueFirestore);
 // Vue.use(VueAxios, axios)
 
 
-// import VirtualScrollList from 'vue-virtual-scroll-list'
-// Vue.component('virtual-list', VirtualScrollList)
+import VirtualScrollList from 'vue-virtual-scroll-list'
+Vue.component('virtual-list', VirtualScrollList)
 
 
 

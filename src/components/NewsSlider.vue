@@ -120,7 +120,7 @@
 
         firestore() {
             return {
-                NewsDB: fs.collection('News').orderBy("id")
+                NewsDB: fs.collection('News_Fea').orderBy("id")
 
             }
 

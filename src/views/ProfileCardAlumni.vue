@@ -39,8 +39,9 @@
             </a>
             </li>
         </ul>
-        <!--<div class="at-user__title">Position</div>-->
+        <div class="at-user__title"><strong>{{ProPosition}}</strong></div>
 
+        <div class="at-user__company">{{ProCompany}}</div>
 
 
     </div>
@@ -60,6 +61,14 @@
             },
 
             ProUrl: {
+                type: String,
+                required: true
+            },
+            ProPosition: {
+                type: String,
+                required: true
+            },
+            ProCompany: {
                 type: String,
                 required: true
             },
@@ -112,7 +121,7 @@
     .at-user__name {
         color: #313435;
         font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 500;
         line-height: 1rem;
     }
@@ -120,7 +129,14 @@
     .at-user__title {
         color: #6F808A;
         font-family: 'Roboto', sans-serif;
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+        line-height: 2.375rem;
+    }
+
+    .at-user__company {
+        color: #6F808A;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1rem;
         line-height: 2.375rem;
     }
 
