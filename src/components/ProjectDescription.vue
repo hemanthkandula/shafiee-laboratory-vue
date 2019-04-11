@@ -163,20 +163,20 @@
                 </div>
 
 
-            <aside class="article-side article-side--right ">
+            <!--<aside class="article-side article-side&#45;&#45;right ">-->
 
-                <h3 class="article-side__item-title">News articles covered</h3>
-                <ul class="article-side__list ">
+                <!--<h3 class="article-side__item-title">News articles covered</h3>-->
+                <!--<ul class="article-side__list ">-->
 
-                    <li :key="index" v-for="(img,index) in 5">
-                        <a href="">
-                            Article name
-                        </a>
-                    </li>
+                    <!--<li :key="index" v-for="(img,index) in 5">-->
+                        <!--<a href="">-->
+                            <!--Article name-->
+                        <!--</a>-->
+                    <!--</li>-->
 
-                </ul>
+                <!--</ul>-->
 
-            </aside>
+            <!--</aside>-->
   </div>
 
         </section>
