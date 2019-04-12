@@ -173,7 +173,7 @@
             return {
 
 
-                PublicationsDB: fs.collection('Publications_backup').orderBy("Serial")
+                PublicationsDB: fs.collection('Publication').orderBy("Serial")
 
             }
 
@@ -263,8 +263,9 @@
                 let sorted = [];
 
                 for(let key in this.filteryearslist) {
-                    if(key!==" ")
+                    if(key!==""){
                     sorted[sorted.length] = key;
+                    }
                 }
                 sorted.sort().reverse();
 

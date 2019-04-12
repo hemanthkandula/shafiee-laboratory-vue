@@ -142,7 +142,7 @@
                 // PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
 
 
-                PublicationsDB: fs.collection('Publication').orderBy(this.SortBy, 'desc')
+                PublicationsDB: fs.collection('Publication').orderBy('Serial', 'desc')
 
 
 
@@ -160,7 +160,15 @@
                 this.filteryearslist = this.groupBy(this.PublicationsDB, 'Projects');
 
                 if(this.SortBy==='Selected'){
-                    this.FilteredPublicationsDB =this.PublicationsDB
+                    // this.FilteredPublicationsDB =this.PublicationsDB
+                    this.filteryearslist = this.groupBy(this.PublicationsDB, 'Selected');
+                    this.FilteredPublicationsDB = this.filteryearslist['yes'].sort(function(first, second) {
+                        return first.Serial - second.Serial;
+                    });
+
+
+
+
 
                 }
                 else {
@@ -236,7 +244,7 @@
             setcount:function (Sortby) {
 
                 if(Sortby==='Selected'){
-                    return 5
+                    return this.FilteredPublicationsDB.length
                 }
                 else {
                     return this.FilteredPublicationsDB.length

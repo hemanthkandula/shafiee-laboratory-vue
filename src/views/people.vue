@@ -4,7 +4,7 @@
 
         <page-block
                 button="See people"
-                button_link="/people"
+                button_link="/people#lab-members"
                 description=""
                 title="Our Team"
 
@@ -71,7 +71,7 @@
 
 
                                     <div class="quote__details">
-                                        <a class="quote__author" href="/Hadi-Shafiee">
+                                        <a class="quote__author" href="https://scholar.google.com/citations?hl=en&user=ikDTLNsAAAAJ" target="_blank">
                                             HADI SHAFIEE, PHD
 
                                         </a>
@@ -94,6 +94,8 @@
 
 
         <section class="copy copy--sidebar article--big-lede ">
+
+
             <div class="copy__wrapper">
 
 
@@ -169,7 +171,15 @@
 
 
         <section class="group group--default    has-grey-background">
+            <v-layout align-center justify-center row fill-height>
 
+                <h1 class="" id="lab-members">
+                    LAB MEMBERS
+
+
+                </h1>
+
+            </v-layout>
 
             <div class="group__content-wrapper">
 
@@ -688,7 +698,16 @@
 
 
         <section class="group group--pub  has-white-background  " >
+            <v-layout align-center justify-center row fill-height>
+
+                <h1 class=" ">
+                    ALUMNI
+
+                </h1>
+
+            </v-layout>
             <div class="group__wrapper">
+
 
                 <div class="group__content-wrapper">
 
@@ -696,17 +715,14 @@
                     <div class="content group__content    ">
                         <div class="content__text">
 
-                            <span class="content__brow">Alumni</span>
-                            <div class="content__header">
-                                <h2 class="content__title ">
-                                    Alumni
-                                </h2>
+                            <!--<span class="content__brow">Alumni</span>-->
+                            <!--<div class="content__header">-->
 
-                            </div>
+                            <!--</div>-->
 
-                            <div class="content__body">
-                                <p>Some thing about alumni</p>
-                            </div>
+                            <!--<div class="content__body">-->
+                                <!--<p>Some thing about alumni</p>-->
+                            <!--</div>-->
                         </div>
 
 
