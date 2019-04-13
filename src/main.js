@@ -76,4 +76,4 @@ new Vue({
 }).$mount('#app');
 
 
-Vue.config.performance = true
+// Vue.config.performance = true
