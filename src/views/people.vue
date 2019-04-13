@@ -743,7 +743,7 @@
 
                         </div>
 
-                        <virtual-list :size="40" :remain="12">
+                        <virtual-list :size="40" :remain="16">
 
 
                             <div class="at-grid" data-column="4">
@@ -773,7 +773,7 @@
                             </h3>
 
                         </div>
-                        <virtual-list :size="40" :remain="12">
+                        <virtual-list :size="40" :remain="16">
 
 
                             <div class="at-grid" data-column="4">
@@ -802,7 +802,7 @@
                             </h3>
 
                         </div>
-                        <virtual-list :size="40" :remain="12">
+                        <virtual-list :size="40" :remain="16">
                             <div class="at-grid" data-column="4">
 
 
