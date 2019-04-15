@@ -8,7 +8,9 @@ import People from './views/people.vue'
 import Positions from './views/positions.vue'
 import Publications from './views/publications.vue'
 // import Research from "@/views/Research";
-import ProjectDescription from "@/components/ProjectDescription";
+import ProjectDescription from "./components/ProjectDescription";
+
+import NotFound from "./views/NotFound.vue"
 
 
 
@@ -82,6 +84,9 @@ export default new Router({
         },
         //
         { path: '/projects/:name', component: ProjectDescription },
+
+        { path: '/404', component: NotFound },
+        { path: '*', redirect: '/404' },
 
         //
         // {
