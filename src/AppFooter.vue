@@ -29,11 +29,11 @@
                         <div class="Footer-social">
                             <a href="https://www.facebook.com/" target="_blank" title="Shafiee Laboratory | Facebook" class="Icon Icon--facebook"></a>
 
-                            <a href="https://www.linkedin.com/company/" target="_blank" title="Shafiee Laboratory | Linkedin" class="Icon Icon--linkedin"></a>
+                            <a href="https://www.linkedin.com/company/brigham-and-women's-hospital" target="_blank" title="Shafiee Laboratory | Linkedin" class="Icon Icon--linkedin"></a>
 
 
 
-                            <a href="https://www.youtube.com/user/" target="_blank" title="Shafiee Laboratory | Youtube" class="Icon Icon--youtube"></a></div>
+                            <a href="https://www.youtube.com/channel/UCpVkZIs1AfIrMPpE-rDLE6g" target="_blank" title="Shafiee Laboratory | Youtube" class="Icon Icon--youtube"></a></div>
                     </div>
                     <div class="Footer-information">
                         <div class="Footer-information-left">
@@ -53,9 +53,9 @@
                                     </li>
                                     <li class="Menu-item Menu-item--type-aboutUs Menu-item--object-aboutUs">
 
-                                        <router-link exact to="/research">
-                                            Research
-                                        </router-link>
+                                        <!--<router-link exact to="/research">-->
+                                            <!--Research-->
+                                        <!--</router-link>-->
 
 
 
@@ -96,7 +96,7 @@
                             <div class="Footer-copyright">Copyright © 2019 Shafiee Laboratory | All rights reserved</div>
                         </div>
                         <div class="Footer-information-right">
-                            <p><a href="https://" target="_blank">some thing about it </a></p>
+                            <!--<p><a href="https://hemanthkandula.com" target="_blank">designed by  </a></p>-->
                         </div>
                     </div>
                 </div>
