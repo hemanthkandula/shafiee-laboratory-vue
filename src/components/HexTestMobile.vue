@@ -46,7 +46,7 @@
 
 
                             class="videohex" autoplay=""  muted="" playsinline=""
-                           src="../assets/videos/3d.mp4"></video>
+                           src="../../public/videos/3d.mp4"></video>
                 </div>
 
             </article>

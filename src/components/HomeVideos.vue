@@ -16,32 +16,92 @@
         <section class='tl'>
 
 
-            <article  :key="index+'-lab1'" v-for="(news ,index) in 5">
+            <!--<article  :key="index+'-lab1'" v-for="(news ,index) in 5">-->
 
 
-                <div class="Inhexvideo ">
+                <!--<div class="Inhexvideo ">-->
 
 
 
-                    <!--@ended="PickVideo(CurrentPlaying[index])"-->
+                    <!--&lt;!&ndash;@ended="PickVideo(CurrentPlaying[index])"&ndash;&gt;-->
 
-                    <!--<div class="overlay"-->
-                         <!--@mouseover="hover = true"-->
-                         <!--@mouseleave="hover = false"-->
+                    <!--&lt;!&ndash;<div class="overlay"&ndash;&gt;-->
+                         <!--&lt;!&ndash;@mouseover="hover = true"&ndash;&gt;-->
+                         <!--&lt;!&ndash;@mouseleave="hover = false"&ndash;&gt;-->
 
-                    <!--&gt;-->
+                    <!--&lt;!&ndash;&gt;&ndash;&gt;-->
 
-                    <!--</div>-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
 
-                    <video  disableRemotePlayback  loop
+                    <!--<video  disableRemotePlayback  loop-->
 
-                            class="videohex" autoplay="" muted="" playsinline=""
-                               :src="videos[index]"></video>
+                            <!--class="videohex" autoplay="" muted="" playsinline=""-->
+                               <!--:src="videos[index]"></video>-->
+                <!--</div>-->
+
+            <!--</article>-->
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/1.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/2.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/3.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/4.mp4"></video>
                 </div>
 
             </article>
 
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/5.mp4"></video>
+                </div>
+
+            </article>
 
 
             <article >
@@ -52,35 +112,97 @@
                     <video disableRemotePlayback
 
                             class="videohex" autoplay=""  muted="" playsinline=""
-                           src="../assets/videos/3d.mp4"></video>
+                           src="/videos/3d.mp4"></video>
                 </div>
 
             </article>
 
-
-
-            <article  :key="index+'-lab2'" v-for="(news ,index) in 5">
+            <article >
 
 
                 <div class="Inhexvideo">
 
+                    <video disableRemotePlayback loop=""
 
-                    <!--<div class="overlay"></div>-->
-
-
-
-                    <!--@ended="PickVideo(CurrentPlaying[index])"-->
-
-                    <!--@ended="PickVideo(CurrentPlaying[index+5])"-->
-                    <video disableRemotePlayback  loop
-
-                            class="videohex" autoplay="" muted="" playsinline=""
-                            :src="videos[index+5]">
-
-                    </video>
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/7.mp4"></video>
                 </div>
 
             </article>
+
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/8.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/9.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/10.mp4"></video>
+                </div>
+
+            </article>
+            <article >
+
+
+                <div class="Inhexvideo">
+
+                    <video disableRemotePlayback loop=""
+
+                           class="videohex" autoplay=""  muted="" playsinline=""
+                           src="/videos/11.mp4"></video>
+                </div>
+
+            </article>
+
+
+
+            <!--<article  :key="index+'-lab2'" v-for="(news ,index) in 5">-->
+
+
+                <!--<div class="Inhexvideo">-->
+
+
+                    <!--&lt;!&ndash;<div class="overlay"></div>&ndash;&gt;-->
+
+
+
+                    <!--&lt;!&ndash;@ended="PickVideo(CurrentPlaying[index])"&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;@ended="PickVideo(CurrentPlaying[index+5])"&ndash;&gt;-->
+                    <!--<video disableRemotePlayback  loop-->
+
+                            <!--class="videohex" autoplay="" muted="" playsinline=""-->
+                            <!--:src="videos[index+5]">-->
+
+                    <!--</video>-->
+                <!--</div>-->
+
+            <!--</article>-->
 
 
 
@@ -112,28 +234,6 @@
 <script>
     import ParticlesJS from "@/components/ParticlesJS";
 
-    import vid1 from "@/assets/videos/1.mp4";
-    import vid2 from "@/assets/videos/2.mp4";
-
-    import vid3 from "@/assets/videos/3.mp4";
-    import vid4 from "@/assets/videos/4.mp4";
-    import vid5 from "@/assets/videos/5.mp4";
-    // import vid6 from "@/assets/videos/6.mp4";
-    import vid7 from "@/assets/videos/7.mp4";
-    import vid8 from "@/assets/videos/8.mp4";
-    import vid9 from "@/assets/videos/9.mp4";
-    import vid10 from "@/assets/videos/10.mp4";
-    import vid11 from "@/assets/videos/11.mp4";
-
-
-    // import vid16 from "@/assets/videos/16.mp4";
-    // import vid17 from "@/assets/videos/17.mp4";
-    // import vid18 from "@/assets/videos/18.mp4";
-    // import vid19 from "@/assets/videos/19.mp4";
-    // import vid20 from "@/assets/videos/20.mp4";
-
-    // import vid21 from "@/assets/videos/21.mp4";
-
 
     export default {
 
@@ -148,14 +248,6 @@
         data:function(){
 
             return {
-                videosrc : "../assets/videos/",
-                videos: [vid1, vid2,vid3,vid4,vid5,vid7,vid8,vid9,vid10,vid11],
-
-                // AvailablePlaying:[vid1, vid2,vid3,vid4,vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,
-                //     vid14,vid15 ],
-
-                // CurrentPlaying:[]
-
 
 
 
