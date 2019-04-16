@@ -46,10 +46,13 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
 
-                           class="videohex" autoplay=""  muted="" playsinline=""
-                           src="/videos/1.mp4"></video>
+
+                    <video class="videohex" src="/videos/1.mp4"
+                           autoplay muted playsinline loop></video>
+
+
+
                 </div>
 
             </article>
@@ -58,9 +61,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/2.mp4"></video>
                 </div>
 
@@ -70,9 +71,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/3.mp4"></video>
                 </div>
 
@@ -82,9 +81,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/4.mp4"></video>
                 </div>
 
@@ -95,9 +92,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/5.mp4"></video>
                 </div>
 
@@ -109,9 +104,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback
-
-                            class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/3d.mp4"></video>
                 </div>
 
@@ -122,9 +115,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/7.mp4"></video>
                 </div>
 
@@ -135,9 +126,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/8.mp4"></video>
                 </div>
 
@@ -147,9 +136,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/9.mp4"></video>
                 </div>
 
@@ -159,9 +146,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/10.mp4"></video>
                 </div>
 
@@ -171,9 +156,7 @@
 
                 <div class="Inhexvideo">
 
-                    <video disableRemotePlayback loop=""
-
-                           class="videohex" autoplay=""  muted="" playsinline=""
+                    <video  autoplay muted playsinline loop  class="videohex"
                            src="/videos/11.mp4"></video>
                 </div>
 
