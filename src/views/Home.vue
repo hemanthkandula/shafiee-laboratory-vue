@@ -102,19 +102,22 @@
 </template>
 
 <script>
-    // @ is an alias to /src
-    import RecentPublication from '@/components/RecentPubications'
-    import NewsSlider from "@/components/NewsSlider";
-    import PageBlock from "@/components/PageBlock";
-    // import Hextest from "@/components/hextest";
-    import Contact from "@/views/contact";
-    import lab2 from "@/assets/images/lab2.jpg"
-    // import HexTestMobile from "@/components/HexTestMobile";
 
-    import joinus from "@/assets/images/joinus1.jpg"
-    import ResearchProjects from "@/views/ResearchProjects";
-    import HomeVideos from "../components/HomeVideos";
-    import HomeVideosMobile from "../components/HomeVideosMobile";
+
+
+
+    const RecentPublication = () => import('../components/RecentPubications.vue')
+    const NewsSlider = () => import('../components/NewsSlider.vue')
+
+    const PageBlock = () => import('../components/PageBlock.vue')
+    const Contact = () => import('../views/contact.vue')
+    const ResearchProjects = () => import('../views/ResearchProjects.vue')
+    const HomeVideos = () => import('../components/HomeVideos.vue')
+    const HomeVideosMobile = () => import('../components/HomeVideosMobile.vue')
+
+    import lab2 from "../assets/images/lab2.jpg"
+    import  joinus  from "../assets/images/joinus1.jpg"
+
 
 
     export default {

@@ -15,6 +15,7 @@
     "firebase": "^5.8.4",
     "material-icons": "^0.3.0",
     "particles.js": "^2.0.0",
+    "react-snap": "^1.23.0",
     "vee-validate": "^2.1.7",
     "vue": "^2.6.7",
     "vue-awesome-swiper": "^3.1.3",

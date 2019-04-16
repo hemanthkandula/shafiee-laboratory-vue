@@ -1,16 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-// import About from './views/About.vue'
-// import Contact from './views/contact.vue'
-// import News from './views/news.vue'
-import People from './views/people.vue'
-import Positions from './views/positions.vue'
-import Publications from './views/publications.vue'
-// import Research from "@/views/Research";
-import ProjectDescription from "./components/ProjectDescription";
 
-import NotFound from "./views/NotFound.vue"
+
+
+
+
 
 
 
@@ -35,12 +29,16 @@ export default new Router({
         }
     },
     routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: Home
-        },
         // {
+        //     path: '/',
+        //     name: 'home',
+        //     component: Home
+        //
+        //
+        // },
+        { path: '/', component: () => import('./views/Home.vue') },
+
+            // {
         //     path: '/research',
         //     name: 'research',
         //     component: Research
@@ -69,23 +67,29 @@ export default new Router({
         {
             path: '/people',
             name: 'People',
-            component: People
+            component: () => import('./views/people.vue')
         },
         {
             path: '/positions',
             name: 'Positions',
-            component: Positions
+            component: () => import('./views/positions.vue')
         },
 
         {
             path: '/publications',
             name: 'Publications',
-            component: Publications
+            component: () => import('./views/publications.vue')
         },
         //
-        { path: '/projects/:name', component: ProjectDescription },
+        { path: '/projects/:name',
+            component: () => import('./components/ProjectDescription.vue')
 
-        { path: '/404', component: NotFound },
+
+        },
+
+        { path: '/404'
+     ,component: () => import('./views/NotFound.vue')   },
+
         { path: '*', redirect: '/404' },
 
         //
