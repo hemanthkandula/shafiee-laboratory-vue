@@ -7,18 +7,22 @@
 
 <!--<homehexagon> </homehexagon>-->
 
-        <hex-test-mobile v-if="Mobile"
+        <!--<hex-test-mobile v-if="Mobile"-->
 
 
-                >
+                <!--&gt;-->
 
-        </hex-test-mobile>
-        <hextest v-else>
+        <!--</hex-test-mobile>-->
+        <!--<hextest v-else>-->
 
-        </hextest>
+        <!--</hextest>-->
 
 
 
+        <home-videos-mobile v-if="Mobile">
+
+        </home-videos-mobile>
+<home-videos v-else></home-videos>
 
 
 
@@ -102,23 +106,25 @@
     import RecentPublication from '@/components/RecentPubications'
     import NewsSlider from "@/components/NewsSlider";
     import PageBlock from "@/components/PageBlock";
-    import Hextest from "@/components/hextest";
+    // import Hextest from "@/components/hextest";
     import Contact from "@/views/contact";
     import lab2 from "@/assets/images/lab2.jpg"
-    import HexTestMobile from "@/components/HexTestMobile";
+    // import HexTestMobile from "@/components/HexTestMobile";
 
     import joinus from "@/assets/images/joinus1.jpg"
     import ResearchProjects from "@/views/ResearchProjects";
+    import HomeVideos from "../components/HomeVideos";
+    import HomeVideosMobile from "../components/HomeVideosMobile";
 
 
     export default {
         name: 'home',
         components: {
+            HomeVideosMobile,
+            HomeVideos,
             ResearchProjects,
-            HexTestMobile,
 
             Contact,
-            Hextest,
 
 
 
