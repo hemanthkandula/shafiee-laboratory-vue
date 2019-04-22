@@ -62,10 +62,17 @@
                     <div class="gallery__wrapper">
 
                         <!--:onclick="applydialog(detail.Tittle)"-->
+                        <!--<position-card-->
+                                       <!--@applydialog="applydialog"-->
+                                       <!--:content="detail.Content" :key="detail.Tittle" :link="detail.Link"-->
+                                       <!--:title="detail.Tittle" v-for="detail in position"></position-card>-->
                         <position-card
-                                       @applydialog="applydialog"
-                                       :content="detail.Content" :key="detail.Tittle" :link="detail.Link"
-                                       :title="detail.Tittle" v-for="detail in position"></position-card>
+
+                                :content="detail.Content" :key="detail.Tittle" :link="detail.Link"
+                                :title="detail.Tittle" v-for="detail in position">
+
+
+                        </position-card>
 
 
                     </div>
@@ -88,7 +95,7 @@
 
 <script>
     import PageBlock from "@/components/PageBlock";
-    import PositionCard from "@/views/PositionCard";
+    import PositionCard from "../views/PositionCard";
     import ApplyForm from "@/components/ApplyForm";
     import joinus from "@/assets/images/joinus1.jpg"
 

@@ -39,9 +39,10 @@
                 <div class="content__ctas">
 
 
-                        <a class="button"
-                           v-on:click="callparent"
+                        <a class="button" href="mailto:"
                         >
+                            <!--v-on:click="callparent"-->
+
 
 
                             Apply now
