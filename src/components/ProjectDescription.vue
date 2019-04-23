@@ -11,6 +11,13 @@
                      v-bind:style="{ backgroundImage: 'url(' + projct_images[index] + ')' }"
 
 
+                >
+
+                </div>
+                <div class="block__background--mobile  is-loaded"
+
+                     v-bind:style="{ backgroundImage: 'url(' + projct_images[index] + ')' }"
+
                 ></div>
                 <!--<div class="block__background&#45;&#45;mobile is-loaded"-->
                      <!--style="background-image: url(/static/images/home/home_research-m.jpg);"></div>-->
