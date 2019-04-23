@@ -244,7 +244,7 @@
                     'AI powered device to detect signs of ovulation',
                     'Affordable cellphone based tool to detect HIV',
                     'Rapid Zika detection test uses smartphone technology',
-                    'Paper microchips detections and diagnostics'
+                    'A low cost flexible paper microchips detections and diagnostics'
                 ],
                 tags:['SPERM','OVULATION','HIV','ZIKA','PAPER'],
                 sourcesImageURLS:[
@@ -253,14 +253,14 @@
                     'https://www.bostonherald.com/wp-content/uploads/2018/11/HeraldDotComBanner.svg',
                     'https://www.nanowerk.com/images/nanowerk-logo.svg',
                     'https://www.sciencedaily.com/images/sd-logo.png',
-                    'http://shafieelab.bwh.harvard.edu/project-images/azonano.png'
+                    'http://www.bwhpublicationsarchives.org/images/new2011/bulletin_head.gif'
                 ],
                 sourcesurls:[
                     'https://www.cnn.com/2017/03/22/health/male-infertility-test-phone-app-study/index.html',
                     'https://www.bostonherald.com/2019/03/02/smartphone-ovulation-test-a-breakthrough-at-the-brigham/',
                     'https://www.nanowerk.com/nanotechnology-news2/newsid=51457.php',
                     'https://www.sciencedaily.com/releases/2018/06/180628151646.htm',
-                    'https://www.azonano.com/news.aspx?newsID=32488'
+                    'http://www.bwhpublicationsarchives.org/DisplayBulletin.aspx?articleid=6401'
 
                 ],
                 sourcestitle:[
@@ -270,7 +270,7 @@
                     'Smartphone ovulation test a breakthrough at the Brigham',
                     'Cellphone combined with nanotechnology to detect HIV viruses',
                     'Rapid Zika detection test uses smartphone technology',
-                    'New Biosensing Platform Remotely Detects and Monitors Treatment Options for HIV, E-coli'
+                    'Fighting HIV/AIDS: A low-cost, flexible microchip'
 
                 ],
 

@@ -91,6 +91,10 @@ export default new Router({
      ,component: () => import('./views/NotFound.vue')   },
 
         { path: '*', redirect: '/404' },
+        { path: '/contact', redirect: '/#contact' },
+        { path: '/contact-us', redirect: '/#contact' },
+
+
 
         //
         // {

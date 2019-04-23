@@ -174,7 +174,7 @@
                                 'AI powered device to detect signs of ovulation',
                                 'Affordable cellphone based tool to detect HIV',
                     'Rapid Zika detection test uses smartphone technology',
-                    'Paper microchips detections and diagnostics'
+                    'A low cost flexible paper microchips detections and diagnostics'
                                ]
 
 
