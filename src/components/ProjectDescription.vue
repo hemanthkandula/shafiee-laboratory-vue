@@ -201,7 +201,7 @@
     import maleinf from '../assets/images/project-images/sperm-image.png'
     import HIV from '../assets/images/project-images/hiv-pub.png'
     import ovulatuion from '../assets/images/project-images/ovulation-pub.png'
-    import zika from '../assets/images/project-images/zika-pub.png'
+    import zika from '../assets/images/project-images/zika-image.jpg'
 
     import paper from '../assets/images/project-images/paper-pub.png'
 
