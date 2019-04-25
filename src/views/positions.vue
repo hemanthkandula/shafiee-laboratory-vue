@@ -5,8 +5,8 @@
 
 
         <page-block
-                button="Positions"
-                button_link="/positions"
+                button="Apply Now"
+                button_link="/positions#apply-now"
                 description=""
                 title="Join Us"
 
@@ -18,12 +18,14 @@
                     :section-class=CalloutFullWidth></page-block>
 
 
+        <br id="apply-now">
+
         <section class="group group--default    has-grey-background">
 
             <v-layout align-center justify-center row fill-height>
 
 
-                    <h1 >Positions</h1>
+                    <h1  >Positions</h1>
 
             </v-layout>
 

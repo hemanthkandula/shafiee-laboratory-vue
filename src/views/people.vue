@@ -10,11 +10,11 @@
 
                 :background-image="lab"
 
+                :div-class="BlockCtaRight" :has-dark-background="DarkBackground"
+                :section-class=CalloutFullWidth
 
 
-
-                :div-class="BlockLeft" :has-dark-background="DarkBackground"
-                    :section-class=CalloutFullWidth>
+                >
 
         </page-block>
 
@@ -170,10 +170,10 @@
 
 
 
-        <section class="group group--default    has-grey-background">
+        <section id="lab-members" class="group group--default    has-grey-background">
             <v-layout align-center justify-center row fill-height>
 
-                <h1 class="" id="lab-members">
+                <h1 class="" >
                     LAB MEMBERS
 
 

@@ -146,12 +146,12 @@
 
 <script>
 
-    import maleinf from '../assets/images/projects/male_infertility/young-couple-looking-screen-mobile.jpg'
-    import african from '../assets/images/project-images/african.jpg'
+    import maleinf from '../assets/images/project-images/male.jpg'
+    import african from '../assets/images/project-images/hiv.jpg'
     import ovulatuion from '../assets/images/project-images/ovulation2.jpg'
     import zika from '../assets/images/project-images/zika-main.jpg'
 
-    import paper from '../assets/images/project-images/paper-main.jpg'
+    import paper from '../assets/images/project-images/paper-project.jpg'
 
 
     export default {
