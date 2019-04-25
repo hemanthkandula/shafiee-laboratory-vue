@@ -165,6 +165,7 @@
                     this.FilteredPublicationsDB = this.filteryearslist['yes'].sort(function(first, second) {
                         return first.Serial - second.Serial;
                     });
+                    // this.FilteredPublicationsDB = this.filteryearslist['yes'];
 
 
 

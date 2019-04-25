@@ -149,7 +149,7 @@
     import maleinf from '../assets/images/project-images/male.jpg'
     import african from '../assets/images/project-images/hiv.jpg'
     import ovulatuion from '../assets/images/project-images/ovulation2.jpg'
-    import zika from '../assets/images/project-images/zika-main.jpg'
+    import zika from '../assets/images/project-images/zika-main.jpeg'
 
     import paper from '../assets/images/project-images/paper-project.jpg'
 

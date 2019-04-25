@@ -4,8 +4,8 @@
             <!--<div class="card card&#45;&#45;publication  card&#45;&#45;publication-list " data-card-type="list"-->
             <!--data-gen-art="" data-id="citation-285873181745812610519690736573110520935">-->
             <!--<a class="card__link" href="/research/pubs/"-->
-            <!--v-bind:title="Title" ><span-->
-            <!--class="hidden-text">{{Title}}</span></a>-->
+            <!--v-bind:title="title" ><span-->
+            <!--class="hidden-text">{{title}}</span></a>-->
             <!--<div class="card__image" data-gen-art-background=""><img height="100%" src="back" width="100%"></div>-->
             <!--<div class="card__link&#45;&#45;icon">-->
             <!--<a class="icon icon&#45;&#45;google-scholar card__link-search-scholar"-->
@@ -52,7 +52,7 @@
             <!--<div class="content card__content ">-->
             <!--<div class="content__title">-->
             <!---->
-            <!--<a class="card__title"  v-bind:href="Link" :title="Title">{{Title}}-->
+            <!--<a class="card__title"  v-bind:href="Link" :title="title">{{title}}-->
             <!---->
             <!--</a>-->
             <!--</div>-->
@@ -93,7 +93,7 @@
             <!--</div>-->
 
             <div class="card card--publication  card--publication-list " data-card-type="list">
-                <a :href="Link" :title="Title" class="card__link"><span class="hidden-text">{{Title}}</span></a>
+                <a :href="Link" :title="title" class="card__link"><span class="hidden-text">{{title}}</span></a>
                 <div class="card__image" data-gen-art-background="">
                     <img alt="back" height="100%" src="back" width="100%"></div>
 
@@ -102,7 +102,7 @@
 
                     <a class="icon icon--google-scholar card__link-search-scholar"
 
-                       :href =makehref(Title)
+                       :href =makehref(title)
                        target="_blank">
                         <!--<img alt="GS" src="../assets/icons/icon-google-scholar.svg"/>-->
                         <img alt="info" src="../assets/icons/gs.jpg" width="26px" height="26px"/>
@@ -136,7 +136,7 @@
                     <div class="card__link-abstract t--card-description">
                         <a class="icon icon--close card__link-abstract-close"
                            ></a>
-                        <p> {{ Description}}
+                        <p> {{ description}}
                         </p>
                         <a :href=URL>View details</a>
                     </div>
@@ -145,7 +145,7 @@
 
                 <div class="content card__content ">
                     <div class="content__title">
-                        <a :href="Link" class="card__title1" title="Pub Name">{{Title}}</a>
+                        <a :href="Link" class="card__title1" title="Pub Name">{{title}}</a>
                     </div>
                     <div class="content__body">
                         <p class="content__authors" >
@@ -234,7 +234,7 @@
                 required: true
             },
 
-            Title: {
+            title: {
 
                 type: String,
                 required: true
@@ -267,7 +267,7 @@
                 required: true
 
             },
-            Description: {
+            description: {
                 type: String,
                 required: true
             },

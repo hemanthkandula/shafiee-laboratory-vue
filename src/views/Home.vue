@@ -221,7 +221,13 @@
 
             window.addEventListener('resize', this.onResize)
 
+            window.addEventListener('load', () => {
+                console.error("HOME LOADED")
+            })
 
+
+        },ready() {
+            console.error("HOME LOADED 2")
         },
 
         beforeDestroy() {

@@ -21,7 +21,7 @@
                         <!--<span class="content__brow"> {{Title}}</span>-->
                         <div class="content__header">
                             <h3 class="content__title ">
-                                {{Title}}
+                                {{title}}
                             </h3>
 
                         </div>
@@ -30,8 +30,8 @@
                         </div>
                     </div>
                     <div v-if="ButtonExist" class="content__ctas">
-                            <router-link class="button" exact :to=Button_link>
-                            {{Button}}
+                            <router-link class="button" exact :to=button_link>
+                            {{button}}
 
                             </router-link>
 
@@ -104,21 +104,20 @@
             },
             HasLightBackground_mobile: {
                 type: Boolean,
-                required: true
 
             },
 
-            Title:{
+            title:{
 
                 type: String,
                 required: true
             },
-            Button:{
+            button:{
                 type: String,
                 required: true
             },
 
-            Button_link:{
+            button_link:{
                 type: String,
                 required: true
             },
