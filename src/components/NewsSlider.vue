@@ -15,27 +15,31 @@
         <!-- swiper -->
         <swiper :options="swiperOption">
             <swiper-slide  :key="index" v-for="(news ,index) in NewsDB">
-                <div class="card card--default   card--in-carousel " data-card-type="card">
+                <div class="card card--default   card--in-carousel " data-card-type="card" style="    text-align: center;">
 
 
                     <a class="card__link" :href=news.url :title = news.title  target="_blank" ><span class="hidden-text">{{news.title}} </span></a>
                     <div class="card__image" v-bind:style="{ backgroundImage: 'url(' + news.img + ')' }">
                         <div class="icon-parent" style="width: 100%;    height: 50%;">
-                        <!--<div class="content__source"-->
+                            <!--<div class="content__source"-->
 
-                             <!--v-bind:style="{ backgroundImage: 'url(' + news.icon + ')' }"-->
+                            <!--v-bind:style="{ backgroundImage: 'url(' + news.icon + ')' }"-->
 
 
-                        <!--&gt;-->
+                            <!--&gt;-->
 
-                        <!--</div>-->
+                            <!--</div>-->
 
                             <img class="content__source"
-                                    :src="news.icon" alt="">
+                                 :src="news.icon" alt="">
                         </div>
 
                     </div>
+
+
                     <div class="content card--in-carousel    ">
+
+
                         <div class="content__text">
 
                             <div class="content__header">
@@ -51,6 +55,8 @@
                         </div>
 
                     </div>
+                    <img class="news-icon"
+                         :src="news.icon" alt="">
                 </div>
 
             </swiper-slide>
@@ -182,9 +188,21 @@
 
     }
 
+    .news-icon{
+
+        background: center / contain no-repeat transparent;
+        display: inline-block;
+
+
+        width: 50%;
+        height: 20%;
+        object-fit: scale-down;
+
+    }
+
     .content__source{
         width: 100%;
-        height: 100%;
+        height: 50%;
         object-fit: contain;
 
     }

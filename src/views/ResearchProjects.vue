@@ -9,13 +9,13 @@
 
                     <div class="content__header">
                         <h2 class="content__title ">
-                           Selected Research Projects
+                            Selected Research Projects
                         </h2>
 
                     </div>
 
                     <!--<div class="content__body">-->
-                        <!--<p>text about it </p>-->
+                    <!--<p>text about it </p>-->
                     <!--</div>-->
                 </div>
 
@@ -39,7 +39,7 @@
 
                     <div :key="index" class="gallery__item " v-for="(img,index) in projct_images">
 
-                        <div class="card card--content    " data-card-type="card"
+                        <div class="card card--content    " data-card-type="card" style="text-align: center;"
                              @mouseover="hover = true"
                              @mouseleave="hover = false"
                         >
@@ -54,40 +54,40 @@
 
                             <div  class="cardimage"
 
-                                 v-bind:style="{ backgroundImage: 'url(' + img + ')' }"
+                                  v-bind:style="{ backgroundImage: 'url(' + img + ')' }"
 
                             >
 
 
                                 <!--<div class="content     ">-->
-                                    <!--<div class="content__text">-->
-                                        <!--<div>-->
-                                            <!--<div class="content__header">-->
-                                                <!--<div class="content__title ">-->
-                                                    <!--Research Project 1-->
-                                                <!--</div>-->
+                                <!--<div class="content__text">-->
+                                <!--<div>-->
+                                <!--<div class="content__header">-->
+                                <!--<div class="content__title ">-->
+                                <!--Research Project 1-->
+                                <!--</div>-->
 
-                                            <!--</div>-->
+                                <!--</div>-->
 
-                                            <!--<div class="content__body">-->
-                                                <!--<p>Projects descrition</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-
-
-                                    <!--<div class="content__ctas">-->
+                                <!--<div class="content__body">-->
+                                <!--<p>Projects descrition</p>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--</div>-->
 
 
-                                        <!--<router-link class="button" exact to='/project-description'>-->
-                                            <!--Explore Project-->
+                                <!--<div class="content__ctas">-->
 
 
-                                        <!--</router-link>-->
+                                <!--<router-link class="button" exact to='/project-description'>-->
+                                <!--Explore Project-->
+
+
+                                <!--</router-link>-->
 
 
 
-                                    <!--</div>-->
+                                <!--</div>-->
 
                                 <!--</div>-->
 
@@ -98,12 +98,30 @@
 
 
                             </div>
-                            <div class="content     ">
+                            <div class="  project   ">
+
+
+                                <!--<div class="content__text">-->
+                                <!--<div>-->
+                                <!--<div class="content__header">-->
+                                <!--<div class="content__title ">-->
+                                <!--Research Project 1-->
+                                <!--</div>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="content__body">-->
+                                <!--<p>Projects descrition</p>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--</div>-->
 
 
 
                                 <div class="content__ctas">
-
+                                    <div class="content__title ">
+                                        {{ project_name[index]}}
+                                    </div>
 
                                     <router-link class="button" exact :to=projectsurl+removespaces(project_name[index])>
                                         Explore Project
