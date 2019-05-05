@@ -61,7 +61,13 @@ import VirtualScrollList from 'vue-virtual-scroll-list'
 Vue.component('virtual-list', VirtualScrollList)
 
 
+import VueAnalytics from 'vue-analytics'
 
+
+Vue.use(VueAnalytics, {
+  id: 'UA-62243676-1',
+  router
+})
 
 
 
