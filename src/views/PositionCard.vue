@@ -5,8 +5,8 @@
             <!--<router-link class="card__link" exact target="_blank" to="/apply">-->
             <!--<a class="card__link" :onclick="callparent" ><span class="hidden-text">LINK </span></a>-->
 
-            <a class="card__link"  @click="callparent" :title="title">
-                <span class="hidden-text">Software Engineer, AI/ML</span></a>
+            <!--<a class="card__link"  @click="callparent" :title="title">-->
+                <span class="hidden-text">{{title}}</span>
 
                 <span class="hidden-text">{{ title}}</span>
 

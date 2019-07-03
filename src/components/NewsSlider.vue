@@ -1,7 +1,7 @@
 <template>
 
-    <section class="group group--default    ">
-        <div class="group__content-wrapper">
+    <section class="group group--default has-grey-background   ">
+        <div class="group__content-wrapper ">
             <div class="content group__content has-no-margin   ">
                 <div class="content__text">
                     <span class="content__brow">Featured news</span>
@@ -55,9 +55,15 @@
                         </div>
 
                     </div>
-                    <img class="news-icon"
-                         :src="news.icon" alt="">
+                    <!--<img class="news-icon"-->
+                         <!--:src="news.icon" alt="">-->
                 </div>
+
+
+                <v-spacer></v-spacer>
+
+
+
 
             </swiper-slide>
             <br>
@@ -69,6 +75,9 @@
             <div class="swiper-button-next" slot="button-next"></div>
 
         </swiper>
+
+        <!--<v-spacer></v-spacer>-->
+        <!--<v-spacer></v-spacer>-->
 
 
     </section>
@@ -161,8 +170,17 @@
     .swiper-slide {
         width: 30%;
 
+        /*margin-bottom: 20px;*/
 
     }
+    .swiper-container {
+        padding-bottom: 85px;
+
+    }
+    .group{
+        padding: 85px 0 0 0;
+    }
+
 
     .card__link[target=_blank]::after {
 
@@ -184,6 +202,17 @@
             width: 90%;
 
 
+        }
+
+
+
+
+        .swiper-container {
+            padding-bottom: 42px;
+
+        }
+        .group{
+            padding: 42px 0 0 0;
         }
 
     }

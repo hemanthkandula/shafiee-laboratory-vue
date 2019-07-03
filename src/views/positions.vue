@@ -25,7 +25,7 @@
             <v-layout align-center justify-center row fill-height>
 
 
-                    <h1  >Positions</h1>
+                    <h1>Positions</h1>
 
             </v-layout>
 
@@ -53,6 +53,137 @@
 
             </v-layout>
 
+
+
+
+
+            <section>
+
+
+
+            </section>
+
+
+
+            <div class="group__gallery-wrapper">
+
+
+                <div class="gallery gallery--content-card
+
+      gallery--1-columns">
+
+                    <div class="gallery__wrapper">
+
+
+                        <div class="gallery__item">
+                            <div class="card card--content    " data-card-type="card" >
+
+                                <!--<router-link class="card__link" exact target="_blank" to="/apply">-->
+                                <!--<a class="card__link" :onclick="callparent" ><span class="hidden-text">LINK </span></a>-->
+
+                                <!--<a class="card__link"  @click="callparent" :title="title">-->
+                                    <!--<span class="hidden-text">Postdoctoral Fellow / Research Scientist – Medical Devices</span></a>-->
+
+                                <span class="hidden-text">Postdoctoral Fellow / Research Scientist – Medical Devices </span>
+
+                                <!--</router-link>-->
+
+
+                                <div class="content     ">
+                                    <div class="content__text">
+
+                                        <div class="content__header">
+                                            <div class="content__title has-icon">
+                                                <span class="icon icon--full-time"></span>
+
+                                                Postdoctoral Fellow / Research Scientist – Medical Devices
+
+                                            </div>
+
+                                        </div>
+
+                                        <div  v-bind:class="{ heightvalue: !expand }"
+                                               class="content__body height_change ">
+
+
+                                            <p>&nbsp;</p>
+                                            <h4 style="text-align: left;"><strong>Position Summary</strong></h4>
+                                            <p>‪‪We are interested in bringing together specialized knowledge from various scientific and engineering disciplines and applying them to solve real-life issues. One of our major focuses is developing and translating micro/nanotechnologies with clinical diagnostic applications in medicine and biology. &nbsp;</p>
+                                            <p>We are currently looking for eager Research Scientists or Postdoctoral Fellows to assist in the development of low-cost, point-of-care diagnostics for rapid detection of infectious diseases/cancer through quantification of target bioagents, including biomarkers, bacterial pathogens, and viruses in biological samples such as whole blood, urine, and saliva. The successful candidates will be intimately involved in every stage of the biosensing device development, including the design, prototyping, optimization, and validation.</p>
+                                            <p>&nbsp;Functioning very independently and leading highly interdisciplinary and complex bioengineering projects by daily mentorship of research technicians and undergraduate and graduate research trainees with broad backgrounds in engineering, biology, computer programing, and infectious diseases. The Postdoc / Research Scientist will also perform high level, complex research experiments. On a regular basis, s/he will contribute to scientific literature, reports, and presentations. Investigates, creates and develops new methods and technologies for research advancement.</p>
+                                            <p>In addition to helping the Principal Investigator (PI) to achieve the aims of the currently active projects in the lab, the Postdoc / Research Scientist helps the PI to continuously develop novel ideas and open up new lines of relevant research in the lab with the potential in securing future funding from different sources such as NIH, DoD, NSF, etc. S/he will also help the PI in the translational aspect of the projects and technologies developed in the lab.</p>
+                                            <h4><span style="color: #000000;">‪‪<strong>Responsibilities</strong></span></h4>
+                                            <ul>
+                                                <li>‪‪Develop microfluidic devices for point-of-care detection of infectious diseases</li>
+                                                <li>Design and develop diagnostic assays (immunoassays and nucleic acid tests)</li>
+                                                <li>Strong passion and experience in nano and microtechnologies</li>
+                                                <li>Independently leads interdisciplinary teams with backgrounds in engineering and biology.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Work closely with a range of scientists to design experimental protocols and develop workflows and pipelines for bioengineering projects that involves developing mobile health diagnostics and digital health systems.&nbsp;</li>
+                                                <li>Researches, develops, designs, executes and interprets research experiments.</li>
+                                                <li>Contributes for scientific literature, reports and presentations.</li>
+                                                <li>Investigates, creates, and develops new methods and technologies for research advancement.</li>
+                                                <li>Write/review reports, proposals, invention disclosures, and scientific articles</li>
+                                                <li>Supervises undergraduate and graduate students and research technicians and provides training and troubleshooting to colleagues.</li>
+                                                <li>Develops new lines of research in medicine specially at the interface of nanotechnology, consumer electronics, and machine learning.</li>
+                                            </ul>
+                                            <h4>&nbsp;<strong>Requirements</strong></h4>
+                                            <ul>
+                                                <li>‪‪Ph.D./MS in relevant field with experience in diagnostics, microfluidic systems, microfabrication, nanotechnology, and immunoassays.</li>
+                                                <li>‪‪Strong communicational and organizational skills for collaborating with interdisciplinary teams of engineers, biologists, and virologists.</li>
+                                                <li>‪‪Experience with electrochemical/optical biosensors</li>
+                                                <li>‪Creativity, self-starter, tough-minded, self-confident, and attention to details</li>
+                                            </ul>
+                                            <h4>&nbsp;<strong>Additional Desirable Skills</strong></h4>
+                                            <ul>
+                                                <li>‪‪Prior graduate-level research in areas such as cell biology, microbiology, genetics, biochemistry, molecular biology, etc.</li>
+                                                <li>Passion and experience in image processing, programming, and medical device prototyping.</li>
+                                                <li>Experience in a variety of techniques used in nanotechnology such as Uv-vis spectroscopy, FTIR spectroscopy, ICPMass spectroscopy, TEM, SEM, etc.</li>
+                                                <li>Experience in the development of portable optical-based sensors</li>
+                                                <li>Proficiency in biochemical assays, immunochemistry, polymerase chain reaction (PCR), loop-mediated isothermal amplification (LAMP), ELISA, and cell culture.</li>
+                                                <li>Experience in developing surface chemistry protocols on microfluidic devices.</li>
+                                                <li>Experience with real-time target protein/nanoparticle detection on-chip</li>
+                                                <li>Experience with 3D modern rapid prototyping tools (3D printing, PDMS, laser cutter, etc)</li>
+                                                <li>Proficiency in statistical analysis methods, including Bland Altman. Experience working with statistical analysis software such as prism and Minitab</li>
+                                            </ul>
+                                            <p>&nbsp;</p>
+                                            <h4><strong>How to Apply:</strong> Please send your CV to <a href="mailto:hshafiee@bwh.harvard.edu">hshafiee@bwh.harvard.edu</a></h4>
+
+
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <!--<div class="search__category-intro-toggle t&#45;&#45;link" >Read More</div>-->
+                                    <!--<div class="search__category-intro-toggle t&#45;&#45;link ng-hide">Less</div>-->
+                                    <div class="content__ctas">
+
+
+                                        <a class="button"
+
+                                            v-on:click="Expand_position" >
+
+
+
+                                            {{Expand_text}}
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
 
             <div class="group__gallery-wrapper">
 
@@ -120,9 +251,70 @@
                 DarkBackground: true,
                 NoDarkBackground: false,
                 joinus:joinus,
+                Expand_text:'Read More',
+
+                expand:false,
 
                 BlockHalfImage: 'block--half-image',
                 PositionApplying: '',
+                position_Postdoctoral_Fellow : [
+
+                    {
+
+                        Tittle: 'Postdoctoral positions',
+                        Content: "<p><strong>Position Summary</strong></p>\n" +
+                            "<p>‪‪We are interested in bringing together specialized knowledge from various scientific and engineering disciplines and applying them to solve real-life issues. One of our major focuses is developing and translating micro/nanotechnologies with clinical diagnostic applications in medicine and biology. &nbsp;</p>\n" +
+                            "<p>&nbsp;</p>\n" +
+                            "<p>We are currently looking for eager Research Scientists or Postdoctoral Fellows to assist in the development of low-cost, point-of-care diagnostics for rapid detection of infectious diseases/cancer through quantification of target bioagents, including biomarkers, bacterial pathogens, and viruses in biological samples such as whole blood, urine, and saliva. The successful candidates will be intimately involved in every stage of the biosensing device development, including the design, prototyping, optimization, and validation.</p>\n" +
+                            "<p>&nbsp;</p>\n" +
+                            "<p>Functioning very independently and leading highly interdisciplinary and complex bioengineering projects by daily mentorship of research technicians and undergraduate and graduate research trainees with broad backgrounds in engineering, biology, computer programing, and infectious diseases. The Postdoc / Research Scientist will also perform high level, complex research experiments. On a regular basis, s/he will contribute to scientific literature, reports, and presentations. Investigates, creates and develops new methods and technologies for research advancement.</p>\n" +
+                            "<p>&nbsp;</p>\n" +
+                            "<p>In addition to helping the Principal Investigator (PI) to achieve the aims of the currently active projects in the lab, the Postdoc / Research Scientist helps the PI to continuously develop novel ideas and open up new lines of relevant research in the lab with the potential in securing future funding from different sources such as NIH, DoD, NSF, etc. S/he will also help the PI in the translational aspect of the projects and technologies developed in the lab.</p>\n" +
+                            "<p>‪‪<strong>Responsibilities</strong></p>\n" +
+                            "<ul>\n" +
+                            "<li>‪‪Develop microfluidic devices for point-of-care detection of infectious diseases</li>\n" +
+                            "<li>Design and develop diagnostic assays (immunoassays and nucleic acid tests)</li>\n" +
+                            "<li>Strong passion and experience in nano and microtechnologies</li>\n" +
+                            "<li>Independently leads interdisciplinary teams with backgrounds in engineering and biology.</li>\n" +
+                            "</ul>\n" +
+                            "<ul>\n" +
+                            "<li>Work closely with a range of scientists to design experimental protocols and develop workflows and pipelines for bioengineering projects that involves developing mobile health diagnostics and digital health systems.&nbsp;</li>\n" +
+                            "<li>Researches, develops, designs, executes and interprets research experiments.</li>\n" +
+                            "<li>Contributes for scientific literature, reports and presentations.</li>\n" +
+                            "<li>Investigates, creates, and develops new methods and technologies for research advancement.</li>\n" +
+                            "<li>Write/review reports, proposals, invention disclosures, and scientific articles</li>\n" +
+                            "<li>Supervises undergraduate and graduate students and research technicians and provides training and troubleshooting to colleagues.</li>\n" +
+                            "<li>Develops new lines of research in medicine specially at the interface of nanotechnology, consumer electronics, and machine learning.</li>\n" +
+                            "</ul>\n" +
+                            "<p>&nbsp;</p>\n" +
+                            "<p><strong>Requirements</strong></p>\n" +
+                            "<ul>\n" +
+                            "<li>‪‪Ph.D./MS in relevant field with experience in diagnostics, microfluidic systems, microfabrication, nanotechnology, and immunoassays.</li>\n" +
+                            "<li>‪‪Strong communicational and organizational skills for collaborating with interdisciplinary teams of engineers, biologists, and virologists.</li>\n" +
+                            "<li>‪‪Experience with electrochemical/optical biosensors</li>\n" +
+                            "<li>‪Creativity, self-starter, tough-minded, self-confident, and attention to details</li>\n" +
+                            "</ul>\n" +
+                            "<p>&nbsp;</p>\n" +
+                            "<p><strong>Additional Desirable Skills</strong></p>\n" +
+                            "<ul>\n" +
+                            "<li>‪‪Prior graduate-level research in areas such as cell biology, microbiology, genetics, biochemistry, molecular biology, etc.</li>\n" +
+                            "<li>Passion and experience in image processing, programming, and medical device prototyping.</li>\n" +
+                            "<li>Experience in a variety of techniques used in nanotechnology such as Uv-vis spectroscopy, FTIR spectroscopy, ICPMass spectroscopy, TEM, SEM, etc.</li>\n" +
+                            "<li>Experience in the development of portable optical-based sensors</li>\n" +
+                            "<li>Proficiency in biochemical assays, immunochemistry, polymerase chain reaction (PCR), loop-mediated isothermal amplification (LAMP), ELISA, and cell culture.</li>\n" +
+                            "<li>Experience in developing surface chemistry protocols on microfluidic devices.</li>\n" +
+                            "<li>Experience with real-time target protein/nanoparticle detection on-chip</li>\n" +
+                            "<li>Experience with 3D modern rapid prototyping tools (3D printing, PDMS, laser cutter, etc)</li>\n" +
+                            "<li>Proficiency in statistical analysis methods, including Bland Altman. Experience working with statistical analysis software such as prism and Minitab</li>\n" +
+                            "</ul>"
+                        ,Link: ''
+                    },
+
+
+
+
+
+                ],
 
 
                 position: [
@@ -186,9 +378,37 @@
             applydialog:function (variable) {
                 this.PositionApplying = variable;
                 this.dialog=  !this.dialog
+            },
+            Expand_position:function () {
+
+                this.expand = !this.expand;
+                    if(this.expand){
+                        this.Expand_text = "Read Less"
+                    }
+                    else {this.Expand_text = "Read More"
+                        this.$router.push({ path: '/positions#apply-now' })
+                    }
+
             }
         }
     }
 
 </script>
+
+<style scoped>
+
+    .height_change{
+        color: #80868b;
+        overflow: hidden;
+        transition: max-height .5s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 85%;
+        will-change: max-height
+    }
+    .heightvalue{
+
+        max-height: 650px;
+
+    }
+
+</style>
 

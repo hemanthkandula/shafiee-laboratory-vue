@@ -111,21 +111,14 @@
                         <!--</div>-->
 
                         <div class="content__body">
-                            <p> Dr. Shafiee’s lab aims to integrate biology/medicine with micro- and nanotechnology to
-                                develop innovative tools and solve unmet clinical problems,
-                                including applications in infectious disease diagnostics and treatment monitoring for
-                                global health, vaccine delivery, and fertility. His lab is
-                                particularly interested in developing point-of-care diagnostics through utilizing
-                                advances in consumer electronics, nanotechnology, and optical/electrical/magnetic
-                                sensing modalities.
-                                His work was featured on the cover of Science Translational Medicine, Advanced
-                                Functional Materials, Nanoscale, Small, and Lab-Chip,
-                                and was also highlighted by some of the major news outlets including CNN, theguardian,
-                                Boston Globe, CBS News, New York Times, STAT, NPR,
-                                Scientific American, and Yahoo, etc. His work on developing paper microchip technologies
-                                for point-of-care viral load measurement received several
-                                awards, including 2014 BWH Bright Futures Prize and 2015 Innovation Evergreen Award from
-                                Harvard Medical School.</p>
+                            <p> He graduated from Isfahan University of Technology, Iran (BSc) in 2001 and University of Tehran, Iran (MSc) in 2003 with degrees in Mechanical Engineering.
+                                He received his Ph.D. in Biomedical Engineering and Mechanics from Virginia Polytechnique Institute and State University in 2010.
+                                After receiving trainings in the development of devices for cell sorting and pathogen detection at Virginia Tech and
+                                Harvard-MIT Division of Health Science and Technology, he started his own lab at BWH, HMS in 2014.
+                                Dr. Shafiee’s lab strives to develop innovative diagnostic tools to address unmet clinical challenges through integrating biology/medicine,
+                                micro- and nanotechnology, consumer electronics, and artificial intelligence. His work has been recognized by some of the major news outlets
+                                including CNN, theguardian, Boston Globe, CBS News, STAT, New York Times, etc. He has mentored more than 60 postdoctoral research fellows,
+                                and undergraduate and graduate students.</p>
                         </div>
                     </div>
 
@@ -133,10 +126,10 @@
                 <aside class="aside aside--quote ">
                     <div class="quote  quote--aside">
                         <div class="quote__text">
-                            <p> we aim to integrate biology/medicine with micro- and nanotechnology to develop
-                                innovative tools and solve unmet clinical problems,
-                                including applications in infectious disease diagnostics and treatment monitoring for
-                                global health, vaccine delivery, and fertility.</p>
+                            <p> With an emphasis on translational research, I hope to develop useful technologies that can make a difference in patients’ lives.
+                                I also hope to train the next generation of bioengineers and scientists to work at the forefront of bioengineering and
+                                regenerative medicine, and to expand the boundaries of this exciting field.
+                            </p>
                         </div>
                         <div class="quote__source">
                             <div class="quote__image"
@@ -743,7 +736,7 @@
 
                         </div>
 
-                        <virtual-list :size="40" :remain="16">
+                        <virtual-list :size="40" :remain="8">
 
 
                             <div class="at-grid" data-column="4">
@@ -802,7 +795,7 @@
                             </h3>
 
                         </div>
-                        <virtual-list :size="40" :remain="16">
+                        <virtual-list :size="40" :remain="20">
                             <div class="at-grid" data-column="4">
 
 
