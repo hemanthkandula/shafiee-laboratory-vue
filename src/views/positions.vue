@@ -57,15 +57,11 @@
 
 
 
-            <section>
 
 
 
-            </section>
 
-
-
-            <div class="group__gallery-wrapper">
+            <div class="group__gallery-wrapper" id="post-doc-application">
 
 
                 <div class="gallery gallery--content-card
@@ -386,7 +382,13 @@
                         this.Expand_text = "Read Less"
                     }
                     else {this.Expand_text = "Read More"
-                        this.$router.push({ path: '/positions#apply-now' })
+
+                        if(this.$route.fullPath === "/positions#post-doc-application")
+                        {this.$router.push({ path: '/positions#apply-now' })}
+                        else {this.$router.push({ path: '/positions#post-doc-application' })}
+
+
+
                     }
 
             }

@@ -111,7 +111,7 @@
                         <!--</div>-->
 
                         <div class="content__body">
-                            <p> He graduated from Isfahan University of Technology, Iran (BSc) in 2001 and University of Tehran, Iran (MSc) in 2003 with degrees in Mechanical Engineering.
+                            <p> Dr. Shafiee graduated from Isfahan University of Technology, Iran (BSc) in 2001 and University of Tehran, Iran (MSc) in 2003 with degrees in Mechanical Engineering.
                                 He received his Ph.D. in Biomedical Engineering and Mechanics from Virginia Polytechnique Institute and State University in 2010.
                                 After receiving trainings in the development of devices for cell sorting and pathogen detection at Virginia Tech and
                                 Harvard-MIT Division of Health Science and Technology, he started his own lab at BWH, HMS in 2014.
