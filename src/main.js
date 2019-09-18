@@ -30,7 +30,7 @@ import './assets/css/custom.css';
 
 
 import VueFirestore from 'vue-firestore';
-import * as VueGoogleMaps from 'vue2-google-maps'
+// import * as VueGoogleMaps from 'vue2-google-maps'
 
 
 Vue.use(VueFirestore);
@@ -71,17 +71,17 @@ Vue.use(VueAnalytics, {
 })
 
 
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyCqUbyusY50sbz0XPdhKbahXLZjA2TukIk',
-    libraries: 'places', // This is required if you use the Autocomplete plugin
-    // OR: libraries: 'places,drawing'
-    // OR: libraries: 'places,drawing,visualization'
-    // (as you require)
-
-    //// If you want to set the version, you can do so:
-    // v: '3.26',
-  }})
+// Vue.use(VueGoogleMaps, {
+//   load: {
+//     key: 'key-here',
+//     libraries: 'places', // This is required if you use the Autocomplete plugin
+//     // OR: libraries: 'places,drawing'
+//     // OR: libraries: 'places,drawing,visualization'
+//     // (as you require)
+//
+//     //// If you want to set the version, you can do so:
+//     // v: '3.26',
+//   }})
 
 
 
