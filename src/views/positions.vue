@@ -22,17 +22,18 @@
 
         <section class="group group--default    has-grey-background">
 
-            <v-layout align-center justify-center row fill-height>
+            <v-layout align-start justify-center row >
 
 
-                    <h1>Positions</h1>
+
+                <h1>Positions</h1>
 
             </v-layout>
 
 
-            <v-layout align-center justify-center row fill-height>
+            <v-layout align-center justify-start row fill-height>
 
-                <v-flex xs6 offset-xs1>
+                <v-flex xs10 offset-xs1>
 
 
 

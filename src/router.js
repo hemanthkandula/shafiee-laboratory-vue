@@ -80,6 +80,11 @@ export default new Router({
             name: 'Publications',
             component: () => import('./views/publications.vue')
         },
+        {
+            path: '/gallery',
+            name: 'Gallery',
+            component: () => import('./views/Gallery.vue')
+        },
         //
         { path: '/projects/:name',
             component: () => import('./components/ProjectDescription.vue')

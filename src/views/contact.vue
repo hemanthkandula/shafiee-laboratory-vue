@@ -10,26 +10,32 @@
 
 
         <section>
-            <div class="Container Container--maxWidth Contact-footer-container">
-                <div class="Contact-footer--left Accordion">
+
+
+            <!--<div class="Container Container&#45;&#45;maxWidth Contact-footer-container">-->
+
+
+
+                <!--<div class="Contact-footer&#45;&#45;left Accordion">-->
                     <!--<div class="Contact-footer&#45;&#45;left-contentWrapper">-->
-                    <contact-form></contact-form>
+                    <!--<contact-form></contact-form>-->
+
 
                     <!--</div>-->
-                </div>
-                <div class="Contact-footer--right">
-                    <div class="Contact-footer--right-background"  v-bind:style="{ backgroundImage: 'url(' + Maps + ')' }" >
+                <!--</div>-->
+                <!--<div class="Contact-footer&#45;&#45;right">-->
+                    <!--<div class="Contact-footer&#45;&#45;right-background"  v-bind:style="{ backgroundImage: 'url(' + Maps + ')' }" >-->
 
-                        <div class="Contact-footer--right-content">
-                            <div>
-                                <p><strong>Shafiee Laboratory</strong></p>
-                                <p> 65 Landsdowne St <br> Cambridge, MA 02139</p>
-                                <a class="btn btn--outline-white btn--arrowRight" href="https://www.google.com/maps/place/65+Landsdowne+St,+Cambridge,+MA+02139" target="_blank">Get Directions</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <!--<div class="Contact-footer&#45;&#45;right-content">-->
+                            <!--<div>-->
+                                <!--<p><strong>Shafiee Laboratory</strong></p>-->
+                                <!--<p> 65 Landsdowne St <br> Cambridge, MA 02139</p>-->
+                                <!--<a class="btn btn&#45;&#45;outline-white btn&#45;&#45;arrowRight" href="https://www.google.com/maps/place/65+Landsdowne+St,+Cambridge,+MA+02139" target="_blank">Get Directions</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </section>
 
 
@@ -47,16 +53,21 @@
 
 <script>
 
+
+    // import  googleMapsClient  from '@google/maps'
+
     import Maps from "@/assets/images/map.png"
-    import ContactForm from "@/components/ContactForm";
+    // import ContactForm from "@/components/ContactForm";
     export default {
         name: "contact",
         components: {
-            ContactForm
+            // ContactForm
 
 
 
         },
+
+
 
         data: function () {
             return {
@@ -77,7 +88,17 @@
 
 
             }
+
+
+        },methods: {
+
+
+
+
+
         }
+
+
     }
 </script>
 

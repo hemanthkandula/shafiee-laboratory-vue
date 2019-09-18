@@ -3,7 +3,7 @@
 
     <div>
 
-        <footer class="Footer">
+        <footer class="Footer" id="contact">
             <div class="Container Footer-container">
                 <div class="Container--default">
                     <a aria-label="" class="footer__logo" href="http://shafieelab.bwh.harvard.edu" target="_blank">

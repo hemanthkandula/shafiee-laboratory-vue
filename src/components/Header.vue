@@ -93,6 +93,14 @@
                         </router-link>
                     </div>
 
+                    <!--<div aria-level="1" class="header__item">-->
+                        <!--<router-link exact to="/gallery">-->
+                            <!--<a class="header__link">-->
+                                <!--Gallery-->
+                            <!--</a>-->
+                        <!--</router-link>-->
+                    <!--</div>-->
+
 
                     <div aria-level="1" class="header__item">
                         <router-link exact to="/positions">
