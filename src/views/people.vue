@@ -998,6 +998,7 @@
     // import axios from 'axios';
     import joinus from "@/assets/images/joinus1.jpg"
 
+    import { version } from '../variables'
 
 
 
@@ -1044,7 +1045,9 @@
 
                 peopleDB:[],
                 position_filtered:[],
-                peopleimg:peopleimg
+                peopleimg:peopleimg,
+
+                version:version
             }
         },
 
@@ -1086,7 +1089,7 @@
 
             geturl:function(url){
 
-                return this.baseurl+url
+                return this.baseurl+url+'?v='+version
 
 
 
