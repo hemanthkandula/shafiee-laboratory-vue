@@ -142,8 +142,8 @@
                 // PublicationsDB: fs.collection('Publication').orderBy("Selected",'desc')
 
 
-                PublicationsDB: fs.collection('Publication').orderBy('Serial', 'desc')
-
+                PublicationsDB: fs.collection("Publication_Feb2021")
+                    .orderBy("Serial", "desc")
 
 
 
@@ -163,7 +163,7 @@
                     // this.FilteredPublicationsDB =this.PublicationsDB
                     this.filteryearslist = this.groupBy(this.PublicationsDB, 'Selected');
                     this.FilteredPublicationsDB = this.filteryearslist['yes'].sort(function(first, second) {
-                        return first.Serial - second.Serial;
+                        return second.Serial - first.Serial;
                     });
                     // this.FilteredPublicationsDB = this.filteryearslist['yes'];
 

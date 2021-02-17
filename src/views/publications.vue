@@ -2,11 +2,7 @@
     <div>
 
 
-
-
-
-
-        <CoversSlider></CoversSlider>
+        <CoversSlider/>
 
 
 
@@ -32,35 +28,36 @@
                     <!--<vs-col v-tooltip="'col - 12'" vs-align="center" vs-justify="center" vs-offset="0" vs-type="flex"-->
                             <!--vs-w="12">-->
 
+<!--                               year bar -->
+<!--    <div class="filters search__filters ng-scope">-->
+<!--        &lt;!&ndash;<h5 class="filters__title">Filters<span class="filters__reset is-visible" >&ndash;&gt;-->
+<!--            &lt;!&ndash;<a  href="">Reset filters</a></span></h5>&ndash;&gt;-->
 
-    <div class="filters search__filters ng-scope">
-        <!--<h5 class="filters__title">Filters<span class="filters__reset is-visible" >-->
-            <!--<a  href="">Reset filters</a></span></h5>-->
-
-        <div class="filter ng-scope is-active" data-filter="" id="year" style="height: 450px;">
-        <button class="filter__title ng-binding">
-            Year
-        </button>
-        <div class="filter__list" data-filter-list="">
-
-
-            <div  :key="idx" v-for="(year,idx) in getallyesrs()">
-            <v-checkbox v-model="checkboxyears"  :value=year  >
-                <template v-slot:label>
-
-                    <span>
-                        <Strong>{{year}}</Strong>
-                    </span>
-                    <!--<span class="filter__option-count ng-binding">144</span>-->
+<!--        <div class="filter ng-scope is-active" data-filter="" id="year" style="height: 450px;">-->
+<!--        <button class="filter__title ng-binding">-->
+<!--            Year-->
+<!--        </button>-->
+<!--        <div class="filter__list" data-filter-list="">-->
 
 
-                </template>
+<!--            <div  :key="idx" v-for="(year,idx) in getallyesrs()">-->
+<!--            <v-checkbox v-model="checkboxyears"  :value=year  >-->
+<!--                <template v-slot:label>-->
 
-            </v-checkbox>
-            </div>
-        </div>
-    </div>
-    </div>
+<!--                    <span>-->
+<!--                        <Strong>{{year}}</Strong>-->
+<!--                    </span>-->
+<!--                    &lt;!&ndash;<span class="filter__option-count ng-binding">144</span>&ndash;&gt;-->
+
+
+<!--                </template>-->
+
+<!--            </v-checkbox>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
+                <!--                               year bar -->
 
 
 
@@ -173,7 +170,8 @@
             return {
 
 
-                PublicationsDB: fs.collection('Publication').orderBy("Serial")
+                PublicationsDB: fs.collection("Publication_Feb2021")
+                    .orderBy("Serial", "desc")
 
             }
 
@@ -282,6 +280,10 @@
 </script>
 
 <style scoped>
-
+.search__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 </style>

@@ -78,6 +78,7 @@
 
     // import  logo from "@/assets/homecen.jpg"
 
+    import c0 from "@/assets/images/covers/0.jpg"
     import c1 from "@/assets/images/covers/1.png"
     import c2 from "@/assets/images/covers/2.jpg"
     import c3 from "@/assets/images/covers/3.png"
@@ -128,7 +129,7 @@
                 meta : [],
                 NewsDB: [],
 
-                Coversurls: [ c1,c2,c3,c4,c5,c6,c7,c8]
+                Coversurls: [ c0,c1,c2,c3,c4,c5,c6,c7,c8]
 
 
 

@@ -93,7 +93,7 @@
             <!--</div>-->
 
             <div class="card card--publication  card--publication-list " data-card-type="list">
-                <a :href="Link" :title="title" class="card__link"><span class="hidden-text">{{title}}</span></a>
+                <a :href="Link" target="_blank" :title="title" class="card__link"><span class="hidden-text">{{title}}</span></a>
                 <div class="card__image" data-gen-art-background="">
                     <img alt="back" height="100%" src="back" width="100%"></div>
 
@@ -135,7 +135,7 @@
                     <div class="card__link-tooltip">Preview Abstract</div>
                     <div class="card__link-abstract t--card-description">
                         <a class="icon icon--close card__link-abstract-close"
-                           ></a>
+                        />
                         <p> {{ description}}
                         </p>
                         <a :href=URL>View details</a>
