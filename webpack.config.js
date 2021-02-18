@@ -1,3 +1,5 @@
+import Vue from "vue";
+
 var path = require('path')
 var webpack = require('webpack')
 // Add these
@@ -6,6 +8,7 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 
+Vue.config.devtools = true
 
 module.exports = {
 

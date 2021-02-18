@@ -93,7 +93,7 @@
             <!--</div>-->
 
             <div class="card card--publication  card--publication-list " data-card-type="list">
-                <a :href="Link" target="_blank" :title="title" class="card__link"><span class="hidden-text">{{title}}</span></a>
+                <a :href="Link"  :title="title" class="card__link"><span class="hidden-text">{{title}}</span></a>
                 <div class="card__image" data-gen-art-background="">
                     <img alt="back" height="100%" src="back" width="100%"></div>
 
@@ -151,7 +151,7 @@
                         <p class="content__authors" >
 
                             {{Authors}}
-
+                            <br>
 
                             <!--<span><a href="/research/people/" title="Author 1">Mohamed Shehata Draz</a></span>-->
                             <!--<span>, </span>-->
@@ -291,7 +291,7 @@
         font-family: 'Roboto', sans-serif;
         /*color: #000;*/
 
-
+        font-weight: 300;
     }
 
 .content__authors {
@@ -333,7 +333,7 @@
     .card.card--publication-list .card__link-info:hover,
     .search.is-list-view .card.card--publication .card__link-info:hover {
         opacity: 0.7
-        
+
     }
 
     .icon--close {
