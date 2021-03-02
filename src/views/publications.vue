@@ -155,6 +155,7 @@
                 filteryearslist: [],
                 checkboxyears: [],
                 FilteredPublicationsDB: [],
+                FPublicationsDB: [],
 
 
 
@@ -185,13 +186,14 @@
                 this.filteryearslist = this.groupBy(this.PublicationsDB, 'Year');
 
 
+              this.FilteredPublicationsDB = this.remove_patents()
 
 
             },
 
             checkboxyears:function () {
 
-                if (this.checkboxyears.length===0){
+              if (this.checkboxyears.length===0){
                     this.FilteredPublicationsDB =this.PublicationsDB
 
                 } else {
@@ -244,6 +246,34 @@
 
 
                 }
+
+
+
+
+
+                return pubs
+
+
+
+
+
+
+            },
+            remove_patents:function () {
+
+                // console.error(position)
+
+              let pubs = []
+
+
+              this.FilteredPublicationsDB.forEach(function (arrayItem) {
+                if (!arrayItem.Journal.includes('US ')){
+                  // eslint-disable-next-line no-console
+                  //   console.log(arrayItem.Journal)
+                    pubs.push(arrayItem)
+                }
+              });
+
 
 
 
