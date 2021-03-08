@@ -141,8 +141,9 @@
                                           </ul>
 
 
+                                          <h4><span style="color: #000000;">‪‪<strong>Qualifications</strong></span></h4>
 
-                                          <h4>&nbsp;<strong>Qualifications</strong></h4>
+<!--                                          <h4>&nbsp;<strong>Qualifications</strong></h4>-->
                                           <ul>
                                             <li>    Ph.D. in Bioengineering, Chemistry, Mechanical Engineering, or related area.</li>
                                             <li>    Detail-oriented    </li>
