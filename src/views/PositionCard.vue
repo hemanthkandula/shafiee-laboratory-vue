@@ -39,7 +39,7 @@
                 <div class="content__ctas">
 
 
-                        <a class="button" href="mailto:"
+                        <a class="button" href="mailto:hshafiee@bwh.harvard.edu"
                         >
                             <!--v-on:click="callparent"-->
 
