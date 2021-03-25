@@ -1,4 +1,11 @@
-# shafiee-lab-vue
+# Official Website of [shafieelab.bwh.harvard.edu](https://shafieelab.bwh.harvard.edu/)
+
+## Preview 
+<!-- <img src="screenshots/shafieelab.bwh.harvard.edu_ screenshot.png" alt="screenshot" width="600px"/> -->
+
+[<img src="screenshots/shafieelab.bwh.harvard.edu_ screenshot.png">](https://shafieelab.bwh.harvard.edu/)
+
+
 
 ## Project setup
 ```
