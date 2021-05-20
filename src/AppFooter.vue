@@ -51,15 +51,15 @@
 
 
                                     </li>
-                                    <li class="Menu-item Menu-item--type-aboutUs Menu-item--object-aboutUs">
+<!--                                    <li class="Menu-item Menu-item&#45;&#45;type-aboutUs Menu-item&#45;&#45;object-aboutUs">-->
 
-                                        <!--<router-link exact to="/research">-->
-                                            <!--Research-->
-                                        <!--</router-link>-->
+<!--                                        &lt;!&ndash;<router-link exact to="/research">&ndash;&gt;-->
+<!--                                            &lt;!&ndash;Research&ndash;&gt;-->
+<!--                                        &lt;!&ndash;</router-link>&ndash;&gt;-->
 
 
 
-                                    </li>
+<!--                                    </li>-->
                                     <li class="Menu-item Menu-item--type-aboutUs Menu-item--object-aboutUs">
 
                                         <router-link exact to="/Publications">
@@ -93,10 +93,10 @@
 
                                 </ul>
                             </nav>
-                            <div class="Footer-copyright">Copyright © 2019 Shafiee Laboratory | All rights reserved</div>
+                            <div class="Footer-copyright">Copyright © 2021 Shafiee Laboratory | All rights reserved</div>
                         </div>
                         <div class="Footer-information-right">
-                            <!--<p><a href="https://hemanthkandula.com" target="_blank">designed by  </a></p>-->
+                            <p><a href="https://hemanthkandula.com" rel="nofollow" target="_blank">Designed by Hemanth Kandula <br> https://hemanthkandula.com  </a></p>
                         </div>
                     </div>
                 </div>
